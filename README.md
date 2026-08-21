@@ -89,27 +89,6 @@ Vấn đề này liên quan trực tiếp đến lĩnh vực tài chính vì ng�
 6. Những khái niệm tài chính nào nên được tích hợp vào phần điều tra?
 7. Có nên đưa yếu tố giới hạn thời gian vào hay không, hay điều đó sẽ gây xao nhãng khỏi nhiệm vụ lập luận tài chính?
 
-## 9. Feedback từ checkpoint
-
-*(Sẽ được cập nhật sau buổi Session 2 — Group Checkpoint.)*
-
-- Feedback 1: _đang chờ checkpoint_
-- Feedback 2: _đang chờ checkpoint_
-
-## 10. Revision sau checkpoint
-
-*(Sẽ được cập nhật sau khi nhóm nhận phản hồi.)*
-
-**Quyết định:** Keep / Change / Simplify / Restart — _chưa xác định_
-
-**Nội dung đã điều chỉnh:**
-- Nội dung đã thay đổi: _chưa có_
-- Lý do thay đổi: _chưa có_
-- Bằng chứng hoặc commit liên quan: _chưa có_
-
-**Câu hỏi mở cho Tuần 2:**
-- ...
-
 ## Hướng đi hiện tại của Tuần 1
 
 - **Người dùng mục tiêu:** Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản.
