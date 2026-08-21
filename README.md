@@ -1,6 +1,6 @@
 # The Last Heir — Checkpoint Tuần 1
 
-> Học phần: **NHA408E** · Nhóm: **FTU Legacy 63**
+> Học phần: **NHA408E** · Nhóm: **08**
 > Ý tưởng: Một trò chơi điều tra tài chính tương tác, trong đó người chơi phải sàng lọc thông tin doanh nghiệp bị phân mảnh, mâu thuẫn và chưa được kiểm chứng để giải quyết một vụ việc trong vòng 48 giờ ảo.
 
 ## Thành viên nhóm
