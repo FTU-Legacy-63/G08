@@ -117,10 +117,5 @@ Vấn đề này liên quan trực tiếp đến lĩnh vực tài chính vì ng�
 - **Khó khăn chính:** Thông tin liên quan bị phân mảnh trên nhiều nguồn và có thể bao gồm thông tin không đầy đủ, mâu thuẫn hoặc chưa được kiểm chứng.
 - **Quyết định hiện tại:** Tiếp tục theo hướng vấn đề này, song song với việc thu thập bằng chứng người dùng ban đầu trước khi đưa ra các quyết định thiết kế sản phẩm cuối cùng.
 
-## Tài liệu liên quan
-
-- [`docs/vai-tro-y-tuong.docx`](docs/) — Tài liệu ý tưởng đầy đủ của trò chơi *The Last Heir*, bao gồm cơ chế Assumption Board, ba giai đoạn điều tra (Surface Anomaly / Deep Trace / Noise Surge), danh sách nghi phạm và tiêu chí chấm điểm.
-
----
 *Cập nhật lần cuối: Checkpoint Tuần 1.*
 
