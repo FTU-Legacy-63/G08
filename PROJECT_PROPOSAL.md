@@ -40,11 +40,11 @@ Assumption Board là giao diện thao tác, không phải kết quả cuối. In
 
 Bên trong "Final Case Report" có bốn thành phần khác nhau, nhưng chúng thuộc hai loại khác nhau chứ không ngang hàng.
 
-Kết luận được chọn cho bất thường tài chính, và tập bằng chứng cụ thể người dùng dùng để bảo vệ kết luận đó, là quyết định của người dùng — đây là thứ người dùng tạo ra và đưa vào sản phẩm, không phải thứ sản phẩm trả về.
+Kết luận được chọn cho bất thường tài chính, và tập bằng chứng cụ thể người dùng dùng để bảo vệ kết luận đó, là quyết định của người dùng, Đây là thứ người dùng tạo ra và đưa vào sản phẩm, không phải thứ sản phẩm trả về.
 
 Phần trăm độ tin cậy tích lũy chỉ là một chỉ số phụ hỗ trợ. Điểm số theo bốn tiêu chí là một đánh giá phụ dùng để phản hồi. Cả hai đều không phải kết quả chính người dùng cần để giải quyết nhiệm vụ.
 
-**Main output được chốt:**
+**Main output chốt:**
 
 > Kết quả đối chiếu giữa kết luận người dùng chọn với logic vụ án đúng — gồm: kết luận đó đúng hay sai, bằng chứng nào người dùng đã dùng đúng, và bằng chứng nào bị bỏ sót hoặc bị tin đồn/suy đoán đánh lừa.
 
