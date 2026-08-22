@@ -1,6 +1,6 @@
 # The Last Heir — Solution Structure Tuần 2
 
-> Học phần: **NHA408E** · Nhóm: **FTU Legacy 63**
+> Học phần: **NHA408E** · Nhóm: **08**
 
 ## 1. Main Output
 
