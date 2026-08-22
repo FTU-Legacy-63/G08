@@ -15,13 +15,13 @@
 
 ## 1. Các Problem Candidates (đề xuất vấn đề)
 
-### Đề xuất 1 — Tích hợp thông tin
+### Đề xuất 1: Tích hợp thông tin
 Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh gặp khó khăn khi đánh giá các tình huống tài chính doanh nghiệp phức tạp, vì thông tin liên quan có thể bị phân mảnh giữa báo cáo tài chính, hồ sơ giao dịch, tài liệu nội bộ, thông tin công khai và các thông tin chưa được kiểm chứng.
 
-### Đề xuất 2 — Xác minh bằng chứng
+### Đề xuất 2: Xác minh bằng chứng
 Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh gặp khó khăn khi phân biệt bằng chứng tài chính đáng tin cậy với tin đồn, suy đoán và thông tin gây hiểu lầm khi đánh giá một vấn đề tài chính doanh nghiệp.
 
-### Đề xuất 3 — Lập luận dựa trên bằng chứng
+### Đề xuất 3: Lập luận dựa trên bằng chứng
 Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh gặp khó khăn khi kết nối các bất thường tài chính với giao dịch, các bên liên quan và bằng chứng hỗ trợ để hình thành một kết luận logic và có căn cứ.
 
 ### Hướng vấn đề được lựa chọn
