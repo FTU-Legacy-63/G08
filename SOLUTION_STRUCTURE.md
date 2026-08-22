@@ -6,7 +6,7 @@
 
 Main output đã chốt ở `PROJECT_PROPOSAL.md`:
 
-> Kết quả đối chiếu giữa kết luận người dùng chọn với logic vụ án đúng — gồm: kết luận đó đúng hay sai, bằng chứng nào người dùng đã dùng đúng, và bằng chứng nào bị bỏ sót hoặc bị tin đồn/suy đoán đánh lừa.
+> Kết quả đối chiếu giữa kết luận người dùng chọn với logic vụ án đúng bao gồm: kết luận đó đúng hay sai, bằng chứng nào người dùng đã dùng đúng, và bằng chứng nào bị bỏ sót hoặc bị tin đồn/suy đoán đánh lừa.
 
 Kết luận và tập bằng chứng mà người dùng tự chọn (mục "Input" ở sơ đồ dưới) là quyết định của người dùng, đưa vào Process — không phải bản thân main output. Main output là kết quả Process trả về sau khi xử lý quyết định đó.
 
