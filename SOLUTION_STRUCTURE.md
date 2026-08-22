@@ -16,24 +16,16 @@ Kết luận và tập bằng chứng mà người dùng tự chọn (mục "Inp
 User: sinh viên (target user)
    |
    v
-Input: mở tài liệu vụ án (báo cáo tài chính, sao kê, hợp đồng,
-        tin đồn, tài liệu nội bộ), chọn bằng chứng liên quan,
-        đánh dấu bằng chứng là đáng tin hay không đáng tin,
-        chọn một cách giải thích làm kết luận
+Input: mở tài liệu vụ án (báo cáo tài chính, sao kê, hợp đồng, tin đồn, tài liệu nội bộ), chọn bằng chứng liên quan, đánh dấu bằng chứng là đáng tin hay không đáng tin, chọn một cách giải thích làm kết luận
    |
    v
-Process: phân loại độ tin cậy từng bằng chứng, so sánh các cách
-        giải thích khả dĩ dựa trên bằng chứng đã chọn, giải thích
-        kết quả so khớp với logic vụ án đúng
+Process: phân loại độ tin cậy từng bằng chứng, so sánh các cách giải thích khả dĩ dựa trên bằng chứng đã chọn, giải thích kết quả so khớp với logic vụ án đúng
    |
    v
-Output (main output): kết quả đối chiếu — kết luận người dùng
-        chọn đúng hay sai, bằng chứng nào đã dùng đúng, bằng
-        chứng nào bị bỏ sót hoặc bị tin đồn đánh lừa
+Output (main output): kết quả đối chiếu — kết luận người dùng chọn đúng hay sai, bằng chứng nào đã dùng đúng, bằng chứng nào bị bỏ sót hoặc bị tin đồn đánh lừa
    |
    v
-User action: xem lại đúng những bằng chứng bị bỏ sót hoặc dùng
-        sai, hiệu chỉnh cách đọc bằng chứng cho lần kết luận sau
+User action: xem lại đúng những bằng chứng bị bỏ sót hoặc dùng sai, hiệu chỉnh cách đọc bằng chứng cho lần kết luận sau
 ```
 
 ## 3. Initial Required Information
@@ -79,11 +71,11 @@ Kiểm tra lại luồng theo bốn tiêu chí:
 
 ## 6. Target, Fallback và Out of Scope
 
-**Target Scope**, tức phiên bản khả thi dự kiến cho Tuần 6 và Tuần 7, gồm một vụ án với đầy đủ năm đến tám bằng chứng và hai đến ba cách giải thích cùng logic vụ án đúng, Document Viewer và News/Rumor Feed hiển thị toàn bộ tài liệu, cơ chế chọn và đánh dấu bằng chứng không nhất thiết phải kéo thả, và cơ chế so khớp kết luận với logic vụ án đúng kèm phản hồi giải thích.
+**Target Scope**: Phiên bản khả thi dự kiến cho Tuần 6 và Tuần 7, gồm một vụ án với đầy đủ năm đến tám bằng chứng và hai đến ba cách giải thích cùng logic vụ án đúng, Document Viewer và News/Rumor Feed hiển thị toàn bộ tài liệu, cơ chế chọn và đánh dấu bằng chứng không nhất thiết phải kéo thả, và cơ chế so khớp kết luận với logic vụ án đúng kèm phản hồi giải thích.
 
-**Fallback Scope**, tức hướng đi nhỏ hơn nếu rủi ro về thời gian hoặc kỹ thuật xảy ra, gồm việc bỏ giao diện kéo thả của Assumption Board Lớp 1 và thay bằng danh sách checkbox chọn bằng chứng, bỏ việc tính phần trăm độ tin cậy theo thời gian thực và chỉ tính một lần khi người dùng nộp kết luận, và bỏ giai đoạn mở khóa tài liệu theo Information Reveal Map để hiển thị toàn bộ tài liệu ngay từ đầu, giữ độ khó ở khâu chọn lọc và đánh giá thay vì khâu thời điểm.
+**Fallback Scope**: Hướng đi nhỏ hơn nếu rủi ro về thời gian hoặc kỹ thuật xảy ra, gồm việc bỏ giao diện kéo thả của Assumption Board Lớp 1 và thay bằng danh sách checkbox chọn bằng chứng, bỏ việc tính phần trăm độ tin cậy theo thời gian thực và chỉ tính một lần khi người dùng nộp kết luận, và bỏ giai đoạn mở khóa tài liệu theo Information Reveal Map để hiển thị toàn bộ tài liệu ngay từ đầu, giữ độ khó ở khâu chọn lọc và đánh giá thay vì khâu thời điểm.
 
-**Out of Scope**, tức các phần loại hẳn khỏi giai đoạn này, gồm nhiều vụ án hoặc cốt truyện rẽ nhánh, hệ thống tài khoản và đăng nhập cùng lưu tiến trình giữa các phiên, bảng xếp hạng và chế độ nhiều người chơi, Assumption Board Lớp 2 với hint economy nâng cao, và việc tự sinh vụ án bằng AI hoặc dùng dữ liệu tài chính thật từ doanh nghiệp hoặc ngân hàng.
+**Out of Scope**: Các phần loại hẳn khỏi giai đoạn này, gồm nhiều vụ án hoặc cốt truyện rẽ nhánh, hệ thống tài khoản và đăng nhập cùng lưu tiến trình giữa các phiên, bảng xếp hạng và chế độ nhiều người chơi, Assumption Board Lớp 2 với hint economy nâng cao, và việc tự sinh vụ án bằng AI hoặc dùng dữ liệu tài chính thật từ doanh nghiệp hoặc ngân hàng.
 
 ## 7. Initial Route Hypothesis
 
@@ -97,7 +89,7 @@ Dữ liệu vụ án, gồm bằng chứng, cách giải thích và logic vụ �
 
 | Responsibility | Owner | Visible output | Consumer / dependency |
 |---|---|---|---|
-| Input owner | Phạm Triệu Tiến Dũng | Danh sách bằng chứng vụ Victor gồm nguồn, độ tin cậy thật, cách giải thích nó ủng hộ, và bộ bằng chứng gây nhiễu | Logic owner, Interface owner, README |
+| Input owner | Phạm Triệu Tiến Dũng | Danh sách bằng chứng vụ án gồm nguồn, độ tin cậy thật, cách giải thích nó ủng hộ, và bộ bằng chứng gây nhiễu | Logic owner, Interface owner, README |
 | Logic owner | Nguyễn Minh Hiền | Bảng công thức mô tả cách phân loại từng bằng chứng, cách so sánh các cách giải thích, và logic vụ án đúng dùng để so khớp | Output owner, Integration owner, kiểm thử |
 | Output owner | Tôn Khánh Ngọc | Định nghĩa cụ thể nội dung phản hồi ở bước giải thích, gồm thông điệp đúng hoặc sai, bằng chứng bị bỏ sót hoặc bị nhiễu, và trình tự hé lộ thông tin | Interface owner, demo |
 | Interface owner | Đinh Thị Minh Khuê | Màn hình dùng output thật, không phải mock, gồm Document Viewer, màn hình chọn bằng chứng, và màn hình kết quả | User review, demo |
