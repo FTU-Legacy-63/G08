@@ -53,8 +53,9 @@ Phần trăm độ tin cậy, điểm bốn tiêu chí, Assumption Board và Inv
 Sau khi dùng sản phẩm, người dùng sẽ nhận được kết quả đối chiếu giữa kết luận mình chọn với logic vụ án đúng, kèm chỉ rõ bằng chứng nào dùng đúng và bằng chứng nào bị bỏ sót hoặc bị đánh lừa. Output này giúp người dùng kiểm tra lại xem lập luận của mình có dựa trên bằng chứng đáng tin hay đã bị tin đồn và suy đoán đánh lừa. Hành động tiếp theo của người dùng là xem lại đúng những bằng chứng bị bỏ sót hoặc dùng sai, để hiệu chỉnh cách đọc bằng chứng cho lần kết luận sau.
 
 ## 6. Product Pattern
+Pattern được chọn là **Financial Learning Game (decision-consequence loop)**: người dùng đưa ra một lựa chọn dựa trên thông tin có sẵn, sau đó sản phẩm phản hồi lại lựa chọn đó đúng hay sai và vì sao.
 
-Từ main output ở mục 5 và loại quy trình cần có, tức phân loại độ tin cậy bằng chứng, so sánh các cách giải thích, và giải thích kết quả so khớp (chi tiết ở `SOLUTION_STRUCTURE.md` mục 4), pattern phù hợp nhất là **Financial Learning Game**, theo mô hình vòng lặp quyết định và hệ quả.
+Trong "The Last Heir", vòng lặp này thể hiện cụ thể như sau: người dùng chọn bằng chứng và chọn một cách giải thích (quyết định) → sản phẩm so khớp với logic vụ án đúng và trả lời đúng/sai kèm lý do (hệ quả).
 
 Giá trị nằm ở việc người dùng phải ra quyết định dựa trên bằng chứng và nhận phản hồi về hệ quả của quyết định đó. Điều này khác với Comparison Tool, vốn chỉ so sánh các phương án có sẵn, và khác với Calculator, vốn chỉ tính ra một chỉ số duy nhất.
 
