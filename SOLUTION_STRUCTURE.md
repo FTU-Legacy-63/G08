@@ -13,18 +13,18 @@ Kết luận và tập bằng chứng mà người dùng tự chọn (mục "Inp
 ## 2. User to Input to Process to Output to User Action
 
 ```
-User: sinh viên (target user)
-   |
-   v
+                                                                  User: sinh viên (target user)
+                                                                              |
+                                                                              v
 Input: mở tài liệu vụ án (báo cáo tài chính, sao kê, hợp đồng, tin đồn, tài liệu nội bộ), chọn bằng chứng liên quan, đánh dấu bằng chứng là đáng tin hay không đáng tin, chọn một cách giải thích làm kết luận
-   |
-   v
+                                                                              |
+                                                                              v
 Process: phân loại độ tin cậy từng bằng chứng, so sánh các cách giải thích khả dĩ dựa trên bằng chứng đã chọn, giải thích kết quả so khớp với logic vụ án đúng
-   |
-   v
+                                                                              |
+                                                                              v
 Output (main output): kết quả đối chiếu — kết luận người dùng chọn đúng hay sai, bằng chứng nào đã dùng đúng, bằng chứng nào bị bỏ sót hoặc bị tin đồn đánh lừa
-   |
-   v
+                                                                              |
+                                                                              v
 User action: xem lại đúng những bằng chứng bị bỏ sót hoặc dùng sai, hiệu chỉnh cách đọc bằng chứng cho lần kết luận sau
 ```
 
