@@ -38,7 +38,7 @@ User action: xem lại đúng những bằng chứng bị bỏ sót hoặc dùng
 
 ## 3. Initial Required Information
 
-Thông tin tối thiểu cần có gồm một tình huống bất thường tài chính doanh nghiệp cụ thể là vụ Victor, hai đến ba cách giải thích khả dĩ cho bất thường đó, và năm đến tám mục bằng chứng.
+Thông tin tối thiểu cần có gồm một tình huống bất thường tài chính doanh nghiệp cụ thể liên quan đến nghi vấn gian lận của 1 nhân viên trong trò chơi, hai đến ba cách giải thích khả dĩ cho bất thường đó, và năm đến tám mục bằng chứng.
 
 Mỗi mục bằng chứng cần gắn ba nhãn: nguồn của nó (báo cáo tài chính, hồ sơ giao dịch, tài liệu nội bộ, thông tin công khai, hoặc tin đồn chưa kiểm chứng), mức độ tin cậy thật theo thiết kế của nhóm, và cách giải thích mà nó ủng hộ.
 
@@ -60,15 +60,15 @@ Loại thứ ba là giải thích. Khi người dùng nộp kết luận, hệ t
 
 Luồng hoàn chỉnh và nhỏ nhất có thể chạy từ đầu đến cuối, gồm năm bước:
 
-**Bước 1 — Mở tài liệu vụ án.** Người dùng mở năm đến tám tài liệu của vụ Victor qua Document Viewer và News/Rumor Feed.
+**Bước 1: Mở tài liệu vụ án.** Người dùng mở năm đến tám tài liệu của vụ án qua Document Viewer và News/Rumor Feed.
 
-**Bước 2 — Chọn và đánh giá bằng chứng.** Người dùng chọn các bằng chứng cho là liên quan, và đánh dấu từng bằng chứng là đáng tin hoặc không đáng tin.
+**Bước 2: Chọn và đánh giá bằng chứng.** Người dùng chọn các bằng chứng cho là liên quan, và đánh dấu từng bằng chứng là đáng tin hoặc không đáng tin.
 
-**Bước 3 — Chọn kết luận.** Người dùng chọn một trong hai đến ba cách giải thích làm kết luận.
+**Bước 3: Chọn kết luận.** Người dùng chọn một trong hai đến ba cách giải thích làm kết luận.
 
-**Bước 4 — Hệ thống đối chiếu.** Hệ thống so khớp lựa chọn với logic vụ án đúng, trả về kết quả đúng hoặc sai, kèm bằng chứng nào đã dùng đúng và bằng chứng nào bị bỏ sót hoặc bị nhiễu.
+**Bước 4: Hệ thống đối chiếu.** Hệ thống so khớp lựa chọn với logic vụ án đúng, trả về kết quả đúng hoặc sai, kèm bằng chứng nào đã dùng đúng và bằng chứng nào bị bỏ sót hoặc bị nhiễu.
 
-**Bước 5 — Xem lại và đối chiếu.** Người dùng xem lại kết luận đúng, tự đối chiếu với lựa chọn của mình.
+**Bước 5: Xem lại và đối chiếu.** Người dùng xem lại kết luận đúng, tự đối chiếu với lựa chọn của mình.
 
 Kiểm tra lại luồng theo bốn tiêu chí:
 
@@ -79,7 +79,7 @@ Kiểm tra lại luồng theo bốn tiêu chí:
 
 ## 6. Target, Fallback và Out of Scope
 
-**Target Scope**, tức phiên bản khả thi dự kiến cho Tuần 6 và Tuần 7, gồm một vụ án là vụ Victor với đầy đủ năm đến tám bằng chứng và hai đến ba cách giải thích cùng logic vụ án đúng, Document Viewer và News/Rumor Feed hiển thị toàn bộ tài liệu, cơ chế chọn và đánh dấu bằng chứng không nhất thiết phải kéo thả, và cơ chế so khớp kết luận với logic vụ án đúng kèm phản hồi giải thích.
+**Target Scope**, tức phiên bản khả thi dự kiến cho Tuần 6 và Tuần 7, gồm một vụ án với đầy đủ năm đến tám bằng chứng và hai đến ba cách giải thích cùng logic vụ án đúng, Document Viewer và News/Rumor Feed hiển thị toàn bộ tài liệu, cơ chế chọn và đánh dấu bằng chứng không nhất thiết phải kéo thả, và cơ chế so khớp kết luận với logic vụ án đúng kèm phản hồi giải thích.
 
 **Fallback Scope**, tức hướng đi nhỏ hơn nếu rủi ro về thời gian hoặc kỹ thuật xảy ra, gồm việc bỏ giao diện kéo thả của Assumption Board Lớp 1 và thay bằng danh sách checkbox chọn bằng chứng, bỏ việc tính phần trăm độ tin cậy theo thời gian thực và chỉ tính một lần khi người dùng nộp kết luận, và bỏ giai đoạn mở khóa tài liệu theo Information Reveal Map để hiển thị toàn bộ tài liệu ngay từ đầu, giữ độ khó ở khâu chọn lọc và đánh giá thay vì khâu thời điểm.
 
