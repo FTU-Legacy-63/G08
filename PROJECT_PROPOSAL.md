@@ -34,19 +34,17 @@ Một sản phẩm giúp sinh viên Tài chính, Kế toán, Ngân hàng và Kin
 
 ## 5. Main Output
 
-Nhóm rà lại các kết quả có thể nhìn thấy để loại bỏ những thứ chỉ là container hoặc giao diện, chưa phải kết quả cuối.
+Assumption Board chỉ là nơi để người chơi thao tác, giống như một cái bàn làm việc để sắp xếp bằng chứng, không phải là kết quả. Investigation Dashboard chỉ là màn hình hiển thị thông tin, cũng không phải kết quả. Còn Final Case Report, nếu chỉ hiểu đơn giản là "một màn hình tổng kết", thì nó cũng chỉ là cái khung chứa, cần mở ra xem bên trong có những gì.
 
-Assumption Board là giao diện thao tác, không phải kết quả cuối. Investigation Dashboard là nơi hiển thị, không phải kết quả người dùng nhận được. Final Case Report, nếu chỉ được định nghĩa là một màn hình tổng hợp, cũng là container, cần bóc tách nội dung bên trong nó.
+Mở Final Case Report ra thì thấy có bốn thứ nằm trong đó, nhưng bốn thứ này chia làm hai nhóm khác nhau, không phải cùng một loại.
 
-Bên trong "Final Case Report" có bốn thành phần khác nhau, nhưng chúng thuộc hai loại khác nhau chứ không ngang hàng.
+**Nhóm thứ nhất là những gì chính người chơi tự nghĩ ra:** kết luận họ chọn cho bất thường tài chính, và bằng chứng họ dùng để bảo vệ kết luận đó. Đây là thứ người chơi tự tạo ra rồi đưa vào game, chứ không phải thứ game tạo ra để đưa lại cho họ. Nói cách khác, đây là quyết định của người chơi, không phải kết quả của sản phẩm.
 
-Kết luận được chọn cho bất thường tài chính, và tập bằng chứng cụ thể người dùng dùng để bảo vệ kết luận đó, là quyết định của người dùng, Đây là thứ người dùng tạo ra và đưa vào sản phẩm, không phải thứ sản phẩm trả về.
+**Nhóm thứ hai là những con số phụ đi kèm:** phần trăm độ tin cậy và điểm theo bốn tiêu chí. Hai thứ này chỉ giúp theo dõi và chấm điểm, chứ không phải thứ người chơi cần để hoàn thành nhiệm vụ đánh giá bằng chứng.
 
-Phần trăm độ tin cậy tích lũy chỉ là một chỉ số phụ hỗ trợ. Điểm số theo bốn tiêu chí là một đánh giá phụ dùng để phản hồi. Cả hai đều không phải kết quả chính người dùng cần để giải quyết nhiệm vụ.
+=> **Main output chốt:**
 
-**Main output chốt:**
-
-> Kết quả đối chiếu giữa kết luận người dùng chọn với logic vụ án đúng — gồm: kết luận đó đúng hay sai, bằng chứng nào người dùng đã dùng đúng, và bằng chứng nào bị bỏ sót hoặc bị tin đồn/suy đoán đánh lừa.
+> Kết quả đối chiếu giữa kết luận người dùng chọn với logic vụ án đúng, gồm ba phần: (1) kết luận đó đúng hay sai, (2) bằng chứng nào người dùng đã dùng đúng, (3) bằng chứng nào bị bỏ sót hoặc bị tin đồn/suy đoán đánh lừa.
 
 Phần trăm độ tin cậy, điểm bốn tiêu chí, Assumption Board và Investigation Dashboard là supporting output và container, sẽ được liệt kê ở `SOLUTION_STRUCTURE.md`, không đứng ngang hàng với main output.
 
