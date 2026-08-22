@@ -89,6 +89,25 @@ Vấn đề này liên quan trực tiếp đến lĩnh vực tài chính vì ng�
 6. Những khái niệm tài chính nào nên được tích hợp vào phần điều tra?
 7. Có nên đưa yếu tố giới hạn thời gian vào hay không, hay điều đó sẽ gây xao nhãng khỏi nhiệm vụ lập luận tài chính?
 
+## 9. Feedback từ checkpoint
+
+- Feedback 1: Problem direction (Đề xuất 1 — Tích hợp thông tin), target user và user task được thầy **duyệt, không yêu cầu chỉnh sửa**.
+- Feedback 2: Không có nhược điểm nào được nêu riêng cho nhóm ở Checkpoint Tuần 1.
+
+## 10. Revision sau checkpoint
+
+**Quyết định:** **Keep** — giữ nguyên problem statement, target user và user task như bản nháp Tuần 1.
+
+**Nội dung đã điều chỉnh:**
+- Nội dung đã thay đổi: Không có thay đổi nào về problem/target user/user task.
+- Lý do thay đổi: Không cần, vì hướng đã được duyệt.
+- Bằng chứng hoặc commit liên quan: README Checkpoint Tuần 1 (bản này) được giữ nguyên làm input chính thức cho Tuần 2.
+
+**Câu hỏi mở cho Tuần 2:**
+- Main output cụ thể của sản phẩm là gì (không chỉ là "trò chơi điều tra")?
+- Product pattern nào phù hợp nhất với main output đó?
+- MVP tối thiểu nào vẫn giữ được giá trị cốt lõi của user task?
+
 ## Hướng đi hiện tại của Tuần 1
 
 - **Người dùng mục tiêu:** Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản.
