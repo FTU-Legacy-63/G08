@@ -32,9 +32,7 @@ Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doa
 
 ### Hướng vấn đề được lựa chọn
 
-Nhóm lựa chọn **Đề xuất 1 — Tích hợp thông tin**, vì đây là khó khăn cốt lõi mà dự án hướng tới khai thác: sinh viên có thể hiểu từng khái niệm tài chính riêng lẻ, nhưng gặp khó khi kết hợp thông tin từ nhiều nguồn và xác định thông tin nào nên được dùng làm căn cứ cho kết luận cuối cùng.
-
-*(Xem mục "Vì sao đây là Week 2, không phải Week 1" trong phần Week 2 bên dưới về cách hướng này được thu hẹp thêm sau checkpoint.)*
+Nhóm lựa chọn **Đề xuất 1: Tích hợp thông tin**, vì đây là khó khăn cốt lõi mà dự án hướng tới khai thác: sinh viên có thể hiểu từng khái niệm tài chính riêng lẻ, nhưng gặp khó khi kết hợp thông tin từ nhiều nguồn và xác định thông tin nào nên được dùng làm căn cứ cho kết luận cuối cùng.
 
 ## 2. Target User (Người dùng mục tiêu được lựa chọn)
 
@@ -54,7 +52,7 @@ Người dùng không đơn thuần được yêu cầu nhớ lại kiến thứ
 
 ## 4. Draft Problem Statement (Bản nháp phát biểu vấn đề)
 
-> Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản gặp khó khăn khi xác định cách giải thích đáng tin cậy nhất cho một bất thường tài chính doanh nghiệp, vì thông tin liên quan bị phân mảnh giữa hồ sơ tài chính, tài liệu nội bộ, thông tin công khai và các thông tin chưa được kiểm chứng — khiến việc phân biệt bằng chứng đáng tin cậy với nhiễu và suy đoán trở nên khó khăn.
+> Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản gặp khó khăn khi xác định cách giải thích đáng tin cậy nhất cho một bất thường tài chính doanh nghiệp, vì thông tin liên quan bị phân mảnh giữa hồ sơ tài chính, tài liệu nội bộ, thông tin công khai và các thông tin chưa được kiểm chứng khiến việc phân biệt bằng chứng đáng tin cậy với nhiễu và suy đoán trở nên khó khăn.
 
 
 ## 5. Initial Source / Observation (Nguồn giả định ban đầu & kế hoạch quan sát)
@@ -63,7 +61,7 @@ Khó khăn của người dùng được đề xuất hiện đang được xem 
 
 > Sinh viên có kiến thức tài chính cơ bản có thể gặp khó khăn trong việc tích hợp thông tin tài chính phân mảnh và phân biệt bằng chứng đã kiểm chứng với suy đoán khi xử lý một tình huống doanh nghiệp mở.
 
-**Kế hoạch kiểm chứng:** thực hiện một buổi quan sát quy mô nhỏ với sinh viên thuộc nhóm người dùng mục tiêu, sử dụng một tình huống tài chính doanh nghiệp ngắn gồm nhiều loại thông tin. Buổi quan sát sẽ kiểm tra xem người tham gia có thể xác định bất thường tài chính chính, xác định thông tin nào liên quan, phân biệt thông tin đã kiểm chứng với chưa kiểm chứng, kết nối bằng chứng từ nhiều nguồn, và đưa ra kết luận có căn cứ.
+**Kế hoạch kiểm chứng:** Thực hiện một buổi quan sát quy mô nhỏ với sinh viên thuộc nhóm người dùng mục tiêu, sử dụng một tình huống tài chính doanh nghiệp ngắn gồm nhiều loại thông tin. Buổi quan sát sẽ kiểm tra xem người tham gia có thể xác định bất thường tài chính chính, xác định thông tin nào liên quan, phân biệt thông tin đã kiểm chứng với chưa kiểm chứng, kết nối bằng chứng từ nhiều nguồn, và đưa ra kết luận có căn cứ.
 
 ## 6. Vì sao đây là vấn đề tài chính hoặc ngân hàng?
 
@@ -93,7 +91,7 @@ Vấn đề này liên quan trực tiếp đến lĩnh vực tài chính vì ng�
 
 | Nội dung | Ghi nhận |
 |---|---|
-| Feedback received | Problem direction (Đề xuất 1 — Tích hợp thông tin), target user và user task được thầy **duyệt, không yêu cầu chỉnh sửa**. Không có nhược điểm nào được nêu riêng cho nhóm. |
+| Feedback received | Problem direction (Đề xuất 1: Tích hợp thông tin), target user và user task được **duyệt, không yêu cầu chỉnh sửa**. Không có nhược điểm nào được nêu riêng cho nhóm. |
 | Decision | **Keep** — Giữ nguyên problem statement, target user và user task như bản nháp Tuần 1. |
 | Revision made | Không có thay đổi nào về problem/target user/user task. |
 | Reason | Hướng đã được duyệt, không cần điều chỉnh. |
