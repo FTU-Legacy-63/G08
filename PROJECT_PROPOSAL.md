@@ -12,7 +12,7 @@ Nhóm tiếp tục theo **Đề xuất 1 — Tích hợp thông tin**, đã đư
 
 ## 2. Target User and User Task
 
-**Target user:** Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức cơ bản về báo cáo tài chính và tài chính doanh nghiệp — đã nắm khái niệm nền tảng (đọc báo cáo tài chính, các chỉ số cơ bản) nhưng còn ít kinh nghiệm áp dụng vào tình huống mở, nơi bất thường phải tự phát hiện qua tính toán, không được kể sẵn.
+**Target user:** Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức cơ bản về báo cáo tài chính và tài chính doanh nghiệp đã nắm khái niệm nền tảng (đọc báo cáo tài chính, các chỉ số cơ bản) nhưng còn ít kinh nghiệm áp dụng vào tình huống mở, nơi bất thường phải tự phát hiện qua tính toán, không được kể sẵn.
 
 **User task:** Tự tính toán các chỉ số tài chính từ dữ liệu thô, so sánh với benchmark ngành, phân loại đúng loại cờ đỏ kế toán (accounting red flag) tương ứng, và xác định đơn vị/cá nhân có thẩm quyền liên quan đến bất thường từ đó hình thành kết luận có căn cứ định lượng.
 
