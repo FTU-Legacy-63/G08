@@ -8,13 +8,13 @@ Nhóm tiếp tục theo **Đề xuất 1 — Tích hợp thông tin**, đã đư
 
 > Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản gặp khó khăn khi xác định cách giải thích đáng tin cậy nhất cho một bất thường tài chính doanh nghiệp, vì bằng chứng thật sự nằm trong số liệu định lượng (báo cáo tài chính, chỉ số tài chính) nhưng dễ bị lấn át bởi thông tin định tính (hồ sơ nhân sự, tin đồn), khiến việc tách bạch bằng chứng có giá trị phân tích với thông tin chỉ mang tính dẫn dắt trở nên khó khăn.
 
-**Thay đổi so với Tuần 1:** ở vòng brainstorm sau checkpoint, nhóm nhận ra hướng ban đầu (đánh giá độ tin cậy nguồn tin — email, hồ sơ nhân sự, tin đồn) dễ khiến sản phẩm lệch thành một trò chơi trinh thám thuần túy, không đo đúng năng lực tài chính. Vấn đề được thu hẹp lại: khó khăn cốt lõi không phải "phân biệt nguồn tin thật/giả", mà là **tự đọc số liệu tài chính thô, tự tính chỉ số, và nhận diện bất thường** — đúng năng lực phân tích tài chính, không phải suy luận hình sự.
+**Thay đổi so với Tuần 1:** ở vòng brainstorm sau checkpoint, nhóm nhận ra hướng ban đầu (đánh giá độ tin cậy nguồn tin như email, hồ sơ nhân sự, tin đồn) dễ khiến sản phẩm lệch thành một trò chơi trinh thám thuần túy, không đo đúng năng lực tài chính. Vấn đề được thu hẹp lại: khó khăn cốt lõi không phải "phân biệt nguồn tin thật/giả", mà là **tự đọc số liệu tài chính thô, tự tính chỉ số, và nhận diện bất thường** phù hợp với năng lực phân tích tài chính, không phải suy luận hình sự.
 
 ## 2. Target User and User Task
 
 **Target user:** Sinh viên đại học ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức cơ bản về báo cáo tài chính và tài chính doanh nghiệp — đã nắm khái niệm nền tảng (đọc báo cáo tài chính, các chỉ số cơ bản) nhưng còn ít kinh nghiệm áp dụng vào tình huống mở, nơi bất thường phải tự phát hiện qua tính toán, không được kể sẵn.
 
-**User task:** Tự tính toán các chỉ số tài chính từ dữ liệu thô, so sánh với benchmark ngành, phân loại đúng loại cờ đỏ kế toán (accounting red flag) tương ứng, và xác định đơn vị/cá nhân có thẩm quyền liên quan đến bất thường — từ đó hình thành kết luận có căn cứ định lượng.
+**User task:** Tự tính toán các chỉ số tài chính từ dữ liệu thô, so sánh với benchmark ngành, phân loại đúng loại cờ đỏ kế toán (accounting red flag) tương ứng, và xác định đơn vị/cá nhân có thẩm quyền liên quan đến bất thường từ đó hình thành kết luận có căn cứ định lượng.
 
 **Luồng nhiệm vụ:**
 
@@ -58,8 +58,8 @@ Trong "The Last Heir", vòng lặp này thể hiện cụ thể: người dùng 
 
 **Vì sao không chọn hai pattern còn lại:**
 
-- **Không phải Comparison Tool** (công cụ so sánh). Comparison Tool chỉ đặt các phương án có sẵn cạnh nhau để người dùng nhìn và tự so sánh. Sản phẩm của nhóm không dừng ở việc "đặt cạnh nhau để xem" — người dùng phải tự tính ra chỉ số trước, sản phẩm mới chấm đúng/sai.
-- **Không phải Calculator** (công cụ tính toán). Calculator nhận input rồi trả ra một con số duy nhất theo công thức cố định. Sản phẩm của nhóm không chỉ tính ra 1 chỉ số — nó đánh giá cả một chuỗi lựa chọn (chỉ số nào được tính, cờ đỏ nào được chọn, kết luận nào được đưa ra) rồi giải thích lý do đúng/sai.
+- **Không phải Comparison Tool** (công cụ so sánh). Comparison Tool chỉ đặt các phương án có sẵn cạnh nhau để người dùng nhìn và tự so sánh. Sản phẩm của nhóm không dừng ở việc "đặt cạnh nhau để xem" mà người dùng phải tự tính ra chỉ số trước, sản phẩm mới chấm đúng/sai.
+- **Không phải Calculator** (công cụ tính toán). Calculator nhận input rồi trả ra một con số duy nhất theo công thức cố định. Sản phẩm của nhóm không chỉ tính ra 1 chỉ số mà nó đánh giá cả một chuỗi lựa chọn (chỉ số nào được tính, cờ đỏ nào được chọn, kết luận nào được đưa ra) rồi giải thích lý do đúng/sai.
 
 Việc chọn pattern này được suy ra sau khi đã xác định main output (mục 5) và loại quy trình cần có — tính toán chỉ số, so benchmark, phân loại cờ đỏ, đối chiếu thẩm quyền (chi tiết ở `docs/SOLUTION_STRUCTURE.md` mục 4) — không phải chọn trước rồi mới đi tìm output cho khớp.
 
