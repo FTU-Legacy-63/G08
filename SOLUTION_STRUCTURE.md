@@ -1,4 +1,4 @@
-# The Last Heir: Solution Structure (Tuần 2, Bản v2)
+# The Last Heir: Solution Structure (Tuần 2)
 
 > Học phần: **NHA408E** | Nhóm: **G08**
 
