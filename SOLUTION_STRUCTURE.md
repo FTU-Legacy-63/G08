@@ -1,7 +1,6 @@
 # The Last Heir: Solution Structure (Tuần 2, Bản v2)
 
 > Học phần: **NHA408E** | Nhóm: **G08**
-> Cập nhật Bản v2: Loại bỏ khái niệm "Gói dữ liệu", chuẩn hóa luồng MVP Flow.
 
 ## 1. Main Output
 
@@ -33,7 +32,7 @@ Dữ liệu do người dùng tính và chọn đóng vai trò đầu vào (Inpu
 
 Dữ liệu ban đầu bao gồm bối cảnh doanh nghiệp (Aster Holdings thuộc Aurora Group), ba bộ dữ liệu thô độc lập cho ba bất thường trọng yếu, một bộ số liệu nhiễu (bẫy trọng yếu), Bản đồ quyền hạn tài chính và năm nhân vật đại diện cho các phân vùng thông tin.
 
-Bản v2 cấu trúc lại thông tin thành hai phần rõ ràng: **Hồ sơ vụ án** (dữ liệu công khai, hiển thị mặc định) và **Danh mục nhân vật** (dữ liệu nội bộ, cần thao tác mở).
+Trò chơi thành hai phần rõ ràng: **Hồ sơ vụ án** (dữ liệu công khai, hiển thị mặc định) và **Danh mục nhân vật** (dữ liệu nội bộ, cần thao tác mở).
 
 ### 3.1. Hồ sơ vụ án (Hiển thị mặc định, không cần điều kiện mở)
 
