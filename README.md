@@ -1,4 +1,4 @@
-# The Last Heir — Checkpoint Tuần 1 & 2
+# The Last Heir 
 
 > Học phần: **NHA408E** · Nhóm: **G08** · Ý tưởng: Một trò chơi điều tra tài chính, trong đó người chơi phải tự đọc dữ liệu tài chính thô, tự tính toán chỉ số, và xác định đúng cách giải thích được bằng chứng định lượng ủng hộ mạnh nhất cho một bất thường tài chính doanh nghiệp, trong vòng 48 giờ ảo.
 
