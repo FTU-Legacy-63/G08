@@ -1,135 +1,136 @@
-# The Last Heir — Solution Structure (Tuần 2)
+# The Last Heir: Solution Structure (Tuần 2, Bản v2)
 
-> Học phần: **NHA408E** · Nhóm: **G08**
+> Học phần: **NHA408E** | Nhóm: **G08**
+> Cập nhật Bản v2: Loại bỏ khái niệm "Gói dữ liệu", chuẩn hóa luồng MVP Flow.
 
 ## 1. Main Output
 
-Main output đã chốt ở `docs/PROJECT_PROPOSAL.md`:
+Xác định theo định hướng tại `PROJECT_PROPOSAL.md`:
 
-> Kết quả đối chiếu giữa các chỉ số/kết luận người dùng tự tính và tự chọn với đáp án đúng — gồm: từng chỉ số tính đúng hay sai, cờ đỏ phân loại đúng hay sai, đơn vị/người có thẩm quyền liên quan đúng hay sai, kèm giải thích vì sao.
+> Bản đối chiếu chi tiết giữa chỉ số, phân loại và kết luận do người dùng tự xử lý với đáp án chuẩn. Kết quả hiển thị tính chính xác của từng chỉ số, nhãn cờ đỏ, thẩm quyền phê duyệt liên quan, kèm giải thích chuyên môn.
 
-Các chỉ số và kết luận người dùng tự tính/tự chọn (mục "Input" ở sơ đồ dưới) là quyết định của người dùng, đưa vào Process — không phải bản thân main output. Main output là kết quả Process trả về sau khi đối chiếu quyết định đó với đáp án đúng.
+Dữ liệu do người dùng tính và chọn đóng vai trò đầu vào (Input) của hệ thống xử lý (Process). Output chính thức là kết quả đánh giá và phản hồi được trả về.
 
-## 2. User → Input → Process → Output → User Action
+## 2. Luồng Xử Lý Tổng Thể (System Flow)
 
 ```
-User: sinh viên (target user)
-   |
-   v
-Input: đọc dữ liệu tài chính thô (báo cáo hợp nhất, cơ cấu khách
-        hàng, khoản phải thu chi tiết), tự tính chỉ số (OCF/NI,
-        DSO, % tập trung khách hàng), chọn nhãn cờ đỏ tương ứng,
-        đối chiếu mã nhân viên với Bảng phân quyền, chọn kết luận
-        về đơn vị và người có thẩm quyền liên quan
-   |
-   v
-Process: so khớp từng chỉ số đã tính với đáp án đúng (cho phép
-        sai số nhỏ), so khớp nhãn cờ đỏ đã chọn với đáp án đúng,
-        so khớp kết luận về đơn vị/người có thẩm quyền với đáp
-        án đúng, tổng hợp giải thích
-   |
-   v
-Output (main output): kết quả đối chiếu — từng chỉ số đúng/sai,
-        cờ đỏ phân loại đúng/sai, kết luận đơn vị/người có thẩm
-        quyền đúng/sai, kèm giải thích
-   |
-   v
-User action: xem lại đúng chỉ số nào tính sai hoặc cờ đỏ nào
-        phân loại nhầm, hiệu chỉnh cách đọc dữ liệu tài chính
-        cho lần phân tích sau
+[User: Sinh viên khối ngành Kinh tế]
+                     │
+                     ▼
+[Input: Dữ liệu thô trích xuất, chỉ số tự tính toán (OCF/NI, DSO, % tập trung khách hàng), nhãn cờ đỏ kế toán được chọn, kết luận về nhân sự/bộ phận thẩm quyền]
+                     │
+                     ▼
+[Process: Thuật toán so khớp chỉ số với biên độ sai số cho phép, đối chiếu nhãn cờ đỏ, kiểm tra thẩm quyền phê duyệt và tổng hợp phản hồi giải thích]
+                     │
+                     ▼
+[Output: Bảng đánh giá chi tiết đúng/sai cho từng hạng mục kèm giải thích căn cứ tài chính]
+                     │
+                     ▼
+[User Action: Rà soát sai sót chuyên môn, điều chỉnh tư duy đọc báo cáo và phân tích dữ liệu cho các phiên tiếp theo]
 ```
 
 ## 3. Initial Required Information
 
-Thông tin tối thiểu cần có gồm bối cảnh một công ty con (Aster Holdings, thuộc Aurora Group), ba bộ dữ liệu tài chính thô độc lập tương ứng ba bất thường chính, một bộ dữ liệu nhiễu (bẫy ngưỡng trọng yếu), một bảng phân quyền tài chính nội bộ, và năm nhân vật đóng vai trò vùng dữ liệu điều hướng.
+Dữ liệu ban đầu bao gồm bối cảnh doanh nghiệp (Aster Holdings thuộc Aurora Group), ba bộ dữ liệu thô độc lập cho ba bất thường trọng yếu, một bộ số liệu nhiễu (bẫy trọng yếu), Bản đồ quyền hạn tài chính và năm nhân vật đại diện cho các phân vùng thông tin.
 
-### 3.1. Thông tin sơ bộ — công khai ngay từ đầu
+Bản v2 cấu trúc lại thông tin thành hai phần rõ ràng: **Hồ sơ vụ án** (dữ liệu công khai, hiển thị mặc định) và **Danh mục nhân vật** (dữ liệu nội bộ, cần thao tác mở).
 
-Nguyên tắc phân loại: thông tin công khai từ đầu là loại dữ liệu một công ty đại chúng có nghĩa vụ công bố định kỳ hoặc là cấu trúc tổ chức không mang tính bí mật — không gán thành "bí mật riêng" của một nhân vật cụ thể.
+### 3.1. Hồ sơ vụ án (Hiển thị mặc định, không cần điều kiện mở)
 
-| Gói | Nội dung | Vai trò |
-|---|---|---|
-| Gói 1 | Bối cảnh khủng hoảng (đoạn mở đầu), khởi động đồng hồ 48 giờ | Kể chuyện |
-| Gói 2 | Giới thiệu Aurora Group / Aster Holdings, cơ cấu điều hành | Bối cảnh nền |
-| Gói 3 | Báo cáo tài chính hợp nhất — Doanh thu, Lợi nhuận ròng (NI), Dòng tiền hoạt động (OCF), 4 quý | Dữ liệu thô cho Bất thường 1 |
-| Gói 4 | Cơ cấu khách hàng theo % doanh thu, 4 quý | Dữ liệu thô cho Bất thường 3 |
-| Gói 5 | Bản đồ quyền hạn tài chính (bảng phân quyền theo chức danh) | Công cụ đối chiếu cho Bất thường 3 |
-| Gói 6 | Danh sách 5 nhân vật (tên + chức danh, chưa có hồ sơ chi tiết) | Menu điều hướng điều tra tiếp theo |
+Bao gồm các dữ liệu công khai theo quy định công bố thông tin hoặc cơ cấu tổ chức chung của doanh nghiệp. Toàn bộ xuất hiện đồng thời tại màn hình ban đầu.
 
-### 3.2. Thông tin ẩn — chỉ lộ khi điều tra đúng người/vùng
+| Hạng mục | Chi tiết nội dung | Vai trò chuyên môn |
+| --- | --- | --- |
+| Bối cảnh tình huống | Tóm tắt sự việc, khởi động đồng hồ 48 giờ | Dẫn nhập bối cảnh |
+| Giới thiệu doanh nghiệp | Cơ cấu tổ chức Aurora Group và Aster Holdings | Thông tin nền tảng |
+| Báo cáo tài chính hợp nhất | Doanh thu, Lợi nhuận ròng (NI), Dòng tiền kinh doanh (OCF) trong 4 quý | Dữ liệu tính Bất thường 1 |
+| Cơ cấu khách hàng | Tỷ trọng đóng góp doanh thu của khách hàng trong 4 quý | Dữ liệu tính Bất thường 3 |
+| Bản đồ quyền hạn tài chính | Khung phân quyền phê duyệt theo chức danh nội bộ | Dữ liệu đối chiếu Bất thường 3 |
+| Danh mục nhân vật | Danh sách 5 nhân sự chủ chốt (chỉ gồm tên và chức danh) | Menu điều hướng tới mục 3.2 |
 
-| Thông tin ẩn | Mở khi điều tra | Vì sao hợp lý là tài liệu nội bộ |
-|---|---|---|
-| Khoản phải thu (AR) chi tiết theo quý | Victor | Dữ liệu vận hành sâu hơn báo cáo hợp nhất, thuộc phạm vi COO |
-| Hồ sơ hợp đồng Northstar (mã phê duyệt, mô tả dịch vụ) | Victor | Tài liệu hợp đồng cụ thể, cần quyền truy cập nội bộ |
-| Chi phí văn phòng phẩm bất thường (bẫy ngưỡng trọng yếu) | David | Chi tiết chi phí nội bộ do CFO quản lý |
-| Ghi chú ẩn (twist giải oan, có điều kiện) | David | Tài liệu cá nhân, chỉ lộ đúng điều kiện đã tính đúng trước |
-| Gói đãi ngộ cá nhân | Ethan | Thông tin nhân sự riêng tư |
-| Phạm vi kiểm toán đã thực hiện | Sophia | Hồ sơ công việc nội bộ của đơn vị kiểm toán |
-| Danh mục đầu tư cá nhân | Lucas | Thông tin tài chính cá nhân |
-| Sự kiện tin đồn + tài liệu đối chiếu | Kích hoạt sau khi mở hồ sơ David lần đầu | Sự kiện cốt truyện có điều kiện |
+### 3.2. Danh mục nhân vật (Vùng thông tin cần chủ động truy cập)
+
+Người dùng lựa chọn điều tra từng nhân sự để tiếp cận tài liệu nội bộ tương ứng theo thứ tự linh hoạt.
+
+| Dữ liệu nội bộ | Điều kiện mở | Cơ sở phân loại tài liệu nội bộ |
+| --- | --- | --- |
+| Chi tiết khoản phải thu (AR) theo quý | Hồ sơ Victor | Dữ liệu quản trị vận hành thuộc phạm vi phụ trách của COO |
+| Hồ sơ hợp đồng Northstar | Hồ sơ Victor | Hồ sơ pháp lý và hợp đồng kinh tế nội bộ |
+| Chi tiết chi phí văn phòng phẩm (bẫy trọng yếu) | Hồ sơ David | Báo cáo chi phí chi tiết thuộc thẩm quyền CFO |
+| Ghi chú cá nhân (tài liệu giải trình mở rộng) | Hồ sơ David | Tài liệu cá nhân, yêu cầu tính đúng chỉ số trước khi mở |
+| Chi tiết gói đãi ngộ cá nhân | Hồ sơ Ethan | Hồ sơ nhân sự bảo mật |
+| Báo cáo phạm vi kiểm toán | Hồ sơ Sophia | Biên bản làm việc của đơn vị kiểm toán |
+| Danh mục đầu tư cá nhân | Hồ sơ Lucas | Tài liệu tài chính cá nhân |
+| Báo cáo xác minh tin đồn | Tự động sau khi truy cập hồ sơ David | Dữ liệu kiểm chứng sự kiện nội bộ |
 
 ## 4. Core Process Type
 
-Quy trình gồm bốn loại cụ thể.
+Hệ thống xử lý qua 4 bước logic:
 
-**Loại thứ nhất là tính toán.** Với mỗi bất thường, người dùng tự tính chỉ số từ dữ liệu thô (OCF/NI, DSO, % tập trung khách hàng). Hệ thống so kết quả người dùng nhập với đáp án đúng, cho phép sai số nhỏ.
-
-**Loại thứ hai là phân loại.** Người dùng chọn nhãn cờ đỏ kế toán tương ứng cho từng bất thường, từ danh sách 5 nhãn (3 nhãn đúng, 2 nhãn nhiễu không áp dụng case này). Hệ thống so với nhãn đúng.
-
-**Loại thứ ba là đối chiếu thẩm quyền.** Với Bất thường 3, người dùng tự đối chiếu mã nhân viên trên hồ sơ hợp đồng với Bảng phân quyền tài chính, nhận ra sự lệch pha giữa nội dung hợp đồng và cách nó được phân loại nội bộ.
-
-**Loại thứ tư là giải thích.** Khi người dùng nộp Báo cáo điều tra cuối, hệ thống trả về lý do khớp hoặc lệch với đáp án đúng cho từng phần: chỉ số, cờ đỏ, đơn vị/người có thẩm quyền, đối chiếu tin đồn, đánh giá trọng yếu.
+1. **Tính toán (Calculation):** Người dùng nhập giá trị các chỉ số (OCF/NI, DSO, % tập trung khách hàng) tính được từ dữ liệu thô. Hệ thống kiểm tra kết quả theo khoảng sai số cho phép.
+2. **Phân loại (Classification):** Người dùng chọn nhãn cờ đỏ kế toán tương ứng từ 5 lựa chọn (3 nhãn chính xác, 2 nhãn nhiễu). Hệ thống đối chiếu với phân loại chuẩn.
+3. **Đối chiếu thẩm quyền (Authority Cross-Checking):** Người dùng đối chiếu mã phê duyệt trên hợp đồng với Bản đồ quyền hạn tài chính để phát hiện sai lệch về phân quyền nội bộ.
+4. **Tổng hợp phản hồi (Explanation):** Khi người dùng nộp báo cáo, hệ thống tự động xuất kết quả đánh giá chi tiết kèm căn cứ phân tích cho từng hạng mục.
 
 ## 5. MVP Flow
 
-Luồng hoàn chỉnh và nhỏ nhất có thể chạy từ đầu đến cuối, gồm chín bước:
+Mỗi giai đoạn được phân định rõ theo ba yếu tố: Xử lý của hệ thống, Thao tác của người dùng và Điều kiện kích hoạt.
 
-**Bước 1 — Mở đầu.** Người dùng nhận bối cảnh khủng hoảng (Gói 1–2). Đồng hồ 48 giờ ảo bắt đầu chạy, hiển thị cố định trên màn hình.
+* **Bước 1: Khởi tạo tình huống (Tự động)**
+  * Hệ thống: Hiển thị tóm tắt tình huống và bắt đầu đếm ngược thời gian.
+  * Người dùng: Tiếp nhận thông tin bối cảnh.
+  * Điều kiện: Truy cập phiên làm việc mới.
 
-**Bước 2 — Nhận thông tin sơ bộ.** Người dùng có sẵn báo cáo tài chính hợp nhất (Gói 3), cơ cấu khách hàng (Gói 4), Bản đồ quyền hạn (Gói 5), danh sách 5 nhân vật (Gói 6) — không cần chọn điều tra ai mới thấy được các gói này.
+* **Bước 2: Phân tích Hồ sơ vụ án (Mặc định)**
+  * Hệ thống: Hiển thị toàn bộ dữ liệu tại mục 3.1.
+  * Người dùng: Đọc số liệu và có thể tính toán trước chỉ số OCF/NI và tỷ trọng tập trung khách hàng.
+  * Điều kiện: Hoàn thành Bước 1.
 
-**Bước 3 — Chọn nhân vật để điều tra.** Người dùng tự quyết định mở ai trước trong 5 nhân vật (David, Victor, Ethan, Sophia, Lucas).
+* **Bước 3: Lựa chọn nhân vật điều tra (Thao tác chính)**
+  * Người dùng: Tùy chọn mở hồ sơ của một trong 5 nhân sự (David, Victor, Ethan, Sophia, Lucas) theo thứ tự bất kỳ.
+  * Điều kiện: Thực hiện trên giao diện danh mục nhân sự.
 
-**Bước 4 — Phân tích từng vùng dữ liệu.** Với dữ liệu công khai (Gói 3, 4): tự tính OCF/NI (Bất thường 1) và % tập trung khách hàng (Bất thường 3). Nếu điều tra Victor: mở thêm AR chi tiết để tự tính DSO (Bất thường 2), và đối chiếu hồ sơ hợp đồng Northstar với Bản đồ quyền hạn. Nếu điều tra David: xử lý bẫy ngưỡng trọng yếu (chi phí văn phòng phẩm). Nếu điều tra Ethan/Sophia/Lucas: đọc dữ liệu, tự kết luận không có bất thường.
+* **Bước 4: Khai thác dữ liệu nội bộ (Phân nhánh)**
+  * Nhánh Victor: Hệ thống xuất chi tiết AR (để tính DSO) và hợp đồng Northstar. Người dùng đối chiếu mã phê duyệt với Bản đồ quyền hạn.
+  * Nhánh David: Hệ thống xuất chi tiết chi phí văn phòng phẩm. Người dùng tính toán tỷ trọng trên doanh thu để đánh giá tính trọng yếu.
+  * Nhánh Ethan/Sophia/Lucas: Hệ thống xuất các hồ sơ liên quan để người dùng xác nhận không có bất thường trọng yếu.
 
-**Bước 5 — Ghi chú ẩn (điều kiện).** Nếu người dùng đã tính đúng OCF/NI trước khi mở hồ sơ David → nhận thưởng ghi chú giải oan có hiệu ứng đặc biệt; nếu mở hồ sơ David trước, ghi chú vẫn xuất hiện nhưng không có hiệu ứng.
+* **Bước 5: Kích hoạt thông tin mở rộng (Tự động theo logic)**
+  * Hệ thống: Kiểm tra nếu người dùng đã tính đúng OCF/NI trước khi xem hồ sơ David, tài liệu giải trình bổ sung sẽ hiển thị ở trạng thái đặc biệt.
+  * Người dùng: Tiếp nhận thông tin bổ sung nếu thỏa mãn điều kiện.
 
-**Bước 6 — Sự kiện tin đồn.** Xuất hiện sau khi người dùng mở hồ sơ David lần đầu — chọn xác minh (xem tài liệu đối chiếu) hoặc ghi nhận thẳng vào báo cáo.
+* **Bước 6: Xử lý sự kiện tin đồn (Lựa chọn)**
+  * Điều kiện: Người dùng mở hồ sơ David lần đầu.
+  * Người dùng: Chọn "Xác minh thông tin trước khi ghi nhận" hoặc "Ghi nhận trực tiếp vào báo cáo".
 
-**Bước 7 — Bảng chẩn đoán tài chính.** Tổng hợp ba bất thường chính: nhập chỉ số đã tính, chọn nhãn cờ đỏ, đánh giá độ tin cậy nguồn.
+* **Bước 7: Điền Bảng chẩn đoán tài chính (Bắt buộc)**
+  * Người dùng: Điền các chỉ số đã tính, chọn nhãn cờ đỏ tương ứng và đánh giá độ tin cậy của thông tin.
+  * Ràng buộc: Hệ thống chỉ ghi nhận các chỉ số phát sinh từ quá trình thao tác hợp lệ.
 
-**Bước 8 — Báo cáo điều tra cuối.** Điền năm phần: đơn vị có bất thường, bằng chứng định lượng (trích đúng chỉ số đã tính), người có thẩm quyền liên quan, đối chiếu tin đồn, đánh giá ngưỡng trọng yếu. Xảy ra khi người dùng tự nộp hoặc khi đồng hồ về 0 (tự động chuyển với dữ liệu hiện có).
+* **Bước 8: Nộp Báo cáo điều tra (Chủ động hoặc Tự động)**
+  * Người dùng: Hoàn thiện 5 nội dung đánh giá (Đơn vị có bất thường, Bằng chứng định lượng, Người có thẩm quyền liên quan, Kết quả xác minh tin đồn, Đánh giá tính trọng yếu).
+  * Kích hoạt: Người dùng chủ động gửi báo cáo hoặc hệ thống tự thu bài khi hết thời gian 48 giờ ảo.
 
-**Bước 9 — Kết quả.** Hệ thống chấm điểm, hiển thị đáp án đúng kèm giải thích, cùng đoạn kết tùy độ chính xác (đối chất với CEO).
+* **Bước 9: Nhận kết quả và Đánh giá (Tự động)**
+  * Hệ thống: Chấm điểm tự động, xuất bản đối chiếu đáp án chi tiết và hiển thị phân cảnh kết thúc tương ứng với mức độ chính xác của báo cáo.
 
-Người dùng có thể hoàn thành một lượt phân tích đầy đủ ở bước 1 đến 8; kết quả ở bước 9 giải thích được từng phần; lựa chọn làm thay đổi trạng thái vì việc mở hồ sơ nhân vật quyết định dữ liệu nào khả dụng cho Bảng chẩn đoán; bước sau phụ thuộc bước trước vì Báo cáo điều tra cuối chỉ chấp nhận chỉ số đã thực sự được tính ở bước 4 và 7.
+## 6. Phạm Vi Dự Án (Scope Definition)
 
-## 6. Target, Fallback và Out of Scope
-
-**Target Scope**, tức phiên bản khả thi dự kiến cho Tuần 6–7, gồm: một công ty (Aster Holdings) với ba bất thường tài chính chính (Earnings Quality, DSO, Customer Concentration) và một bất thường nhiễu (ngưỡng trọng yếu); năm nhân vật đóng vai trò vùng dữ liệu; Bảng phân quyền tài chính; đồng hồ 48 giờ đếm ngược thời gian thực; cơ chế Ghi chú ẩn có điều kiện; một sự kiện tin đồn tĩnh có điều kiện kích hoạt; Bảng chẩn đoán tài chính; Báo cáo điều tra cuối có validate chéo.
-
-**Fallback Scope**, tức hướng đi nhỏ hơn nếu rủi ro về thời gian hoặc kỹ thuật xảy ra, gồm: bỏ cơ chế Ghi chú ẩn có điều kiện thứ tự (chỉ hiển thị ghi chú như tài liệu thường, không phân biệt trải nghiệm theo thứ tự mở); bỏ sự kiện tin đồn (chỉ giữ 3 bất thường chính và bẫy ngưỡng trọng yếu); rút danh sách nhãn cờ đỏ nhiễu từ 5 xuống 3 (chỉ giữ đúng 3 nhãn khớp 3 bất thường, chấp nhận giảm độ khó phân loại).
-
-**Out of Scope**, tức các phần loại hẳn khỏi giai đoạn này, gồm: nhiều vụ án hoặc cốt truyện rẽ nhánh; hệ thống tài khoản, đăng nhập, lưu tiến trình giữa các phiên; bảng xếp hạng và chế độ nhiều người chơi; mô phỏng giá cổ phiếu phản ứng động theo thời gian thực (đã cân nhắc và loại bỏ — xem mục 7); tự sinh case bằng AI hoặc dùng dữ liệu tài chính thật từ doanh nghiệp/ngân hàng.
+* **Target Scope (Mục tiêu Tuần 6 và 7):** Doanh nghiệp Aster Holdings với 3 bất thường chính (Earnings Quality, DSO, Customer Concentration) và 1 bẫy thông tin không trọng yếu; 5 nhân vật dữ liệu; Bản đồ phân quyền tài chính; Đồng hồ đếm ngược thời gian thực; 1 sự kiện tin đồn; Bảng chẩn đoán tài chính và Báo cáo điều tra có kiểm tra chéo dữ liệu.
+* **Fallback Scope (Phương án dự phòng):** Chuyển tài liệu giải trình mở rộng thành văn bản thông thường; tinh giản sự kiện tin đồn; rút gọn danh sách nhãn cờ đỏ từ 5 xuống 3.
+* **Out of Scope (Ngoài phạm vi phát triển):** Cốt truyện nhiều nhánh phức tạp; hệ thống tài khoản và lưu trữ cơ sở dữ liệu nhiều phiên; bảng xếp hạng người chơi; mô hình biến động giá cổ phiếu theo thời gian thực; tính năng tự động tạo case bằng AI.
 
 ## 7. Initial Route Hypothesis
 
-Route chính là **Code based web** theo hướng interactive flow, vì main output đòi hỏi trạng thái thay đổi theo lựa chọn của người dùng (chỉ số đã tính, nhân vật đã mở, tin đồn đã xác minh), nên cần tương tác thực chứ không chỉ xem tĩnh, phù hợp với bốn loại process ở mục 4.
+* **Phương án triển khai chính:** Ứng dụng Web tương tác (Code based web) sử dụng React/JavaScript. Cấu trúc dữ liệu tĩnh (Báo cáo tài chính, Danh mục phân quyền, Đáp án chuẩn) được lưu trữ dưới định dạng JSON, không yêu cầu cơ sở dữ liệu phức tạp. Cơ chế thời gian được vận hành bằng bộ đếm giờ chuẩn (`setInterval`).
+* **Phương án dự phòng:** Bản mẫu tương tác (Interactive Figma Prototype) kết hợp bảng quy tắc chấm điểm chi tiết nếu tiến độ kỹ thuật không đáp ứng thời hạn.
 
-**Ghi chú kỹ thuật quan trọng:** thiết kế ban đầu từng cân nhắc một cơ chế "Đồng hồ niềm tin thị trường" — giá cổ phiếu phản ứng động theo nhiều tin đồn thời gian thực. Cơ chế này bị loại bỏ vì độ khó kỹ thuật cao nhất trong toàn bộ thiết kế (cần mô phỏng trạng thái động, nhiều sự kiện chồng lấn) trong khi không ảnh hưởng trực tiếp tới điểm số. Thay vào đó, nhóm giữ lại đúng phần tạo áp lực thời gian bằng một đồng hồ đếm ngược 48 giờ ảo đơn giản (một biến số giảm dần theo thời gian thực, dùng `setInterval`), không gắn chi phí theo từng hành động — toàn bộ nằm trong khả năng React/JS thuần, không bắt buộc backend.
+## 8. Phân Công Trách Nhiệm (Responsibility Matrix)
 
-Route dự phòng là **Prototype cộng logic file**, ví dụ một bản Figma có thể bấm được kèm một file quy tắc viết tay mô tả cách chấm điểm, dùng nếu phần code tương tác không kịp hoàn thành.
-
-Dữ liệu tài chính, cờ đỏ, bảng phân quyền và đáp án đúng sẽ lưu dưới dạng file cấu trúc tĩnh như JSON, không cần database vì Target Scope chỉ có một công ty, một bộ case.
-
-## 8. Responsibility by Output
-
-| Responsibility | Owner | Visible output | Consumer / dependency |
-|---|---|---|---|
-| Input owner | Phạm Triệu Tiến Dũng | Bộ dữ liệu tài chính thô (báo cáo hợp nhất, AR chi tiết, cơ cấu khách hàng), đáp án đúng cho từng chỉ số, bộ dữ liệu nhiễu (ngưỡng trọng yếu) | Logic owner, Interface owner, README |
-| Logic owner | Nguyễn Minh Hiền | Công thức tính từng chỉ số (OCF/NI, DSO, % tập trung), benchmark so sánh, danh sách nhãn cờ đỏ (đúng + nhiễu), logic đồng hồ 48 giờ | Output owner, Integration owner, kiểm thử |
-| Output owner | Tôn Khánh Ngọc | Định nghĩa nội dung phản hồi ở Báo cáo điều tra cuối (đúng/sai từng phần kèm giải thích), nội dung Ghi chú ẩn và sự kiện tin đồn, đoạn kết theo độ chính xác | Interface owner, demo |
-| Interface owner | Đinh Thị Minh Khuê | Màn hình dùng output thật: danh sách 5 nhân vật (Follow the Money), Bảng chẩn đoán tài chính, Bảng phân quyền, đồng hồ 48 giờ, form Báo cáo điều tra cuối | User review, demo |
-| Integration owner | Phạm Quỳnh Phương | Run path nối input, logic, output và interface thành một luồng chạy được; theo dõi state (nhân vật đã mở, chỉ số đã tính, tin đồn đã xác minh) xuyên suốt game | Cả nhóm, checkpoint |
-
+| Trách nhiệm | Thành viên phụ trách | Đầu ra cụ thể | Thành phần phụ thuộc / Phối hợp |
+| --- | --- | --- | --- |
+| **Input Owner** | Phạm Triệu Tiến Dũng | Bộ dữ liệu tài chính thô, đáp án chuẩn cho các chỉ số, bộ số liệu bẫy trọng yếu | Logic Owner, Interface Owner |
+| **Logic Owner** | Nguyễn Minh Hiền | Công thức tính toán chỉ số, benchmark ngành, danh mục nhãn cờ đỏ, logic đếm giờ | Output Owner, Integration Owner, Kiểm thử |
+| **Output Owner** | Tôn Khánh Ngọc | Nội dung phản hồi chi tiết tại Báo cáo cuối, kịch bản tài liệu mở rộng và sự kiện tin đồn, phân cảnh kết thúc | Interface Owner, Demo |
+| **Interface Owner** | Đinh Thị Minh Khuê | Giao diện tương tác: Danh mục nhân sự, Bảng chẩn đoán, Bản đồ quyền hạn, Đồng hồ đếm giờ, Form Báo cáo | Kiểm thử người dùng, Demo |
+| **Integration Owner** | Phạm Quỳnh Phương | Tích hợp luồng vận hành (Run path), quản lý và đồng bộ trạng thái dữ liệu (State management) toàn hệ thống | Toàn nhóm, Checkpoint |
