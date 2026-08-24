@@ -30,7 +30,7 @@ Không ai đưa sẵn kết luận hay số liệu đã xử lý cho người ch
 
 ## 3. Desired User Outcome
 
-Sau lượt chơi, người học có thể tự xử lý dữ liệu thô để tính toán các chỉ số cốt lõi (chất lượng dòng tiền, vòng quay công nợ, mức độ phụ thuộc nhà cung cấp), sau đó liên kết chặt chẽ các kết quả này với bối cảnh vận hành và chuẩn ngành. Thay vì phỏng đoán theo cảm tính, người học sẽ bóc tách được các biến động thông thường khỏi các sai lệch bất thường, phân định rõ dòng tiền vào – ra, từ đó xâu chuỗi dữ liệu thành một câu chuyện kinh doanh hoàn chỉnh nhằm chỉ ra chính xác các nút thắt rủi ro và vấn đề cốt lõi mà doanh nghiệp đang đối mặt.
+Sau lượt chơi, người học có thể tự xử lý dữ liệu thô để tính toán các chỉ số cốt lõi (chất lượng dòng tiền, vòng quay công nợ, mức độ phụ thuộc nhà cung cấp) tốt hơn, sau đó liên kết chặt chẽ các kết quả này với bối cảnh vận hành và chuẩn ngành. Thay vì phỏng đoán theo cảm tính thông thường, người học sẽ có thể bóc tách được các biến động thông thường khỏi các sai lệch bất thường, phân định rõ dòng tiền vào – ra, từ đó xâu chuỗi dữ liệu thành một câu chuyện kinh doanh hoàn chỉnh nhằm chỉ ra chính xác các nút thắt rủi ro và vấn đề cốt lõi mà doanh nghiệp đang đối mặt.
 
 ## 4. Product Statement
 
