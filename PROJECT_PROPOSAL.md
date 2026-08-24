@@ -8,19 +8,19 @@ Nhóm tiếp tục theo **Đề xuất 1 — Tích hợp thông tin**, đã đư
 
 > Sinh viên có kiến thức tài chính cơ bản gặp khó khi tìm ra nguyên nhân thật của một bất thường tài chính doanh nghiệp. Bằng chứng thật nằm trong số liệu (báo cáo, chỉ số tài chính), nhưng người học dễ bị thông tin không phải số liệu (hồ sơ nhân sự, ghi chú, tin đồn) làm phân tâm — khiến việc tách bạch bằng chứng thật với thông tin chỉ mang tính dẫn dắt trở nên khó khăn.
 
-**Thay đổi so với Tuần 1:** Ban đầu nhóm định cho người chơi đánh giá độ tin cậy của nguồn tin (email, hồ sơ, tin đồn). Sau khi bàn lại, nhóm nhận ra hướng này dễ biến sản phẩm thành một trò trinh thám thuần túy — đoán qua lời kể — không đo đúng năng lực tài chính. Nhóm thu hẹp lại: cái khó thật sự không phải là phân biệt tin thật/giả, mà là **tự đọc số liệu thô, tự tính chỉ số, và tự phát hiện bất thường kế toán** từ chính con số.
+**Thay đổi so với Tuần 1:** Ban đầu nhóm định cho người chơi đánh giá độ tin cậy của nguồn tin (email, hồ sơ, tin đồn). Sau khi bàn lại, nhóm nhận ra hướng này dễ biến sản phẩm thành một trò trinh thám thuần túy — đoán qua lời kể — không đo đúng năng lực tài chính. Nhóm thu hẹp lại: cái khó thật sự không phải là phân biệt tin thật/giả, mà là **tự đọc số liệu thô, tự tính chỉ số, và tự phát hiện bất thường kế toán và xác minh các nguồn thông tin** từ chính con số và các tài liệu.
 
 ## 2. Target User and User Task
 
 **Target user:** Sinh viên đại học khối ngành Tài chính, Kế toán, Ngân hàng, Kinh doanh — đã biết đọc báo cáo tài chính và các chỉ số cơ bản, nhưng chưa quen áp dụng vào tình huống mở, nơi bất thường không được chỉ sẵn mà phải tự tính mới thấy.
 
-**User task:** Tự tính các chỉ số tài chính từ số liệu thô, so với chuẩn ngành (benchmark), chọn đúng loại cờ đỏ kế toán tương ứng, và xác định ai có thẩm quyền liên quan — từ đó đưa ra kết luận có số liệu làm căn cứ.
+**User task:** Tự tính các chỉ số tài chính từ số liệu thô, so với chuẩn ngành (benchmark), chọn đúng loại cờ đỏ kế toán tương ứng, và xác định ai có thẩm quyền liên quan từ đó đưa ra kết luận về con số và tính liên quan và chính xác của các tài liệu để làm căn cứ.
 
 **Luồng nhiệm vụ:**
 
 ```
 Đọc số liệu thô → Tự tính chỉ số → So với chuẩn ngành
-    → Chọn đúng cờ đỏ kế toán → Đối chiếu ai có thẩm quyền
+    → Chọn đúng cờ đỏ kế toán → Đối chiếu ai có thẩm quyền (kiểm tra tài liệu)
     → Đưa ra kết luận có căn cứ
 ```
 
