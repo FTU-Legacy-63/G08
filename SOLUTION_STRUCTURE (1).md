@@ -131,8 +131,6 @@ Conclusion
 
 ## 4. MVP Flow
 
-MVP của The Last Heir không phải là phiên bản thu nhỏ của toàn bộ game. MVP là **một flow nhỏ nhưng hoàn chỉnh dùng để kiểm chứng core value của sản phẩm**.
-
 Problem Direction của nhóm là Information Integration. Vì vậy, MVP cần kiểm chứng xem người dùng có thể đi từ một dấu hiệu tài chính ban đầu đến một giao dịch cụ thể và kết nối nhiều nguồn thông tin để xây dựng một Financial Trace hay không.
 
 MVP tập trung vào nhánh:
