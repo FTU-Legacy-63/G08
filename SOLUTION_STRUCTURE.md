@@ -1,135 +1,70 @@
-# The Last Heir: Solution Structure (Tuần 2)
+# The Last Heir — Project Proposal (Tuần 2)
 
-> Học phần: **NHA408E** | Nhóm: **G08**
+> Học phần: **NHA408E** · Nhóm: **G08**
 
-## 1. Main Output
+## 1. Problem Direction
 
-Xác định theo định hướng tại `PROJECT_PROPOSAL.md`:
+Nhóm tiếp tục theo **Đề xuất 1 — Tích hợp thông tin**, đã được duyệt ở Checkpoint Tuần 1: sinh viên khối ngành Tài chính, Kế toán, Ngân hàng, Kinh doanh gặp khó khi đánh giá một tình huống tài chính doanh nghiệp phức tạp, vì thông tin nằm rải rác ở nhiều nơi — báo cáo tài chính, hồ sơ giao dịch, tài liệu nội bộ.
 
-> Bản đối chiếu chi tiết giữa chỉ số, phân loại và kết luận do người dùng tự xử lý với đáp án chuẩn. Kết quả hiển thị tính chính xác của từng chỉ số, nhãn cờ đỏ, thẩm quyền phê duyệt liên quan, kèm giải thích chuyên môn.
+> Sinh viên có kiến thức tài chính cơ bản gặp khó khi tìm ra nguyên nhân thật của một bất thường tài chính doanh nghiệp. Bằng chứng thật nằm trong số liệu (báo cáo, chỉ số tài chính), nhưng người học dễ bị thông tin không phải số liệu (hồ sơ nhân sự, ghi chú, tin đồn) làm phân tâm — khiến việc tách bạch bằng chứng thật với thông tin chỉ mang tính dẫn dắt trở nên khó khăn.
 
-Dữ liệu do người dùng tính và chọn đóng vai trò đầu vào (Input) của hệ thống xử lý (Process). Output chính thức là kết quả đánh giá và phản hồi được trả về.
+**Thay đổi so với Tuần 1:** Ban đầu nhóm định cho người chơi đánh giá độ tin cậy của nguồn tin (email, hồ sơ, tin đồn). Sau khi bàn lại, nhóm nhận ra hướng này dễ biến sản phẩm thành một trò trinh thám thuần túy — đoán qua lời kể — không đo đúng năng lực tài chính. Nhóm thu hẹp lại: cái khó thật sự không phải là phân biệt tin thật/giả, mà là **tự đọc số liệu thô, tự tính chỉ số, và tự phát hiện bất thường kế toán** từ chính con số.
 
-## 2. Luồng Xử Lý Tổng Thể (System Flow)
+## 2. Target User and User Task
+
+**Target user:** Sinh viên đại học khối ngành Tài chính, Kế toán, Ngân hàng, Kinh doanh — đã biết đọc báo cáo tài chính và các chỉ số cơ bản, nhưng chưa quen áp dụng vào tình huống mở, nơi bất thường không được chỉ sẵn mà phải tự tính mới thấy.
+
+**User task:** Tự tính các chỉ số tài chính từ số liệu thô, so với chuẩn ngành (benchmark), chọn đúng loại cờ đỏ kế toán tương ứng, và xác định ai có thẩm quyền liên quan — từ đó đưa ra kết luận có số liệu làm căn cứ.
+
+**Luồng nhiệm vụ:**
 
 ```
-[User: Sinh viên khối ngành Kinh tế]
-                     │
-                     ▼
-[Input: Dữ liệu thô trích xuất, chỉ số tự tính toán (OCF/NI, DSO, % tập trung khách hàng), nhãn cờ đỏ kế toán được chọn, kết luận về nhân sự/bộ phận thẩm quyền]
-                     │
-                     ▼
-[Process: Thuật toán so khớp chỉ số với biên độ sai số cho phép, đối chiếu nhãn cờ đỏ, kiểm tra thẩm quyền phê duyệt và tổng hợp phản hồi giải thích]
-                     │
-                     ▼
-[Output: Bảng đánh giá chi tiết đúng/sai cho từng hạng mục kèm giải thích căn cứ tài chính]
-                     │
-                     ▼
-[User Action: Rà soát sai sót chuyên môn, điều chỉnh tư duy đọc báo cáo và phân tích dữ liệu cho các phiên tiếp theo]
+Đọc số liệu thô → Tự tính chỉ số → So với chuẩn ngành
+    → Chọn đúng cờ đỏ kế toán → Đối chiếu ai có thẩm quyền
+    → Đưa ra kết luận có căn cứ
 ```
 
-## 3. Initial Required Information
+Không ai đưa sẵn kết luận hay số liệu đã xử lý cho người chơi. Mọi bất thường chỉ hiện ra sau khi người chơi tự tính — đúng trải nghiệm của một người phân tích tài chính thật, không phải một người đọc truyện rồi đoán.
 
-Dữ liệu ban đầu bao gồm bối cảnh doanh nghiệp (Aster Holdings thuộc Aurora Group), ba bộ dữ liệu thô độc lập cho ba bất thường trọng yếu, một bộ số liệu nhiễu (bẫy trọng yếu), Bản đồ quyền hạn tài chính và năm nhân vật đại diện cho các phân vùng thông tin.
+**Difficulty:** Số liệu thô không tự nói lên điều gì sai. Người chơi phải biết chọn đúng công thức, đúng chuẩn so sánh, và phân biệt được biến động đáng chú ý với dao động bình thường. Riêng với dữ liệu liên quan tới nhà cung cấp Northstar Advisory, người chơi cần hiểu đúng bản chất: đây là khoản chi phí công ty phải trả (tiền chảy ra), không phải doanh thu công ty thu về — nhầm lẫn chiều dòng tiền là một cái bẫy tư duy thật mà nhóm cố tình giữ lại để kiểm tra mức hiểu bản chất giao dịch.
 
-Trò chơi thành hai phần rõ ràng: **Hồ sơ vụ án** (dữ liệu công khai, hiển thị mặc định) và **Danh mục nhân vật** (dữ liệu nội bộ, cần thao tác mở).
+## 3. Desired User Outcome
 
-### 3.1. Hồ sơ vụ án (Hiển thị mặc định, không cần điều kiện mở)
+Sau một lượt chơi, người chơi có thể: tự đọc một bộ số liệu tài chính thô và tính ra các chỉ số cơ bản (tỷ lệ dòng tiền/lợi nhuận, số ngày thu tiền, mức tập trung chi phí vào một nhà cung cấp, cấu trúc thanh toán); tự so với chuẩn ngành để tìm bất thường; phân biệt được biến động đáng chú ý với biến động bình thường; và phân biệt đúng đâu là dòng tiền vào (doanh thu từ khách hàng) với đâu là dòng tiền ra (chi phí trả nhà cung cấp) — thay vì chỉ đọc một câu chuyện rồi đoán theo cảm tính.
 
-Bao gồm các dữ liệu công khai theo quy định công bố thông tin hoặc cơ cấu tổ chức chung của doanh nghiệp. Toàn bộ xuất hiện đồng thời tại màn hình ban đầu.
+## 4. Product Statement
 
-| Hạng mục | Chi tiết nội dung | Vai trò chuyên môn |
-| --- | --- | --- |
-| Bối cảnh tình huống | Tóm tắt sự việc, khởi động đồng hồ 48 giờ | Dẫn nhập bối cảnh |
-| Giới thiệu doanh nghiệp | Cơ cấu tổ chức Aurora Group và Aster Holdings | Thông tin nền tảng |
-| Báo cáo tài chính hợp nhất | Doanh thu, Lợi nhuận ròng (NI), Dòng tiền kinh doanh (OCF) trong 4 quý | Dữ liệu tính Bất thường 1 |
-| Cơ cấu khách hàng | Tỷ trọng đóng góp doanh thu của khách hàng trong 4 quý | Dữ liệu tính Bất thường 3 |
-| Bản đồ quyền hạn tài chính | Khung phân quyền phê duyệt theo chức danh nội bộ | Dữ liệu đối chiếu Bất thường 3 |
-| Danh mục nhân vật | Danh sách 5 nhân sự chủ chốt (chỉ gồm tên và chức danh) | Menu điều hướng tới mục 3.2 |
+Một sản phẩm giúp sinh viên khối ngành Tài chính, Kế toán, Ngân hàng, Kinh doanh luyện kỹ năng phân tích tài chính thật, bằng cách đặt họ vào vai người điều tra một bất thường tài chính doanh nghiệp. Mọi kết luận đưa ra đều phải bắt nguồn từ số liệu và phép tính cụ thể — không được suy đoán từ việc chỉ đọc tài liệu kể chuyện.
 
-### 3.2. Danh mục nhân vật (Vùng thông tin cần chủ động truy cập)
+## 5. Main Output
 
-Người dùng lựa chọn điều tra từng nhân sự để tiếp cận tài liệu nội bộ tương ứng theo thứ tự linh hoạt.
+Nhóm rà lại các kết quả người chơi nhìn thấy, để tách rõ cái nào là công cụ thao tác và cái nào mới là kết quả thật:
 
-| Dữ liệu nội bộ | Điều kiện mở | Cơ sở phân loại tài liệu nội bộ |
-| --- | --- | --- |
-| Chi tiết khoản phải thu (AR) theo quý | Hồ sơ Victor | Dữ liệu quản trị vận hành thuộc phạm vi phụ trách của COO |
-| Hồ sơ hợp đồng Northstar | Hồ sơ Victor | Hồ sơ pháp lý và hợp đồng kinh tế nội bộ |
-| Chi tiết chi phí văn phòng phẩm (bẫy trọng yếu) | Hồ sơ David | Báo cáo chi phí chi tiết thuộc thẩm quyền CFO |
-| Ghi chú cá nhân (tài liệu giải trình mở rộng) | Hồ sơ David | Tài liệu cá nhân, yêu cầu tính đúng chỉ số trước khi mở |
-| Chi tiết gói đãi ngộ cá nhân | Hồ sơ Ethan | Hồ sơ nhân sự bảo mật |
-| Báo cáo phạm vi kiểm toán | Hồ sơ Sophia | Biên bản làm việc của đơn vị kiểm toán |
-| Danh mục đầu tư cá nhân | Hồ sơ Lucas | Tài liệu tài chính cá nhân |
-| Báo cáo xác minh tin đồn | Tự động sau khi truy cập hồ sơ David | Dữ liệu kiểm chứng sự kiện nội bộ |
+- **Không phải Main Output:** Bảng chẩn đoán tài chính (chỉ là giao diện nhập liệu), Đồng hồ 48 giờ và Danh sách nhân vật (chỉ là công cụ điều hướng), các chỉ số người chơi tự nhập (đây là dữ liệu người chơi đưa vào, không phải kết quả nhận lại).
 
-## 4. Core Process Type
+**Main output được chốt:**
 
-Hệ thống xử lý qua 4 bước logic:
+> Bản đối chiếu giữa các chỉ số và kết luận người chơi tự đưa ra với đáp án đúng — gồm: từng chỉ số tính đúng hay sai, cờ đỏ chọn đúng hay sai, người có thẩm quyền liên quan đúng hay sai, kèm giải thích vì sao.
 
-1. **Tính toán (Calculation):** Người dùng nhập giá trị các chỉ số (OCF/NI, DSO, % tập trung khách hàng) tính được từ dữ liệu thô. Hệ thống kiểm tra kết quả theo khoảng sai số cho phép.
-2. **Phân loại (Classification):** Người dùng chọn nhãn cờ đỏ kế toán tương ứng từ 5 lựa chọn (3 nhãn chính xác, 2 nhãn nhiễu). Hệ thống đối chiếu với phân loại chuẩn.
-3. **Đối chiếu thẩm quyền (Authority Cross-Checking):** Người dùng đối chiếu mã phê duyệt trên hợp đồng với Bản đồ quyền hạn tài chính để phát hiện sai lệch về phân quyền nội bộ.
-4. **Tổng hợp phản hồi (Explanation):** Khi người dùng nộp báo cáo, hệ thống tự động xuất kết quả đánh giá chi tiết kèm căn cứ phân tích cho từng hạng mục.
+Sau khi nộp báo cáo, người chơi nhận lại đúng bản đối chiếu này. Nó giúp người chơi biết mình đã tính sai ở đâu hoặc hiểu nhầm chỉ số nào — kể cả việc nhầm chiều dòng tiền (coi khoản chi cho nhà cung cấp là doanh thu) — để lần phân tích sau làm tốt hơn.
 
-## 5. MVP Flow
+## 6. Product Pattern
 
-Mỗi giai đoạn được phân định rõ theo ba yếu tố: Xử lý của hệ thống, Thao tác của người dùng và Điều kiện kích hoạt.
+Pattern được chọn: **Financial Learning Game** — mô hình quyết định và hệ quả. Người chơi tự tính và tự đưa ra kết luận (quyết định), hệ thống đối chiếu với đáp án đúng và giải thích vì sao (hệ quả).
 
-* **Bước 1: Khởi tạo tình huống (Tự động)**
-  * Hệ thống: Hiển thị tóm tắt tình huống và bắt đầu đếm ngược thời gian.
-  * Người dùng: Tiếp nhận thông tin bối cảnh.
-  * Điều kiện: Truy cập phiên làm việc mới.
+**Vì sao không chọn 2 pattern còn lại:**
 
-* **Bước 2: Phân tích Hồ sơ vụ án (Mặc định)**
-  * Hệ thống: Hiển thị toàn bộ dữ liệu tại mục 3.1.
-  * Người dùng: Đọc số liệu và có thể tính toán trước chỉ số OCF/NI và tỷ trọng tập trung khách hàng.
-  * Điều kiện: Hoàn thành Bước 1.
+- **Không phải Comparison Tool.** Comparison Tool chỉ đặt các lựa chọn có sẵn cạnh nhau để người chơi tự nhìn và so sánh. Sản phẩm của nhóm khác ở chỗ: người chơi phải tự tính ra số liệu trước, hệ thống mới chấm đúng/sai.
+- **Không phải Calculator.** Calculator chỉ nhận số vào và trả ra 1 kết quả duy nhất theo công thức có sẵn. Sản phẩm của nhóm đánh giá cả một chuỗi việc người chơi làm — tính đúng chỉ số nào, chọn đúng cờ đỏ nào, kết luận đúng ai — rồi giải thích vì sao đúng hoặc sai.
 
-* **Bước 3: Lựa chọn nhân vật điều tra (Thao tác chính)**
-  * Người dùng: Tùy chọn mở hồ sơ của một trong 5 nhân sự (David, Victor, Ethan, Sophia, Lucas) theo thứ tự bất kỳ.
-  * Điều kiện: Thực hiện trên giao diện danh mục nhân sự.
+## 7. Feasibility and Open Questions
 
-* **Bước 4: Khai thác dữ liệu nội bộ (Phân nhánh)**
-  * Nhánh Victor: Hệ thống xuất chi tiết AR (để tính DSO) và hợp đồng Northstar. Người dùng đối chiếu mã phê duyệt với Bản đồ quyền hạn.
-  * Nhánh David: Hệ thống xuất chi tiết chi phí văn phòng phẩm. Người dùng tính toán tỷ trọng trên doanh thu để đánh giá tính trọng yếu.
-  * Nhánh Ethan/Sophia/Lucas: Hệ thống xuất các hồ sơ liên quan để người dùng xác nhận không có bất thường trọng yếu.
+Sản phẩm khả thi trong khuôn khổ môn học nếu giới hạn ở một công ty duy nhất (Aster Holdings, công ty con của Aurora Group), 6 dấu hiệu bất thường tài chính (đã rút từ 7 xuống 6 sau khi nhóm loại bỏ 1 chỉ số dựng trên nhầm lẫn bản chất giao dịch — xem chi tiết ở `SOLUTION_STRUCTURE.md`), 1 bẫy thông tin không đáng chú ý, và 5 nhân vật — mỗi người giữ 1 phần số liệu, không cần tài khoản hay lưu tiến trình nhiều phiên.
 
-* **Bước 5: Kích hoạt thông tin mở rộng (Tự động theo logic)**
-  * Hệ thống: Kiểm tra nếu người dùng đã tính đúng OCF/NI trước khi xem hồ sơ David, tài liệu giải trình bổ sung sẽ hiển thị ở trạng thái đặc biệt.
-  * Người dùng: Tiếp nhận thông tin bổ sung nếu thỏa mãn điều kiện.
+**Open questions còn lại:**
 
-* **Bước 6: Xử lý sự kiện tin đồn (Lựa chọn)**
-  * Điều kiện: Người dùng mở hồ sơ David lần đầu.
-  * Người dùng: Chọn "Xác minh thông tin trước khi ghi nhận" hoặc "Ghi nhận trực tiếp vào báo cáo".
-
-* **Bước 7: Điền Bảng chẩn đoán tài chính (Bắt buộc)**
-  * Người dùng: Điền các chỉ số đã tính, chọn nhãn cờ đỏ tương ứng và đánh giá độ tin cậy của thông tin.
-  * Ràng buộc: Hệ thống chỉ ghi nhận các chỉ số phát sinh từ quá trình thao tác hợp lệ.
-
-* **Bước 8: Nộp Báo cáo điều tra (Chủ động hoặc Tự động)**
-  * Người dùng: Hoàn thiện 5 nội dung đánh giá (Đơn vị có bất thường, Bằng chứng định lượng, Người có thẩm quyền liên quan, Kết quả xác minh tin đồn, Đánh giá tính trọng yếu).
-  * Kích hoạt: Người dùng chủ động gửi báo cáo hoặc hệ thống tự thu bài khi hết thời gian 48 giờ ảo.
-
-* **Bước 9: Nhận kết quả và Đánh giá (Tự động)**
-  * Hệ thống: Chấm điểm tự động, xuất bản đối chiếu đáp án chi tiết và hiển thị phân cảnh kết thúc tương ứng với mức độ chính xác của báo cáo.
-
-## 6. Phạm Vi Dự Án (Scope Definition)
-
-* **Target Scope (Mục tiêu Tuần 6 và 7):** Doanh nghiệp Aster Holdings với 3 bất thường chính (Earnings Quality, DSO, Customer Concentration) và 1 bẫy thông tin không trọng yếu; 5 nhân vật dữ liệu; Bản đồ phân quyền tài chính; Đồng hồ đếm ngược thời gian thực; 1 sự kiện tin đồn; Bảng chẩn đoán tài chính và Báo cáo điều tra có kiểm tra chéo dữ liệu.
-* **Fallback Scope (Phương án dự phòng):** Chuyển tài liệu giải trình mở rộng thành văn bản thông thường; tinh giản sự kiện tin đồn; rút gọn danh sách nhãn cờ đỏ từ 5 xuống 3.
-* **Out of Scope (Ngoài phạm vi phát triển):** Cốt truyện nhiều nhánh phức tạp; hệ thống tài khoản và lưu trữ cơ sở dữ liệu nhiều phiên; bảng xếp hạng người chơi; mô hình biến động giá cổ phiếu theo thời gian thực; tính năng tự động tạo case bằng AI.
-
-## 7. Initial Route Hypothesis
-
-* **Phương án triển khai chính:** Ứng dụng Web tương tác (Code based web) sử dụng React/JavaScript. Cấu trúc dữ liệu tĩnh (Báo cáo tài chính, Danh mục phân quyền, Đáp án chuẩn) được lưu trữ dưới định dạng JSON, không yêu cầu cơ sở dữ liệu phức tạp. Cơ chế thời gian được vận hành bằng bộ đếm giờ chuẩn (`setInterval`).
-* **Phương án dự phòng:** Bản mẫu tương tác (Interactive Figma Prototype) kết hợp bảng quy tắc chấm điểm chi tiết nếu tiến độ kỹ thuật không đáp ứng thời hạn.
-
-## 8. Phân Công Trách Nhiệm (Responsibility Matrix)
-
-| Trách nhiệm | Thành viên phụ trách | Đầu ra cụ thể | Thành phần phụ thuộc / Phối hợp |
-| --- | --- | --- | --- |
-| **Input Owner** | Phạm Triệu Tiến Dũng | Bộ dữ liệu tài chính thô, đáp án chuẩn cho các chỉ số, bộ số liệu bẫy trọng yếu | Logic Owner, Interface Owner |
-| **Logic Owner** | Nguyễn Minh Hiền | Công thức tính toán chỉ số, benchmark ngành, danh mục nhãn cờ đỏ, logic đếm giờ | Output Owner, Integration Owner, Kiểm thử |
-| **Output Owner** | Tôn Khánh Ngọc | Nội dung phản hồi chi tiết tại Báo cáo cuối, kịch bản tài liệu mở rộng và sự kiện tin đồn, phân cảnh kết thúc | Interface Owner, Demo |
-| **Interface Owner** | Đinh Thị Minh Khuê | Giao diện tương tác: Danh mục nhân sự, Bảng chẩn đoán, Bản đồ quyền hạn, Đồng hồ đếm giờ, Form Báo cáo | Kiểm thử người dùng, Demo |
-| **Integration Owner** | Phạm Quỳnh Phương | Tích hợp luồng vận hành (Run path), quản lý và đồng bộ trạng thái dữ liệu (State management) toàn hệ thống | Toàn nhóm, Checkpoint |
+1. 6 dấu hiệu bất thường có phải quá nhiều với thời lượng chơi 1 lượt hay không — cần thử nghiệm để biết thời gian chơi thật sự mất bao lâu.
+2. Đồng hồ 48 giờ ảo quy đổi 12–15 phút thật đã đủ áp lực mà không gây bực bội chưa — cần người chơi thử mới biết.
+3. Danh sách cờ đỏ có 2 lựa chọn gây nhiễu — đã đủ khó để tránh việc đoán mò theo kiểu loại trừ máy móc chưa.
+4. Việc chia đều số liệu cho cả 5 nhân vật có khiến người chơi mất phương hướng, không biết nên mở ai trước hay không — cần kiểm tra bằng cách cho vài người chơi thử.
+5. Bẫy nhầm lẫn chiều dòng tiền (chi phí trả Northstar bị hiểu nhầm thành doanh thu) có thực sự tạo được giá trị học thuật, hay chỉ gây rối cho người chơi — cần quan sát phản ứng người chơi thử để biết rõ.
