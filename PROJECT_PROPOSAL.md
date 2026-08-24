@@ -30,7 +30,7 @@ Không ai đưa sẵn kết luận hay số liệu đã xử lý cho người ch
 
 ## 3. Desired User Outcome
 
-Thông qua trải nghiệm thực tế trong trò chơi, người chơi sẽ phát triển tư duy phân tích tài chính dựa trên dữ liệu thay vì phán đoán theo cảm tính. Cụ thể, người chơi có thể tự đọc bảng số liệu thô để tính toán các chỉ số cốt lõi về sức khỏe dòng tiền, hiệu quả thu hồi công nợ và rủi ro nhà cung ứng. Đồng thời, kỹ năng đối chiếu dữ liệu với chuẩn ngành giúp người chơi nhận diện chính xác các dòng tiền vào - ra, phân biệt được biến động bất thường với biến động định kỳ để đưa ra những đánh giá xác đáng nhất.
+Sau lượt chơi, người học có thể tự xử lý dữ liệu thô để tính toán các chỉ số cốt lõi (chất lượng dòng tiền, vòng quay công nợ, mức độ phụ thuộc nhà cung cấp), sau đó liên kết chặt chẽ các kết quả này với bối cảnh vận hành và chuẩn ngành. Thay vì phỏng đoán theo cảm tính, người học sẽ bóc tách được các biến động thông thường khỏi các sai lệch bất thường, phân định rõ dòng tiền vào – ra, từ đó xâu chuỗi dữ liệu thành một câu chuyện kinh doanh hoàn chỉnh nhằm chỉ ra chính xác các nút thắt rủi ro và vấn đề cốt lõi mà doanh nghiệp đang đối mặt.
 
 ## 4. Product Statement
 
