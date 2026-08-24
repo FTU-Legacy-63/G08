@@ -26,7 +26,7 @@ Nhóm tiếp tục theo **Đề xuất 1 — Tích hợp thông tin**, đã đư
 
 Không ai đưa sẵn kết luận hay số liệu đã xử lý cho người chơi. Mọi bất thường chỉ hiện ra sau khi người chơi tự tính — đúng trải nghiệm của một người phân tích tài chính thật, không phải một người đọc truyện rồi đoán.
 
-**Difficulty:** Số liệu thô không tự nói lên điều gì sai. Người chơi phải biết chọn đúng công thức, đúng chuẩn so sánh, và phân biệt được biến động đáng chú ý với dao động bình thường. Riêng với dữ liệu liên quan tới nhà cung cấp Northstar Advisory, người chơi cần hiểu đúng bản chất: đây là khoản chi phí công ty phải trả (tiền chảy ra), không phải doanh thu công ty thu về — nhầm lẫn chiều dòng tiền là một cái bẫy tư duy thật mà nhóm cố tình giữ lại để kiểm tra mức hiểu bản chất giao dịch.
+**Difficulty:** Số liệu thô không tự nói lên điều gì sai. Người chơi phải biết chọn đúng công thức, đúng chuẩn so sánh, và phân biệt được biến động đáng chú ý với dao động bình thường. 
 
 ## 3. Desired User Outcome
 
