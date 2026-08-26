@@ -66,8 +66,6 @@ Nhóm phân biệt rõ hai loại thông tin, đúng như nguyên tắc đã đ�
 | GAO audit methodology | Nguyên tắc "signal cần context, chưa phải bằng chứng buộc tội" | Problem evidence — xác nhận đúng lý do MVP dừng ở "cần điều tra thêm", khớp Target Scope đã nộp Week 2 | 26/08/2026 | Là nguyên tắc phương pháp, không phải số liệu để tính toán | Dũng |
 | Damodaran Online, CSIMarket | Benchmark ngành OCF/NI, DSO | Problem evidence — xác nhận nguyên lý benchmark có căn cứ học thuật | 26/08/2026 | Benchmark cụ thể trong game (≥1, 28–32 ngày) là ngưỡng team tự đặt, không trích trực tiếp một số liệu | Dũng |
 
-*Đã loại khỏi bảng: STK, VGG, TCM, TNG — đo sai chiều dòng tiền so với nhu cầu của game (doanh thu từ khách hàng thay vì chi phí trả nhà cung cấp).*
-
 ---
 
 ## 4. Real, Sample và Simulated Data — lựa chọn của nhóm
