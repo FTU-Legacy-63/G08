@@ -23,11 +23,8 @@ Nhóm phân biệt rõ hai loại thông tin, đúng như nguyên tắc đã đ�
 
 **Problem evidence — bằng chứng chứng minh vấn đề có căn cứ thật** (không dùng để tính toán, chỉ dùng để biện minh cho thiết kế):
 
-- Satyam Computer Services (The Guardian): Xác nhận hiện tượng "BCTC khỏe nhưng economic reality yếu hơn" là có thật.
-- Pareteum (U.S. DOJ): Xác nhận logic Revenue Recognition Red Flag.
-- GAO-03-678G / GAO-04-87G: Xác nhận Payment Structuring là hành vi có thật và bị cấm rõ ràng, đồng thời cung cấp nguyên tắc "signal cần context, chưa phải bằng chứng buộc tội".
-- Damodaran Online, CSIMarket: Xác nhận benchmark OCF/NI, DSO có căn cứ học thuật, dù ngưỡng cụ thể trong game là do nhóm tự đặt.
-
+- Satyam Computer Services (The Guardian): Xác nhận hiện tượng "BCTC khỏe nhưng economic reality yếu hơn" là có thật. Khớp trực tiếp với revenue, net_income, ocf trong Input Dictionary và phép tính OCF/NI ở Early Logic Test.
+- Damodaran Online, CSIMarket (phần OCF/NI): Xác nhận benchmark OCF/NI ≥ 1 có căn cứ học thuật, dù ngưỡng cụ thể là do nhóm tự đặt. Khớp với cùng bộ field trên.
 ---
 
 ## 2. Input Dictionary
@@ -61,8 +58,6 @@ Nhóm phân biệt rõ hai loại thông tin, đúng như nguyên tắc đã đ�
 | Bảng % chi phí theo nhà cung cấp (team-created) | vendor_cost_ratio, vendor_name | Operational — bước Drill Down | Tạo mới | Số liệu giả định | Dũng |
 | Hồ sơ hợp đồng Northstar (team-created) | contract_* (6 field) | Operational — bước Financial Trace | Tạo mới | Mô tả dịch vụ cố ý mơ hồ ở Lớp 1 (chủ đích, không phải thiếu sót) | Ngọc |
 | Satyam Computer Services (The Guardian) | Pattern "BCTC khỏe nhưng economic reality yếu hơn nhiều" | Problem evidence — xác nhận Financial Signal ban đầu là hiện tượng có thật | 26/08/2026 | Chỉ mượn tinh thần chung; Satyam bịa cả doanh thu lẫn số dư tiền mặt, game chỉ dùng lệch giữa lợi nhuận kế toán và dòng tiền thật — hai cơ chế khác nhau | Dũng |
-| Pareteum (U.S. DOJ) | Logic "ghi nhận doanh thu sớm từ đơn hàng chưa ràng buộc → AR tăng → DSO tăng" | Problem evidence — xác nhận Revenue Recognition Red Flag có thật | 26/08/2026 | Chỉ mượn logic, không mượn số liệu cụ thể | Dũng |
-| GAO-03-678G / GAO-04-87G | Case thật: chia $17,000 thành 8 giao dịch/ngày; $30,000 thành 14 giao dịch; $36,984 thành 3 khoản để né ngưỡng $25,000 | Problem evidence — xác nhận Payment Structuring Red Flag là hành vi có thật, bị chính phủ Mỹ cấm rõ ràng | 26/08/2026 | Case thật là mua sắm bằng thẻ công vụ chính phủ, không phải hợp đồng tư vấn doanh nghiệp — chỉ mượn logic threshold avoidance, không mượn bối cảnh ngành | Dũng |
 | GAO audit methodology | Nguyên tắc "signal cần context, chưa phải bằng chứng buộc tội" | Problem evidence — xác nhận đúng lý do MVP dừng ở "cần điều tra thêm", khớp Target Scope đã nộp Week 2 | 26/08/2026 | Là nguyên tắc phương pháp, không phải số liệu để tính toán | Dũng |
 | Damodaran Online, CSIMarket | Benchmark ngành OCF/NI, DSO | Problem evidence — xác nhận nguyên lý benchmark có căn cứ học thuật | 26/08/2026 | Benchmark cụ thể trong game (≥1, 28–32 ngày) là ngưỡng team tự đặt, không trích trực tiếp một số liệu | Dũng |
 
