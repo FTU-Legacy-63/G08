@@ -17,18 +17,16 @@ Nhóm phân biệt rõ hai loại thông tin, đúng như nguyên tắc đã đ�
 
 **Operational data — dữ liệu để sản phẩm chạy** (100% do nhóm tự tạo, mô phỏng Aster Holdings, không liên quan doanh nghiệp thật):
 
-- `revenue`, `net_income`, `ocf` theo quý — chạy phép tính Earnings Quality (OCF/NI).
-- `vendor_cost_ratio`, `vendor_name` — chạy bước Drill Down xác định Northstar Advisory.
-- `contract_*` (6 field) — thuộc **Contract and Control Information** (Solution Structure Week 2), chạy Financial Trace ở lớp hợp đồng.
+- `revenue`, `net_income`, `ocf` theo quý: Chạy phép tính Earnings Quality (OCF/NI).
+- `vendor_cost_ratio`, `vendor_name`:Chạy bước Drill Down xác định Northstar Advisory.
+- `contract_*` (6 field): Thuộc **Contract and Control Information** (Solution Structure Week 2), chạy Financial Trace ở lớp hợp đồng.
 
 **Problem evidence — bằng chứng chứng minh vấn đề có căn cứ thật** (không dùng để tính toán, chỉ dùng để biện minh cho thiết kế):
 
-- Satyam Computer Services (The Guardian) — xác nhận hiện tượng "BCTC khỏe nhưng economic reality yếu hơn" là có thật.
-- Pareteum (U.S. DOJ) — xác nhận logic Revenue Recognition Red Flag.
-- GAO-03-678G / GAO-04-87G — xác nhận Payment Structuring là hành vi có thật và bị cấm rõ ràng, đồng thời cung cấp nguyên tắc "signal cần context, chưa phải bằng chứng buộc tội".
-- Damodaran Online, CSIMarket — xác nhận benchmark OCF/NI, DSO có căn cứ học thuật, dù ngưỡng cụ thể trong game là do nhóm tự đặt.
-
-Một số nguồn ban đầu được cân nhắc (STK, VGG, TCM, TNG) đã bị loại vì đo sai chiều dòng tiền (doanh thu từ khách hàng, trong khi game cần chi phí trả nhà cung cấp).
+- Satyam Computer Services (The Guardian):Xác nhận hiện tượng "BCTC khỏe nhưng economic reality yếu hơn" là có thật.
+- Pareteum (U.S. DOJ): Xác nhận logic Revenue Recognition Red Flag.
+- GAO-03-678G / GAO-04-87G: Xác nhận Payment Structuring là hành vi có thật và bị cấm rõ ràng, đồng thời cung cấp nguyên tắc "signal cần context, chưa phải bằng chứng buộc tội".
+- Damodaran Online, CSIMarket: Xác nhận benchmark OCF/NI, DSO có căn cứ học thuật, dù ngưỡng cụ thể trong game là do nhóm tự đặt.
 
 ---
 
@@ -52,7 +50,6 @@ Một số nguồn ban đầu được cân nhắc (STK, VGG, TCM, TNG) đã b�
 
 *(revenue, net_income, ocf, vendor_* thuộc operational data phục vụ tính toán; các nguồn Satyam, Pareteum, GAO, Damodaran thuộc problem evidence — không xuất hiện trong input dictionary vì không được dùng để tính toán trực tiếp, mà nằm ở Source Register bên dưới.)*
 
-*(Lưu ý về owner của 3 field `contract_service_description`, `contract_classification`, `approver_code`: theo bảng Responsibility by Output ở `SOLUTION_STRUCTURE.md`, "contract/control information structure" thuộc trách nhiệm của Dũng — Financial Content & Input. Ngọc chỉ là owner của **nội dung cụ thể và thứ tự hé lộ** ba field này — ví dụ việc cố tình viết mô tả dịch vụ mơ hồ ở Lớp 1 — vì đây thuộc Information Reveal Map, trách nhiệm của Ngọc ở Storyline & Output. Dũng vẫn giữ vai trò thiết kế schema/cấu trúc chung cho toàn bộ contract_*; Ngọc quyết định nội dung hiển thị theo từng lớp.)*
 
 ---
 
