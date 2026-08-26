@@ -5,7 +5,7 @@
 
 > **Câu hỏi trung tâm:** Sản phẩm cần thông tin gì để hoạt động, thông tin đó đến từ đâu, và có đủ khả thi để sử dụng hay không?
 
-Tuần 3 không phải một tuần data engineering. Mục tiêu là đảm bảo input, source và sample data đủ rõ để **nhánh Financial Trace** (MVP đã chốt ở Week 2) có thể được xây dựng và kiểm tra logic, trước khi Week 4 biến các input này thành financial logic hoàn chỉnh.
+Mục tiêu là đảm bảo input, source và sample data đủ rõ để **nhánh Financial Trace** (MVP đã chốt ở Week 2) có thể được xây dựng và kiểm tra logic, trước khi Week 4 biến các input này thành financial logic hoàn chỉnh.
 
 Tài liệu này cụ thể hóa ba trong bốn nhóm thông tin đã được xác định ở `SOLUTION_STRUCTURE.md` (Week 2) — **Financial Overview Information**, **Transaction Information**, **Contract and Control Information** — thành input dictionary, source và data flow thật. Nhóm thứ tư, **Responsibility Evidence** (bằng chứng liên kết trách nhiệm của Victor, Lucas, David, Sophia), thuộc Target Product và cố tình chưa được cụ thể hóa ở Tuần 3, đúng với Target/Fallback/Out of Scope đã chốt ở Week 2.
 
@@ -23,7 +23,7 @@ Nhóm phân biệt rõ hai loại thông tin, đúng như nguyên tắc đã đ�
 
 **Problem evidence — bằng chứng chứng minh vấn đề có căn cứ thật** (không dùng để tính toán, chỉ dùng để biện minh cho thiết kế):
 
-- Satyam Computer Services (The Guardian):Xác nhận hiện tượng "BCTC khỏe nhưng economic reality yếu hơn" là có thật.
+- Satyam Computer Services (The Guardian): Xác nhận hiện tượng "BCTC khỏe nhưng economic reality yếu hơn" là có thật.
 - Pareteum (U.S. DOJ): Xác nhận logic Revenue Recognition Red Flag.
 - GAO-03-678G / GAO-04-87G: Xác nhận Payment Structuring là hành vi có thật và bị cấm rõ ràng, đồng thời cung cấp nguyên tắc "signal cần context, chưa phải bằng chứng buộc tội".
 - Damodaran Online, CSIMarket: Xác nhận benchmark OCF/NI, DSO có căn cứ học thuật, dù ngưỡng cụ thể trong game là do nhóm tự đặt.
