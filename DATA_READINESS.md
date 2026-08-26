@@ -83,6 +83,8 @@ Dữ liệu lưu dạng **JSON tĩnh**, khớp với Route Hypothesis đã chố
 {
   "financial_overview": [
     { "quarter": "Q1", "revenue": 120, "net_income": 15, "ocf": 18 },
+    { "quarter": "Q2", "revenue": 128, "net_income": 17, "ocf": 15 },
+    { "quarter": "Q3", "revenue": 142, "net_income": 20, "ocf": 9 },
     { "quarter": "Q4", "revenue": 165, "net_income": 25, "ocf": -3 }
   ],
   "vendor_data": {
@@ -120,12 +122,17 @@ JSON tĩnh (vendor_data)
     → hiển thị mức độ tập trung (Drill Down → Identify Northstar)
 
 JSON tĩnh (contract)
-    → đọc contract_classification + approver_code
-    → validate (đúng định dạng, không rỗng)
+    → đọc đủ 6 field: contract_id, service_description, classification, approver_code, value_total, signed_date
+    → validate cả 6 field (định dạng contract_id, không rỗng, contract_value_total > 0,
+      contract_signed_date không ở tương lai, approver_code đúng định dạng EMP-XXXX)
     → hiển thị Lớp 1 (mô tả + phân loại)
     → người chơi chủ động mở Lớp 2 (phụ lục) nếu muốn đào sâu
-    → đối chiếu với vendor_data và financial_overview (Reconcile Relevant Information)
-    → đánh giá giao dịch Northstar dựa trên 3 nguồn đã đối chiếu (Analyse the Transaction)
+    → Reconcile Relevant Information:
+        so contract_value_total (500) với revenue quý phát sinh hợp đồng (165)
+        → tỷ lệ = value_total / revenue quý = 500 / 165 ≈ 3.03 lần doanh thu một quý
+    → Analyse the Transaction:
+        tỷ lệ ≈ 3.03 lần > ngưỡng cảnh báo (>2 lần doanh thu một quý)
+        → đủ căn cứ để xếp giao dịch Northstar vào diện cần điều tra thêm
     → Build Financial Trace
 ```
 
