@@ -15,10 +15,10 @@ Week 1 đã xác định **Information Integration** là problem direction. Week
 
 Week 3 cụ thể hóa bốn nhóm thông tin từ `SOLUTION_STRUCTURE.md`:
 
-1. **Financial Overview Information** — giúp người chơi phát hiện vấn đề tài chính.
-2. **Transaction Information** — giúp người chơi truy từ vấn đề tài chính đến Northstar.
-3. **Contract and Control Information** — giúp người chơi đánh giá transaction về bản chất, timing và control.
-4. **Responsibility Evidence** — giúp người chơi liên kết transaction structure với các cá nhân có liên quan.
+1. **Financial Overview Information**: giúp người chơi phát hiện vấn đề tài chính.
+2. **Transaction Information**: giúp người chơi truy từ vấn đề tài chính đến Northstar.
+3. **Contract and Control Information**: giúp người chơi đánh giá transaction về bản chất, timing và control.
+4. **Responsibility Evidence**: giúp người chơi liên kết transaction structure với các cá nhân có liên quan.
 
 Ba nhóm đầu cần sẵn sàng để xây và kiểm tra **MVP Financial Trace**. Nhóm thứ tư được xác định ở mức input và document structure ngay trong Week 3 để bảo đảm Target Product khả thi, dù chưa cần tích hợp đầy đủ vào MVP.
 
