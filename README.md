@@ -111,7 +111,7 @@ Giá trị chính của dự án vì vậy nằm ở **financial reasoning**. C�
 | Phạm Triệu Tiến Dũng | Làm rõ bản chất tài chính của vấn đề và cách thông tin bị phân mảnh | **Initial Financial Information Structure** gồm dữ liệu tài chính tổng hợp, dữ liệu giao dịch và tài liệu kiểm soát; kèm mô tả mối liên hệ giữa các lớp thông tin |
 | Nguyễn Minh Hiền | Xác định nhiệm vụ thực tế mà người dùng phải thực hiện | **User Task Flow** từ quan sát dữ liệu đến xác định vấn đề, tìm thông tin liên quan, đối chiếu, kết nối bằng chứng và kết luận |
 | Tôn Khánh Ngọc | Xây dựng bối cảnh ban đầu để kiểm tra problem direction | **Initial Case Context** của Aster Holdings, xác định một tình huống doanh nghiệp trong đó thông tin tài chính không xuất hiện đầy đủ trong một tài liệu duy nhất |
-| Đinh Thị Minh Khuê | Xác định cách trình bày thông tin phục vụ quan sát người dùng | **Initial User Observation Layout** thể hiện cách bố trí dữ liệu tổng hợp và tài liệu chi tiết để kiểm tra khả năng xác định hướng điều tra và kết nối thông tin |
+| Đinh Thị Minh Khuê | Xác định cách trình bày thông tin và chuyển investigation flow thành giao diện tương tác | **Initial User Observation Layout và quá trình phát triển tiếp thành working UI prototype trên Unity; thiết kế screen/page structure, navigation và interaction states; trực tiếp triển khai giao diện bằng Unity + C# (VS Code) để các tài liệu, input và output của investigation flow có thể được sử dụng trong một playable interface |
 
 Các đầu ra trên phục vụ trực tiếp cho Week 1 và chưa giả định trước hình thức sản phẩm cuối cùng hoặc technical route.
 
