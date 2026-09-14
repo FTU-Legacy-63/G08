@@ -30,7 +30,7 @@ Câu hỏi kiểm tra (mục 5 template Week 5):
 
 | Tình huống | User action | System response |
 | --- | --- | --- |
-| Chọn nhầm biến lệch mạnh nhất ở Tab 1 (VD chọn DSRI thay vì SGAI) | Chọn lại | Hệ thống không cộng 5 điểm phần đó nhưng vẫn cho thử lại, không khóa toàn bộ Tab |
+| Chọn nhầm biến lệch mạnh nhất ở Tab 1 (VD chọn DSRI thay vì SGAI) | Đi tiếp đến tab 2 | Hệ thống không cộng 5 điểm phần đó nhưng vẫn cho thử lại, không khóa toàn bộ Tab |
 | Dùng Hint Economy ở Tab 1/4/6 khi bí | Bấm nút Hint | Hệ thống trừ thời gian ảo, hiển thị gợi ý một phần (không lộ đáp án) |
 | Bỏ qua Tab 5 (Suspect Profiles) rồi vào thẳng Tab 6 | Chọn thủ phạm mà chưa đọc hồ sơ | Vẫn cho phép chọn (không ép buộc đọc), nhưng nếu chọn sai, hệ thống gợi ý quay lại Tab 5 |
 | Chọn đúng Victor nhưng phân loại hành vi sai (VD "Poor Decision" thay vì "Fraud") | Hệ thống báo hành vi chưa khớp | Vẫn unlock câu hỏi PV (vì thủ phạm đúng), nhưng ghi nhận điểm phân loại hành vi thấp hơn |
