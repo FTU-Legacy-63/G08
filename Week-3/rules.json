@@ -1,0 +1,52 @@
+{
+  "materiality_threshold": 1.1,
+  "currency_unit": "USD_million",
+  "screening_rules": {
+    "DSRI": {
+      "normal_lower": 0.9,
+      "normal_upper": 1.15,
+      "note": "Case-specific pedagogical review range; not an official Beneish cutoff."
+    },
+    "SGAI": {
+      "review_above": 1.1,
+      "note": "Case-specific routing rule to review SG&A; not a fraud cutoff."
+    },
+    "TATA": {
+      "absolute_review_above": 0.05,
+      "note": "Case-specific pedagogical review rule."
+    }
+  },
+  "approval_policy": [
+    {
+      "min_exclusive": null,
+      "max_inclusive": 0.5,
+      "required_roles": [
+        "Department Head"
+      ]
+    },
+    {
+      "min_exclusive": 0.5,
+      "max_inclusive": 1.0,
+      "required_roles": [
+        "Department Head",
+        "Finance Manager"
+      ]
+    },
+    {
+      "min_exclusive": 1.0,
+      "max_inclusive": null,
+      "required_roles": [
+        "CFO",
+        "Board"
+      ]
+    }
+  ],
+  "aggregation_rule": {
+    "required_link_fields": [
+      "agreement_id",
+      "economic_purpose_code"
+    ],
+    "vendor_match_required": true,
+    "note": "Do not aggregate merely because transactions share a vendor."
+  }
+}

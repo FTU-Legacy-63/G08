@@ -1,0 +1,103 @@
+{
+  "approval_records": [
+    {
+      "evidence_id": "APR-01",
+      "transaction_id": "ADV-02A",
+      "approver_ids": [
+        "P-VICTOR",
+        "P-LUCAS"
+      ]
+    },
+    {
+      "evidence_id": "APR-02",
+      "transaction_id": "ADV-02B",
+      "approver_ids": [
+        "P-VICTOR",
+        "P-LUCAS"
+      ]
+    },
+    {
+      "evidence_id": "APR-03",
+      "transaction_id": "ADV-02C",
+      "approver_ids": [
+        "P-VICTOR",
+        "P-LUCAS"
+      ]
+    }
+  ],
+  "agreement_evidence": [
+    {
+      "evidence_id": "AGR-01",
+      "agreement_id": "AGR-NST-01",
+      "vendor_id": "V-NORTHSTAR",
+      "economic_purpose_code": "NORTHSTAR_ADVISORY_2026",
+      "signed_by_person_ids": [
+        "P-VICTOR"
+      ],
+      "fact": "The three Northstar tranches are linked to the same advisory agreement and economic purpose."
+    }
+  ],
+  "conflict_evidence": [
+    {
+      "evidence_id": "PUB-01",
+      "person_id": "P-VICTOR",
+      "vendor_id": "V-NORTHSTAR",
+      "fact": "A documented family relationship exists between Victor and Northstar's legal representative."
+    }
+  ],
+  "personnel": [
+    {
+      "person_id": "P-VICTOR",
+      "name": "Victor",
+      "role": "Business Development Director",
+      "authority_level": "Department Head",
+      "direct_involvement_evidence_ids": [
+        "APR-01",
+        "APR-02",
+        "APR-03",
+        "AGR-01"
+      ],
+      "conflict_of_interest": true,
+      "conflict_evidence_ids": [
+        "PUB-01"
+      ]
+    },
+    {
+      "person_id": "P-LUCAS",
+      "name": "Lucas",
+      "role": "Finance Manager",
+      "authority_level": "Finance Manager",
+      "direct_involvement_evidence_ids": [
+        "APR-01",
+        "APR-02",
+        "APR-03"
+      ],
+      "conflict_of_interest": false,
+      "conflict_evidence_ids": []
+    },
+    {
+      "person_id": "P-DAVID",
+      "name": "David",
+      "role": "Former Heir / Related Governance Role",
+      "authority_level": "Case-specific governance role",
+      "direct_involvement_evidence_ids": [],
+      "conflict_of_interest": "unknown",
+      "conflict_evidence_ids": []
+    },
+    {
+      "person_id": "P-SOPHIA",
+      "name": "Sophia",
+      "role": "Internal Control",
+      "authority_level": "Control monitoring role",
+      "direct_involvement_evidence_ids": [],
+      "conflict_of_interest": false,
+      "conflict_evidence_ids": []
+    }
+  ],
+  "control_evidence": [
+    {
+      "evidence_id": "POL-01",
+      "fact": "Aster Holdings' simulated approval policy applies higher approval requirements to aggregate economic transactions above USD 1.0 million."
+    }
+  ]
+}

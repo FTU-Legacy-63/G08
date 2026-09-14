@@ -1,0 +1,17 @@
+{
+  "_internal_only": true,
+  "expected_focus_area": "SG&A",
+  "expected_subaccount": "Advisory Expense",
+  "expected_transaction_group": "AGR-NST-01",
+  "expected_override_assessment": "Supported",
+  "expected_primary_responsible_person_id": "P-VICTOR",
+  "minimum_override_evidence_ids": [
+    "POL-01",
+    "AGR-01"
+  ],
+  "minimum_responsibility_evidence_ids": [
+    "AGR-01",
+    "PUB-01"
+  ],
+  "note": "Internal validation only. This file must not be shown as player evidence."
+}
