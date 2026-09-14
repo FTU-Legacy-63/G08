@@ -1,0 +1,63 @@
+{
+  "materiality_threshold": 1.1,
+  "currency_unit": "USD_million",
+  "screening_rules": {
+    "DSRI": {
+      "normal_lower": 0.9,
+      "normal_upper": 1.15,
+      "note": "Case-specific pedagogical review range; not official Beneish cutoff."
+    },
+    "SGAI": {
+      "review_above": 1.1,
+      "note": "Case-specific routing rule."
+    },
+    "TATA": {
+      "absolute_review_above": 0.05,
+      "note": "Case-specific pedagogical review rule."
+    }
+  },
+  "approval_policy": [
+    {
+      "min_exclusive": null,
+      "max_inclusive": 0.5,
+      "required_roles": [
+        "Department Head"
+      ]
+    },
+    {
+      "min_exclusive": 0.5,
+      "max_inclusive": 1.0,
+      "required_roles": [
+        "Department Head",
+        "Finance Manager"
+      ]
+    },
+    {
+      "min_exclusive": 1.0,
+      "max_inclusive": null,
+      "required_roles": [
+        "CFO",
+        "Board"
+      ]
+    }
+  ],
+  "override_route_rule": {
+    "route_name": "management_override_proxy",
+    "allowed_only_for_special_case": true,
+    "required_conditions": [
+      "documented_justification",
+      "valid_reason_code",
+      "retrospective_finance_review"
+    ],
+    "note": "Simulated internal route. Completing a status through this route does not mean the Finance Manager personally approved."
+  },
+  "aggregation_rule": {
+    "required_link_fields": [
+      "agreement_id",
+      "economic_purpose_code"
+    ],
+    "vendor_match_required": true,
+    "initiator_match_supportive": true,
+    "note": "Do not aggregate merely because transactions share a vendor."
+  }
+}

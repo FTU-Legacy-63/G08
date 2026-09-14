@@ -1,0 +1,139 @@
+{
+  "approval_summaries": [
+    {
+      "evidence_id": "APS-01",
+      "transaction_id": "ADV-02A",
+      "department_head_status": "Completed",
+      "finance_approval_status": "Completed",
+      "overall_status": "Approved"
+    },
+    {
+      "evidence_id": "APS-02",
+      "transaction_id": "ADV-02B",
+      "department_head_status": "Completed",
+      "finance_approval_status": "Completed",
+      "overall_status": "Approved"
+    },
+    {
+      "evidence_id": "APS-03",
+      "transaction_id": "ADV-02C",
+      "department_head_status": "Completed",
+      "finance_approval_status": "Completed",
+      "overall_status": "Approved"
+    }
+  ],
+  "approval_audit_trail": [
+    {
+      "evidence_id": "AUD-01",
+      "transaction_id": "ADV-02A",
+      "department_head_actor_id": "P-VICTOR",
+      "finance_step_method": "management_override_proxy",
+      "actual_finance_approver_id": null,
+      "override_actor_id": "P-VICTOR",
+      "override_justification_present": false,
+      "valid_reason_code_present": false,
+      "retrospective_finance_review_present": false
+    },
+    {
+      "evidence_id": "AUD-02",
+      "transaction_id": "ADV-02B",
+      "department_head_actor_id": "P-VICTOR",
+      "finance_step_method": "management_override_proxy",
+      "actual_finance_approver_id": null,
+      "override_actor_id": "P-VICTOR",
+      "override_justification_present": false,
+      "valid_reason_code_present": false,
+      "retrospective_finance_review_present": false
+    },
+    {
+      "evidence_id": "AUD-03",
+      "transaction_id": "ADV-02C",
+      "department_head_actor_id": "P-VICTOR",
+      "finance_step_method": "management_override_proxy",
+      "actual_finance_approver_id": null,
+      "override_actor_id": "P-VICTOR",
+      "override_justification_present": false,
+      "valid_reason_code_present": false,
+      "retrospective_finance_review_present": false
+    }
+  ],
+  "agreement_evidence": [
+    {
+      "evidence_id": "AGR-01",
+      "agreement_id": "AGR-NST-01",
+      "vendor_id": "V-NORTHSTAR",
+      "economic_purpose_code": "NORTHSTAR_ADVISORY_2026",
+      "signed_by_person_ids": [
+        "P-VICTOR"
+      ],
+      "fact": "The three Northstar tranches relate to the same advisory agreement and economic purpose."
+    }
+  ],
+  "conflict_evidence": [
+    {
+      "evidence_id": "PUB-01",
+      "person_id": "P-VICTOR",
+      "vendor_id": "V-NORTHSTAR",
+      "fact": "A documented family relationship exists between Victor and Northstar legal representative."
+    }
+  ],
+  "personnel": [
+    {
+      "person_id": "P-VICTOR",
+      "name": "Victor",
+      "role": "Business Development Director",
+      "authority_level": "Department Head",
+      "northstar_role": "Agreement signatory, transaction initiator, Department Head approver, override-route actor",
+      "direct_involvement_evidence_ids": [
+        "AGR-01",
+        "AUD-01",
+        "AUD-02",
+        "AUD-03"
+      ],
+      "conflict_of_interest": true,
+      "conflict_evidence_ids": [
+        "PUB-01"
+      ]
+    },
+    {
+      "person_id": "P-LUCAS",
+      "name": "Lucas",
+      "role": "Finance Manager",
+      "authority_level": "Finance Manager",
+      "northstar_role": "Required Finance approver under policy but no actual Northstar approval event in audit trail",
+      "direct_involvement_evidence_ids": [],
+      "conflict_of_interest": false,
+      "conflict_evidence_ids": []
+    },
+    {
+      "person_id": "P-DAVID",
+      "name": "David",
+      "role": "Former Heir / Related Governance Role",
+      "authority_level": "Case-specific governance role",
+      "northstar_role": "Contextual governance relevance only",
+      "direct_involvement_evidence_ids": [],
+      "conflict_of_interest": "unknown",
+      "conflict_evidence_ids": []
+    },
+    {
+      "person_id": "P-SOPHIA",
+      "name": "Sophia",
+      "role": "Internal Control",
+      "authority_level": "Control monitoring role",
+      "northstar_role": "Control monitoring context",
+      "direct_involvement_evidence_ids": [],
+      "conflict_of_interest": false,
+      "conflict_evidence_ids": []
+    }
+  ],
+  "control_evidence": [
+    {
+      "evidence_id": "POL-01",
+      "fact": "Transactions above USD 1.0 million in aggregate economic value require CFO + Board approval."
+    },
+    {
+      "evidence_id": "POL-02",
+      "fact": "The management override/proxy route requires documented justification, a valid reason code, and retrospective Finance review."
+    }
+  ]
+}
