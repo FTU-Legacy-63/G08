@@ -1,106 +1,263 @@
-# The Last Heir — Solution Structure Tuần 2
-> Học phần: **NHA408E** · Nhóm: **08**
+# The Last Heir — Financial Investigation Game
 
-## 1. Main Output
+Học phần: NHA408E  
+Nhóm: G08
 
-Main output đã chốt ở `PROJECT_PROPOSAL.md`:
-> Kết quả đối chiếu giữa kết luận người dùng chọn với logic vụ án đúng bao gồm: kết luận đó đúng hay sai, bằng chứng nào người dùng đã dùng đúng, và bằng chứng nào bị bỏ sót hoặc bị tin đồn/suy đoán đánh lừa.
+## WEEK 2 — SOLUTION STRUCTURE
 
-Kết luận và tập bằng chứng mà người dùng tự chọn (mục "Input" ở sơ đồ dưới) là quyết định của người dùng, đưa vào Process — không phải bản thân main output. Main output là kết quả Process trả về sau khi xử lý quyết định đó.
+### 1. Purpose of the Solution Structure
 
-## 2. User to Input to Process to Output to User Action
+Tài liệu này chuyển định hướng sản phẩm trong `PROJECT_PROPOSAL.md` thành một cấu trúc có thể triển khai. Nếu Project Proposal giải thích sản phẩm giúp ai, giải quyết vấn đề gì và tạo ra giá trị gì, Solution Structure tập trung vào cách đầu vào được chuyển thành đầu ra, MVP cần giữ những thành phần nào và hướng kỹ thuật ban đầu của dự án.
 
-```
-                                                                  User: sinh viên (target user)
-                                                                              |
-                                                                              v
-Input: mở tài liệu vụ án (báo cáo tài chính, sao kê, hợp đồng, tin đồn, tài liệu nội bộ), chọn bằng chứng liên quan, đánh dấu bằng chứng là đáng tin hay không đáng tin, chọn một cách giải thích làm kết luận
-                                                                              |
-                                                                              v
-Process: phân loại độ tin cậy từng bằng chứng, so sánh các cách giải thích khả dĩ dựa trên bằng chứng đã chọn, giải thích kết quả so khớp với logic vụ án đúng
-                                                                              |
-                                                                              v
-Output (main output): kết quả đối chiếu — kết luận người dùng chọn đúng hay sai, bằng chứng nào đã dùng đúng, bằng chứng nào bị bỏ sót hoặc bị tin đồn đánh lừa
-                                                                              |
-                                                                              v
-User action: xem lại đúng những bằng chứng bị bỏ sót hoặc dùng sai, hiệu chỉnh cách đọc bằng chứng cho lần kết luận sau
-```
+Câu hỏi trung tâm là:
 
-> **Cụ thể hóa theo 3-layer đã chốt (không đổi sơ đồ trên, chỉ nêu rõ "bằng chứng" và "cách giải thích" cụ thể là gì):** ở Tab 1, "bằng chứng" là các biến Beneish (DSRI, SGAI, TATA — MVP; đủ 8 biến — Final) và "cách giải thích" là các hypothesis về loại gian lận. Ở Tab 4, "bằng chứng" là Magnitude/Likelihood theo SOX 404 và "cách giải thích" là kết luận Severity. Ở Tab 6, "kết luận" là thủ phạm + phân loại hành vi, và bước tính Present Value là điểm thưởng chỉ mở khóa khi kết luận đó đúng.
+> **Sản phẩm cần nhận đầu vào gì, xử lý theo logic nào và tạo đầu ra gì để người dùng vừa đánh giá Management Override vừa xác định cá nhân chịu trách nhiệm chính bằng bằng chứng?**
 
-## 3. Initial Required Information
+### 2. Target Product Structure
 
-Thông tin tối thiểu cần có gồm một tình huống bất thường tài chính doanh nghiệp cụ thể liên quan đến nghi vấn gian lận của 1 nhân viên trong trò chơi, hai đến ba cách giải thích khả dĩ cho bất thường đó, và năm đến tám mục bằng chứng.
+Sản phẩm hoàn chỉnh được tổ chức quanh một chuỗi điều tra duy nhất:
 
-Mỗi mục bằng chứng cần gắn ba nhãn: nguồn của nó (báo cáo tài chính, hồ sơ giao dịch, tài liệu nội bộ, thông tin công khai, hoặc tin đồn chưa kiểm chứng), mức độ tin cậy thật theo thiết kế của nhóm, và cách giải thích mà nó ủng hộ.
+**Người dùng → Thông tin tài chính → Sàng lọc tài chính → Tín hiệu tài chính đáng ngờ → Thông tin cấp giao dịch → Bằng chứng kiểm soát và phê duyệt → Đánh giá Management Override → Quy trách nhiệm → Kết luận về Management Override và trách nhiệm dựa trên bằng chứng → Hành động của người dùng**
 
-Ngoài ra cần một số bằng chứng gây nhiễu, tức các thông tin có vẻ liên quan nhưng không ủng hộ cách giải thích đúng, cùng với logic vụ án đúng xác định chuỗi bằng chứng nào dẫn tới kết luận chính xác.
+Materiality và việc xem xét gian lận hoặc Management Override là hai nguyên tắc xuyên suốt toàn bộ chuỗi.
 
-Đây là input ở mức khởi tạo, chưa cần đầy đủ số liệu tài chính thật. Ý nghĩa, nguồn gốc và giả định chi tiết của từng thông tin sẽ được xử lý ở Tuần 3.
+### 3. Layer Structure
 
-> **Cụ thể hóa theo 3-layer đã chốt:** "năm đến tám mục bằng chứng" nay được phân bổ theo layer — Layer 1 dùng Revenue/Net Income/OCF/AR/SG&A/Total Assets 2 kỳ (MVP) hoặc thêm Intangible/PP&E/Depreciation/Debt/Current Assets (Final); Layer 2 dùng giá Northstar thực trả, giá thị trường hợp lý, Materiality Threshold, tỷ lệ giao dịch dưới ngưỡng phê duyệt; Layer 3 dùng hồ sơ Fraud Triangle của nghi phạm. Chi tiết đầy đủ (kiểu dữ liệu, đơn vị, ví dụ) nằm ở `week3/input-dictionary.md`.
+| Layer | Vai trò | Kiến thức / logic chính | Đầu ra |
+|---|---|---|---|
+| Layer 1 — Financial Screening | Ưu tiên hướng điều tra | Các chỉ số Beneish được lựa chọn / sàng lọc tài chính | Tín hiệu tài chính đáng ngờ |
+| Layer 2 — Control Investigation | Kiểm tra bằng chứng kiểm soát và phê duyệt | COSO, thẩm quyền, tính độc lập, xung đột lợi ích, dấu hiệu vượt qua kiểm soát | Bằng chứng về Management Override |
+| Layer 3 — Responsibility Attribution | Xác định cá nhân chịu trách nhiệm chính | Thẩm quyền, mức độ tham gia, xung đột lợi ích, mức độ liên hệ với giao dịch, bằng chứng vượt qua kiểm soát; Fraud Triangle chỉ hỗ trợ giải thích | Cá nhân chịu trách nhiệm chính và lập luận quy trách nhiệm |
 
-## 4. Core Process Type
+Ba layer không phải ba bài tập độc lập. Đầu ra của Layer 1 là đầu vào cho Layer 2, còn đầu ra của Layer 2 là bằng chứng cần thiết để Layer 3 thực hiện việc quy trách nhiệm.
 
-Quy trình gồm ba loại cụ thể.
+### 4. User–Input–Process–Output–User
 
-Loại thứ nhất là phân loại. Với mỗi bằng chứng người dùng chọn, hệ thống so với mức tin cậy thật để xác định người dùng phân loại đúng hay sai giữa đáng tin và suy đoán.
+**Người dùng:** sinh viên Tài chính, Kế toán, Ngân hàng hoặc Kinh doanh có kiến thức tài chính cơ bản và đã được tiếp cận COSO và Fraud Triangle.
 
-Loại thứ hai là so sánh. Hệ thống so sánh tập bằng chứng người dùng chọn với từng cách giải thích khả dĩ, xác định giải thích nào được ủng hộ mạnh nhất bởi đúng các bằng chứng đáng tin.
+**Đầu vào:** dữ liệu tài chính, thông tin giao dịch, bằng chứng kiểm soát và phê duyệt, thông tin về vai trò và thẩm quyền, thông tin về tính độc lập hoặc xung đột lợi ích, cùng ngưỡng trọng yếu được thiết lập từ đầu.
 
-Loại thứ ba là giải thích. Khi người dùng nộp kết luận, hệ thống trả về lý do khớp hoặc lệch với logic vụ án đúng, chỉ rõ bằng chứng nào đã dùng đúng và bằng chứng nào bị bỏ sót hoặc bị tin đồn đánh lừa.
+**Quy trình xử lý:** sàng lọc, so sánh, truy vết giao dịch, kiểm tra kiểm soát, đánh giá Management Override, quy trách nhiệm và tổng hợp bằng chứng.
 
-> **Cụ thể hóa theo 3-layer đã chốt:** loại thứ nhất (phân loại) ứng với việc so từng biến Beneish với benchmark ngành ở Layer 1 và tra ma trận Likelihood × Magnitude ở Layer 2; loại thứ hai (so sánh) ứng với việc dùng DSRI/SGAI để loại trừ hoặc giữ lại hypothesis ở Layer 1; loại thứ ba (giải thích) ứng với phản hồi gating question ở cả ba layer, và ở Layer 3 còn thêm điều kiện: bước giải thích/tính Present Value chỉ chạy được sau khi kết luận thủ phạm đúng.
+**Đầu ra:** Sơ đồ truy vết tài chính và Kết luận về Management Override và trách nhiệm dựa trên bằng chứng.
 
-## 5. MVP Flow
+**Hành động của người dùng:** người chơi đưa ra hai quyết định cuối cùng: Management Override có xảy ra hay không, và ai là cá nhân chịu trách nhiệm chính; sau đó giải thích chuỗi bằng chứng hỗ trợ cả hai quyết định.
 
-Luồng hoàn chỉnh và nhỏ nhất có thể chạy từ đầu đến cuối, gồm năm bước:
+Ở phạm vi MVP, cấu trúc này được giữ nguyên nhưng mỗi thành phần được thu nhỏ.
 
-**Bước 1: Mở tài liệu vụ án.** Người dùng mở năm đến tám tài liệu của vụ án qua Document Viewer và News/Rumor Feed.
+### 5. Main Output Backward Mapping
 
-**Bước 2: Chọn và đánh giá bằng chứng.** Người dùng chọn các bằng chứng cho là liên quan, và đánh dấu từng bằng chứng là đáng tin hoặc không đáng tin.
+| Đầu ra chính | Logic cần có | Đầu vào cần có | Thành phần cần có |
+|---|---|---|---|
+| Kết luận về Management Override | Đối chiếu thiết kế và vận hành kiểm soát, phê duyệt, thẩm quyền, tính độc lập và dấu hiệu vượt qua kiểm soát | Hồ sơ phê duyệt, thông tin vai trò, bằng chứng kiểm soát, dữ liệu giao dịch | Control Investigation |
+| Cá nhân chịu trách nhiệm chính | So sánh thẩm quyền, mức độ tham gia, xung đột lợi ích, lợi ích liên quan, mức độ liên hệ trực tiếp với giao dịch và bằng chứng vượt qua kiểm soát | Thông tin vai trò, luồng phê duyệt, bằng chứng xung đột lợi ích, mức độ tham gia giao dịch | Responsibility Attribution |
+| Lập luận quy trách nhiệm | Chỉ ra vì sao bằng chứng đối với một cá nhân mạnh hơn các cá nhân khác | Hồ sơ bằng chứng của các cá nhân liên quan | Final Review |
+| Sơ đồ truy vết tài chính | Ghi lại quá trình lập luận từ tín hiệu đến cá nhân và kết luận | Kết quả của toàn bộ các bước | Financial Trace Map |
 
-**Bước 3: Chọn kết luận.** Người dùng chọn một trong hai đến ba cách giải thích làm kết luận.
+Việc suy ngược từ đầu ra cho thấy rằng nếu MVP bỏ bước quy trách nhiệm thì sản phẩm không còn tạo được đầy đủ đầu ra cốt lõi đã xác định trong Project Proposal.
 
-**Bước 4: Hệ thống đối chiếu.** Hệ thống so khớp lựa chọn với logic vụ án đúng, trả về kết quả đúng hoặc sai, kèm bằng chứng nào đã dùng đúng và bằng chứng nào bị bỏ sót hoặc bị nhiễu.
+### 6. MVP Definition
 
-**Bước 5: Xem lại và đối chiếu.** Người dùng xem lại kết luận đúng, tự đối chiếu với lựa chọn của mình.
+MVP của The Last Heir là **phiên bản điều tra tài chính rút gọn nhưng hoàn chỉnh từ đầu đến cuối**.
 
-Kiểm tra lại luồng theo bốn tiêu chí:
+MVP giữ nguyên giá trị cốt lõi, nhiệm vụ cốt lõi của người dùng, logic điều tra và đầu ra cuối cùng. Nhóm giảm số biến, tài liệu, nhân vật liên quan, lựa chọn và nhánh xử lý thay vì loại bỏ một giai đoạn hoàn chỉnh.
 
-- Người dùng có thể hoàn thành một lần kết luận đầy đủ — có, ở bước 1 đến 4.
-- Kết quả có thể giải thích được — có, ở bước 4.
-- Lựa chọn có làm thay đổi trạng thái — có, vì việc đánh dấu bằng chứng ở bước 2 thay đổi tập bằng chứng dùng để so khớp.
-- Bước sau có phụ thuộc bước trước — có, vì kết luận ở bước 4 phụ thuộc vào bằng chứng đã chọn ở bước 2.
+Nhiệm vụ cốt lõi của MVP là:
 
-> **Cụ thể hóa theo 3-layer đã chốt (MVP không đổi, vẫn là nhánh Financial Trace/Layer 1 rút gọn):** ở Tab 1, "tài liệu vụ án" (Bước 1) là bảng dữ liệu tài chính 2 kỳ; "chọn và đánh giá bằng chứng" (Bước 2) là tính DSRI/SGAI/TATA; "chọn kết luận" (Bước 3) là trả lời hai câu hỏi gating (biến lệch nhiều nhất; dùng DSRI để loại trừ hypothesis); "hệ thống đối chiếu" (Bước 4) là chấm 15 điểm gốc (5+5+5) kèm giải thích. Bước 5 giữ nguyên như mô tả.
+> **Đi từ một tín hiệu tài chính đáng chú ý đến giao dịch Northstar, kiểm tra bằng chứng kiểm soát và phê duyệt, đánh giá Management Override và xác định cá nhân chịu trách nhiệm chính dựa trên một tập bằng chứng tối thiểu nhưng đủ để hình thành kết luận.**
 
-## 6. Target, Fallback và Out of Scope
+Đầu vào cốt lõi gồm:
 
-**Target Scope**: Phiên bản khả thi dự kiến cho Tuần 6 và Tuần 7, gồm một vụ án với đầy đủ năm đến tám bằng chứng và hai đến ba cách giải thích cùng logic vụ án đúng, Document Viewer và News/Rumor Feed hiển thị toàn bộ tài liệu, cơ chế chọn và đánh dấu bằng chứng không nhất thiết phải kéo thả, và cơ chế so khớp kết luận với logic vụ án đúng kèm phản hồi giải thích.
+- dữ liệu tài chính hai kỳ;
+- một hoặc một nhóm rất nhỏ chỉ số sàng lọc;
+- một giao dịch Northstar;
+- một hoặc hai bằng chứng kiểm soát hoặc phê duyệt;
+- thông tin về vai trò và thẩm quyền của một số ít cá nhân liên quan;
+- thông tin về tính độc lập hoặc xung đột lợi ích;
+- ngưỡng trọng yếu.
 
-**Fallback Scope**: Hướng đi nhỏ hơn nếu rủi ro về thời gian hoặc kỹ thuật xảy ra, gồm việc bỏ giao diện kéo thả của Assumption Board Lớp 1 và thay bằng danh sách checkbox chọn bằng chứng, bỏ việc tính phần trăm độ tin cậy theo thời gian thực và chỉ tính một lần khi người dùng nộp kết luận, và bỏ giai đoạn mở khóa tài liệu theo Information Reveal Map để hiển thị toàn bộ tài liệu ngay từ đầu, giữ độ khó ở khâu chọn lọc và đánh giá thay vì khâu thời điểm.
+Đầu ra cốt lõi gồm:
 
-**Out of Scope**: Các phần loại hẳn khỏi giai đoạn này, gồm nhiều vụ án hoặc cốt truyện rẽ nhánh, hệ thống tài khoản và đăng nhập cùng lưu tiến trình giữa các phiên, bảng xếp hạng và chế độ nhiều người chơi, Assumption Board Lớp 2 với hint economy nâng cao, và việc tự sinh vụ án bằng AI hoặc dùng dữ liệu tài chính thật từ doanh nghiệp hoặc ngân hàng.
+- Sơ đồ truy vết tài chính rút gọn;
+- Kết luận rút gọn về Management Override và trách nhiệm dựa trên bằng chứng.
 
-> **Cụ thể hóa theo 3-layer đã chốt (Target/Fallback/Out of Scope không đổi, chỉ nêu rõ layer nào rơi vào mục nào):** trong Target Scope, "năm đến tám bằng chứng" của Layer 1 nay là đủ 8 biến Beneish + M-Score; Layer 2 (COSO + SOX 404 Severity) giữ nguyên như đã chốt; Layer 3 (Fraud Triangle + Present Value thiệt hại 3 năm) là điểm thưởng, không bắt buộc để hoàn thành game. Trong Fallback Scope, nếu rủi ro xảy ra, Layer 1 dừng ở MVP 3 biến (không mở đủ 8 biến), và Layer 3 bỏ bước tính Present Value nhiều kỳ, chỉ dùng trực tiếp Magnitude làm con số thiệt hại.
+### 7. MVP User Flow
 
-## 7. Initial Route Hypothesis
+**Bước 1 — Mở đầu tình huống**
 
-Route chính là **Code based web** theo hướng interactive flow, vì main output đòi hỏi trạng thái thay đổi theo lựa chọn của người dùng, tức việc chọn bằng chứng ảnh hưởng đến kết luận, nên cần tương tác thực chứ không chỉ xem tĩnh, phù hợp với ba loại process ở mục 4.
+Người chơi nhận bối cảnh doanh nghiệp, ngưỡng trọng yếu và thông tin tài chính ban đầu. Sản phẩm cũng đặt ra nguyên tắc rằng khả năng gian lận và Management Override phải được xem xét xuyên suốt quá trình điều tra.
 
-Route dự phòng là **Prototype cộng logic file**, ví dụ một bản Figma có thể bấm được kèm một file quy tắc viết tay mô tả cách chấm điểm, dùng nếu phần code tương tác không kịp hoàn thành.
+**Bước 2 — Quan sát thông tin tài chính**
 
-Dữ liệu vụ án, gồm bằng chứng, cách giải thích và logic vụ án đúng, sẽ lưu dưới dạng file cấu trúc tĩnh như JSON hoặc bảng, không cần database vì Target Scope chỉ có một vụ án.
+Người chơi quan sát dữ liệu tài chính hai kỳ và xác định biến động đáng chú ý.
 
-## 8. Responsibility by Output
+**Bước 3 — Sàng lọc tài chính**
 
-| Responsibility    | Owner                | Visible output                                                                                                                                       | Consumer / dependency                     |
-| ----------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Input owner       | Phạm Triệu Tiến Dũng | Danh sách bằng chứng vụ án gồm nguồn, độ tin cậy thật, cách giải thích nó ủng hộ, và bộ bằng chứng gây nhiễu                                         | Logic owner, Interface owner, README      |
-| Logic owner       | Nguyễn Minh Hiền     | Bảng công thức mô tả cách phân loại từng bằng chứng, cách so sánh các cách giải thích, và logic vụ án đúng dùng để so khớp                           | Output owner, Integration owner, kiểm thử |
-| Output owner      | Tôn Khánh Ngọc       | Định nghĩa cụ thể nội dung phản hồi ở bước giải thích, gồm thông điệp đúng hoặc sai, bằng chứng bị bỏ sót hoặc bị nhiễu, và trình tự hé lộ thông tin | Interface owner, demo                     |
-| Interface owner   | Đinh Thị Minh Khuê   | UI được phát triển từ layout ban đầu thành interactive prototype bằng *Unity + C# (VS Code)*, gồm screen structure, page navigation và các interaction state cơ bản. Prototype này là lớp giao diện để tích hợp input, financial logic và output của game ở các tuần tiếp theo.                                       | User review, demo                         |
-| Integration owner | Phạm Quỳnh Phương    | Run path nối input, logic, output và interface thành một luồng chạy được, cùng dependency map giữa bốn phần trên                                     | Cả nhóm, checkpoint                       |
+Người chơi sử dụng các chỉ số sàng lọc được lựa chọn để quyết định tín hiệu nào đáng được ưu tiên. Bước này chỉ trả lời câu hỏi **“vấn đề nào đáng được điều tra sâu hơn?”**, không trả lời **“gian lận đã xảy ra hay chưa?”**.
 
-> **Cụ thể hóa theo 3-layer đã chốt (bảng và owner không đổi, chỉ nêu rõ "bằng chứng"/"công thức"/"phản hồi" cụ thể gồm gì):** với Input owner, "danh sách bằng chứng" nay gồm dữ liệu tài chính 2 kỳ, dữ liệu giao dịch Northstar và hồ sơ Fraud Triangle. Với Logic owner, "bảng công thức" nay gồm công thức Beneish, ma trận Severity SOX 404, và công thức Present Value. Với Output owner, "nội dung phản hồi" nay gồm phản hồi cho từng gating question ở cả ba tab. Chi tiết đầy đủ nằm ở `week3/input-dictionary.md`, `week3/sources.md` và `week3/data-flow.md`.
+**Bước 4 — Truy vết xuống giao dịch**
+
+Người chơi truy vết tín hiệu xuống giao dịch Northstar.
+
+**Bước 5 — Kiểm tra bằng chứng kiểm soát và phê duyệt**
+
+Người chơi xem hồ sơ phê duyệt, thông tin về thẩm quyền, tính độc lập hoặc mối quan hệ lợi ích, cùng bằng chứng về quy trình kiểm soát thông thường. Mục tiêu là xác định liệu phê duyệt chỉ hợp lệ về hình thức hay kiểm soát thực sự được vận hành đúng bản chất.
+
+**Bước 6 — Đánh giá Management Override**
+
+Người chơi tổng hợp bằng chứng kiểm soát và đánh giá liệu bằng chứng hiện có có hỗ trợ kết luận về Management Override hay không.
+
+**Bước 7 — Quy trách nhiệm**
+
+Người chơi so sánh các cá nhân liên quan dựa trên thẩm quyền, mức độ tham gia, xung đột lợi ích, lợi ích liên quan, mức độ liên hệ trực tiếp với giao dịch và bằng chứng vượt qua kiểm soát để xác định cá nhân chịu trách nhiệm chính.
+
+Fraud Triangle chỉ được sử dụng để hỗ trợ giải thích bối cảnh rủi ro gian lận, không tự xác định người chịu trách nhiệm.
+
+**Bước 8 — Kết quả cuối**
+
+Sản phẩm hiển thị:
+
+- Sơ đồ truy vết tài chính rút gọn;
+- kết luận về Management Override;
+- cá nhân chịu trách nhiệm chính;
+- bằng chứng quan trọng hỗ trợ đánh giá Management Override;
+- bằng chứng quan trọng hỗ trợ việc quy trách nhiệm;
+- phản hồi giải thích logic đúng hoặc sai.
+
+### 8. Why the MVP Is a Mini Final Product
+
+| Sản phẩm hoàn chỉnh | MVP |
+|---|---|
+| Nhiều chỉ số tài chính | 1–3 chỉ số thiết yếu |
+| Nhiều tín hiệu giao dịch | 1 giao dịch Northstar |
+| Nhiều tài liệu kiểm soát | 1–2 bằng chứng thiết yếu |
+| Phân tích kiểm soát đầy đủ | 1 vấn đề kiểm soát cốt lõi |
+| Nhiều cá nhân liên quan | Một nhóm nhỏ nhân vật cần so sánh |
+| Nhiều nhánh quy trách nhiệm | 1 quyết định trách nhiệm chính |
+| Sơ đồ truy vết tài chính đầy đủ | Sơ đồ truy vết tài chính rút gọn |
+| Kết luận đầy đủ về Management Override và trách nhiệm | Kết luận rút gọn nhưng đủ hai thành phần |
+
+MVP vẫn cho người chơi trải nghiệm toàn bộ hành trình từ tín hiệu tài chính đến việc xác định cá nhân chịu trách nhiệm chính.
+
+### 9. In Scope
+
+Trong phạm vi MVP, nhóm cam kết hoàn thành một tình huống Aster Holdings với một hướng điều tra chính. Tình huống bao gồm một ngưỡng trọng yếu, một tín hiệu tài chính chính, một nhóm nhỏ chỉ số sàng lọc, một giao dịch Northstar, một hoặc hai bằng chứng kiểm soát, một bước đánh giá Management Override và một bước quy trách nhiệm giữa một số ít cá nhân liên quan.
+
+MVP phải tạo được Sơ đồ truy vết tài chính rút gọn và Kết luận rút gọn về Management Override và trách nhiệm dựa trên bằng chứng, kèm phản hồi giải thích bằng chứng hỗ trợ cả hai phần kết luận.
+
+### 10. Out of Scope
+
+Để kiểm soát khối lượng công việc, các nội dung sau chưa nằm trong MVP:
+
+- đầy đủ tám biến của Beneish M-Score;
+- nhiều benchmark ngành;
+- nhiều giao dịch;
+- nhiều tài liệu kiểm soát;
+- phân tích đầy đủ các thành phần COSO;
+- đánh giá đầy đủ mức độ nghiêm trọng theo SOX 404;
+- nhiều nhân vật và các nhánh quy trách nhiệm phức tạp;
+- chấm điểm Fraud Triangle chi tiết;
+- tính toán Present Value thiệt hại chi tiết;
+- nhiều ending hoặc nhiều tình huống doanh nghiệp;
+- dữ liệu thị trường thời gian thực;
+- external API;
+- hệ thống tài khoản, xác thực hoặc chatbot;
+- AI model hoặc cơ sở dữ liệu phức tạp.
+
+### 11. Product Logic and Product Form
+
+**Giá trị sản phẩm** là giúp người học kết nối bằng chứng để trả lời hai câu hỏi cuối: **Management Override có xảy ra hay không** và **ai chịu trách nhiệm chính**.
+
+**Logic sản phẩm** là:
+
+**Sàng lọc → Truy vết → Kiểm tra → Đánh giá → Quy trách nhiệm → Kết luận**
+
+**Hình thức sản phẩm** là Scenario-Based Financial Investigation Learning Game được triển khai bằng Unity.
+
+Nếu giao diện phải đơn giản hóa, giá trị và logic sản phẩm vẫn phải được giữ nguyên.
+
+### 12. Initial Technical Route
+
+Hướng kỹ thuật ban đầu sử dụng Unity làm giao diện, C# làm ngôn ngữ lập trình và Visual Studio Code làm môi trường phát triển. Dữ liệu của tình huống được chuẩn bị trước và lưu dưới dạng dữ liệu tĩnh hoặc cục bộ. Logic cốt lõi được triển khai theo rule-based logic.
+
+Hướng này phù hợp với MVP vì sản phẩm có một tình huống, một hướng điều tra chính, số lượng đầu vào hữu hạn và logic xác định trước. Nhóm chưa cần backend, external API hoặc cơ sở dữ liệu phức tạp để tạo ra giá trị cốt lõi.
+
+### 13. Fallback Plan
+
+Nếu gặp rủi ro kỹ thuật hoặc thiếu thời gian, nhóm giảm độ phức tạp của từng bước nhưng không cắt bỏ hành trình cốt lõi.
+
+Có thể giảm:
+
+- số chỉ số sàng lọc;
+- số tài liệu kiểm soát;
+- số cá nhân liên quan;
+- số màn hình;
+- số tương tác phụ.
+
+Không được cắt:
+
+- một tín hiệu tài chính;
+- một bước truy vết giao dịch;
+- một bước kiểm tra kiểm soát và phê duyệt;
+- một bước đánh giá Management Override;
+- một quyết định quy trách nhiệm;
+- một kết luận cuối dựa trên bằng chứng;
+- Sơ đồ truy vết tài chính rút gọn.
+
+Nguyên tắc dự phòng là giảm **số lượng**, không giảm **logic cốt lõi**.
+
+### 14. Evidence and Input to Validate in Week 3
+
+Week 3 cần xác định rõ nguồn, giả định, dữ liệu mẫu và quy tắc trò chơi cho:
+
+- chỉ số sàng lọc;
+- benchmark, ngưỡng hoặc quy tắc diễn giải;
+- ngưỡng trọng yếu;
+- dữ liệu Aster Holdings;
+- dữ liệu giao dịch Northstar;
+- bằng chứng phê duyệt và thẩm quyền;
+- thông tin về vai trò và thẩm quyền;
+- thông tin về tính độc lập hoặc xung đột lợi ích;
+- bằng chứng vượt qua kiểm soát;
+- logic đánh giá Management Override;
+- logic quy trách nhiệm;
+- mức bằng chứng cần thiết để xác định cá nhân chịu trách nhiệm chính;
+- nguồn học thuật hoặc nguồn chuyên môn cho các framework được sử dụng.
+
+### 15. Open Questions for Week 3
+
+Nhóm cần tiếp tục xác định mức bằng chứng tối thiểu để một kết luận về Management Override được xem là hợp lý, cũng như mức bằng chứng cần thiết để quy trách nhiệm chính mà không vượt quá dữ liệu.
+
+Các câu hỏi chính gồm:
+
+- Chỉ số nào thực sự cần giữ trong MVP?
+- Ngưỡng trọng yếu được xác định như thế nào?
+- Bằng chứng nào đủ để cho thấy có hành vi vượt qua kiểm soát?
+- Những cá nhân nào cần xuất hiện để bước quy trách nhiệm có ý nghĩa nhưng không làm phạm vi quá lớn?
+- Tiêu chí nào phân biệt trách nhiệm chính với việc chỉ có liên quan?
+- Fraud Triangle nên xuất hiện ở mức hỗ trợ giải thích nào?
+- Sơ đồ truy vết tài chính nên thể hiện cá nhân chịu trách nhiệm ở vị trí nào trong chuỗi lập luận?
+
+### 16. Responsibility Map
+
+| Thành viên | Trách nhiệm trong Week 2 | Expected Output | Evidence Location | Dependency |
+|---|---|---|---|---|
+| Phạm Quỳnh Phương | Tổng hợp định hướng sản phẩm và cấu trúc giải pháp, đối chiếu tính nhất quán giữa đánh giá Management Override và bước quy trách nhiệm | Final Project Proposal, Solution Structure, decision log và danh sách câu hỏi mở cho Week 3 | `PROJECT_PROPOSAL.md`, `SOLUTION_STRUCTURE.md`, README | Phụ thuộc đầu ra từ tất cả workstream |
+| Phạm Triệu Tiến Dũng | Xác định nội dung tài chính và đầu vào phục vụ điều tra | Dữ liệu tài chính, chỉ số sàng lọc, benchmark dự kiến và ngưỡng trọng yếu | Data and Input documentation | Cần kiểm chứng nguồn ở Week 3 |
+| Nguyễn Minh Hiền | Xác định logic gameplay từ đầu đến cuối | Luồng người dùng, logic câu hỏi, bước đánh giá Management Override và quy trách nhiệm | Solution Structure và logic notes | Phụ thuộc đầu vào đã chốt |
+| Tôn Khánh Ngọc | Xây dựng storyline, phản hồi và cách trình bày đầu ra | Nội dung phản hồi, định dạng Sơ đồ truy vết tài chính, cách trình bày cá nhân chịu trách nhiệm và kết luận | Output and feedback notes | Phụ thuộc chuỗi bằng chứng |
+| Đinh Thị Minh Khuê | Chuyển logic sản phẩm thành interactive prototype | Working Unity prototype cho luồng MVP | Unity project và prototype evidence | Phụ thuộc luồng và đầu vào đã chốt |
+
+### 17. Week 2 Completion Check
+
+Đến cuối Week 2, nhóm đã xác định được người dùng mục tiêu, nhiệm vụ người dùng, kết quả mong muốn, đầu ra chính, mô hình sản phẩm, cấu trúc User–Input–Process–Output–User, MVP, phạm vi thực hiện, phạm vi chưa thực hiện, hướng kỹ thuật, phương án dự phòng và phân công trách nhiệm.
+
+MVP hiện được xác định là phiên bản rút gọn nhưng hoàn chỉnh từ đầu đến cuối của sản phẩm cuối. Hai quyết định cuối cùng đã được tách rõ thành đánh giá Management Override và quy trách nhiệm. Đầu ra chính cũng được điều chỉnh thành **Kết luận về Management Override và trách nhiệm dựa trên bằng chứng** để phản ánh đầy đủ cả việc xác định hành vi và xác định cá nhân chịu trách nhiệm chính.
+
+### 18. Handoff to Week 3
+
+Week 2 đã trả lời sản phẩm cần làm gì, người dùng phải đưa ra những quyết định nào và MVP nhỏ nhất phải giữ những bước nào.
+
+Week 3 sẽ tiếp tục trả lời:
+
+> **Những đầu vào, nguồn, giả định và dữ liệu mẫu cụ thể nào cần có để người chơi có thể đưa ra cả kết luận về Management Override và việc quy trách nhiệm một cách có căn cứ?**
