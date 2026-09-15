@@ -103,16 +103,3 @@
 | Ngọc | Evidence, storyline, responsibility và feedback |
 | Khuê | UI/UX, Unity implementation và technical integration |
 
-Cách chia này giữ đúng role xuyên Week 1–5 nhưng giảm tình trạng một người ôm quá nhiều phần.
-
-Phương phụ trách thêm end-to-end QA và final review.  
-Dũng phụ trách thêm numeric validation và calculation testing.  
-Hiền tập trung vào core logic thay vì toàn bộ testing.  
-Ngọc phụ trách thêm evidence-selection content và final feedback.  
-Khuê tập trung vào Unity/UI implementation thay vì đồng thời chịu trách nhiệm business logic và QA.
-
-## 5. Evidence Note
-
-Các contribution trên được ghi dựa trên artifact Week 1 đến Week 5.
-
-Với phần technical implementation, nhóm nên bổ sung GitHub evidence như commit, C# script, Unity scene, screenshot hoặc build nếu evaluator yêu cầu proof of implementation.
