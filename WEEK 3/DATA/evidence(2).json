@@ -1,0 +1,243 @@
+{
+  "approval_summaries": [
+    {
+      "evidence_id": "APS-01",
+      "transaction_id": "ADV-02A",
+      "department_head_status": "Completed",
+      "finance_approval_status": "Completed",
+      "overall_status": "Approved"
+    },
+    {
+      "evidence_id": "APS-02",
+      "transaction_id": "ADV-02B",
+      "department_head_status": "Completed",
+      "finance_approval_status": "Completed",
+      "overall_status": "Approved"
+    },
+    {
+      "evidence_id": "APS-03",
+      "transaction_id": "ADV-02C",
+      "department_head_status": "Completed",
+      "finance_approval_status": "Completed",
+      "overall_status": "Approved"
+    }
+  ],
+  "raw_approval_audit_trail": [
+    {
+      "evidence_id": "AUD-01",
+      "transaction_id": "ADV-02A",
+      "department_head_step": {
+        "required_role": "Department Head",
+        "status": "Completed",
+        "recorded_actor_id": "P-VICTOR"
+      },
+      "finance_step": {
+        "required_role": "Finance Manager",
+        "status": "Completed",
+        "completion_type": "Proxy Route",
+        "recorded_approver_id": null,
+        "route_initiated_by_person_id": "P-VICTOR",
+        "supporting_record": {
+          "valid_reason_code_present": false,
+          "documented_justification_present": false,
+          "retrospective_finance_manager_review_present": false
+        }
+      },
+      "player_facing_note": "Raw record only. No bypass or Management Override conclusion is embedded in this evidence."
+    },
+    {
+      "evidence_id": "AUD-02",
+      "transaction_id": "ADV-02B",
+      "department_head_step": {
+        "required_role": "Department Head",
+        "status": "Completed",
+        "recorded_actor_id": "P-VICTOR"
+      },
+      "finance_step": {
+        "required_role": "Finance Manager",
+        "status": "Completed",
+        "completion_type": "Proxy Route",
+        "recorded_approver_id": null,
+        "route_initiated_by_person_id": "P-VICTOR",
+        "supporting_record": {
+          "valid_reason_code_present": false,
+          "documented_justification_present": false,
+          "retrospective_finance_manager_review_present": false
+        }
+      },
+      "player_facing_note": "Raw record only. No bypass or Management Override conclusion is embedded in this evidence."
+    },
+    {
+      "evidence_id": "AUD-03",
+      "transaction_id": "ADV-02C",
+      "department_head_step": {
+        "required_role": "Department Head",
+        "status": "Completed",
+        "recorded_actor_id": "P-VICTOR"
+      },
+      "finance_step": {
+        "required_role": "Finance Manager",
+        "status": "Completed",
+        "completion_type": "Proxy Route",
+        "recorded_approver_id": null,
+        "route_initiated_by_person_id": "P-VICTOR",
+        "supporting_record": {
+          "valid_reason_code_present": false,
+          "documented_justification_present": false,
+          "retrospective_finance_manager_review_present": false
+        }
+      },
+      "player_facing_note": "Raw record only. No bypass or Management Override conclusion is embedded in this evidence."
+    }
+  ],
+  "agreement_evidence": [
+    {
+      "evidence_id": "AGR-01",
+      "agreement_id": "AGR-NST-01",
+      "vendor_id": "V-NORTHSTAR",
+      "economic_purpose_code": "NORTHSTAR_ADVISORY_2026",
+      "signed_by_person_ids": [
+        "P-VICTOR"
+      ],
+      "fact": "The three Northstar tranches relate to the same advisory agreement and economic purpose."
+    }
+  ],
+  "baseline_personnel": [
+    {
+      "person_id": "P-VICTOR",
+      "name": "Victor",
+      "role": "Business Development Director",
+      "approval_role": "Department Head",
+      "authority_summary": "Department-level approval authority"
+    },
+    {
+      "person_id": "P-LUCAS",
+      "name": "Lucas",
+      "role": "Finance Manager",
+      "approval_role": "Finance Manager",
+      "authority_summary": "Finance approval role where required by policy"
+    },
+    {
+      "person_id": "P-DAVID",
+      "name": "David",
+      "role": "Chief Financial Officer",
+      "approval_role": "CFO",
+      "authority_summary": "Higher-level financial approval authority"
+    },
+    {
+      "person_id": "P-SOPHIA",
+      "name": "Sophia",
+      "role": "Internal Control Manager",
+      "approval_role": "Control Monitoring",
+      "authority_summary": "Monitoring and internal-control review"
+    }
+  ],
+  "control_evidence": [
+    {
+      "evidence_id": "POL-FIN-01",
+      "evidence_type": "approval_policy",
+      "fact": "Transactions above USD 0.5 million and up to USD 1.0 million require Department Head + Finance Manager approval.",
+      "case_specific_simulated_policy": true
+    },
+    {
+      "evidence_id": "POL-PROXY-01",
+      "evidence_type": "proxy_route_policy",
+      "fact": "The Special Proxy Completion Route requires documented justification, a valid reason code, and retrospective Finance Manager review.",
+      "case_specific_simulated_policy": true
+    },
+    {
+      "evidence_id": "POL-AGG-01",
+      "evidence_type": "approval_policy",
+      "fact": "Transactions above USD 1.0 million in aggregate economic value require CFO + Board approval.",
+      "case_specific_simulated_policy": true
+    }
+  ],
+  "responsibility_evidence": [
+    {
+      "evidence_id": "RESP-VIC-01",
+      "person_id": "P-VICTOR",
+      "fact": "Victor is recorded as the initiator of ADV-02A, ADV-02B, and ADV-02C.",
+      "unlock_stage": "Responsibility Attribution"
+    },
+    {
+      "evidence_id": "RESP-VIC-02",
+      "person_id": "P-VICTOR",
+      "fact": "Victor is the recorded signatory of AGR-NST-01.",
+      "unlock_stage": "Responsibility Attribution"
+    },
+    {
+      "evidence_id": "RESP-LUC-01",
+      "person_id": "P-LUCAS",
+      "fact": "Lucas holds the Finance Manager role required by the tranche-level approval policy.",
+      "unlock_stage": "Responsibility Attribution",
+      "note": "Monitoring responsibility, if any, requires separate evidence and is not inferred from role alone."
+    },
+    {
+      "evidence_id": "RESP-DAV-01",
+      "person_id": "P-DAVID",
+      "fact": "David holds the CFO role relevant to approval escalation for aggregate value above USD 1.0 million.",
+      "unlock_stage": "Responsibility Attribution"
+    },
+    {
+      "evidence_id": "RESP-SOP-01",
+      "person_id": "P-SOPHIA",
+      "fact": "Sophia holds an Internal Control monitoring role.",
+      "unlock_stage": "Responsibility Attribution",
+      "note": "No direct Northstar override-action evidence is embedded in this record."
+    }
+  ],
+  "conflict_evidence": [
+    {
+      "evidence_id": "PUB-01",
+      "person_id": "P-VICTOR",
+      "vendor_id": "V-NORTHSTAR",
+      "fact": "A documented family relationship exists between Victor and Northstar legal representative.",
+      "unlock_stage": "Responsibility Attribution"
+    }
+  ],
+  "context_evidence": [
+    {
+      "evidence_id": "CTX-01",
+      "fact": "ADV-01 with Global Consulting Ltd. belongs to a separate agreement and annual advisory purpose.",
+      "relevance_hint": "context_only"
+    },
+    {
+      "evidence_id": "CTX-02",
+      "fact": "ADV-03 with Bright Path Advisors belongs to a separate agreement and special-review purpose.",
+      "relevance_hint": "context_only"
+    }
+  ],
+  "assisted_referral_packets": [
+    {
+      "packet_id": "REF-NORTHSTAR-01",
+      "trigger": "transaction_group_unresolved",
+      "resulting_state": "assisted",
+      "purpose": "Provide the minimum Northstar data needed to continue the control-investigation learning path.",
+      "transaction_group": {
+        "agreement_id": "AGR-NST-01",
+        "transaction_ids": [
+          "ADV-02A",
+          "ADV-02B",
+          "ADV-02C"
+        ],
+        "vendor_id": "V-NORTHSTAR",
+        "economic_purpose_code": "NORTHSTAR_ADVISORY_2026",
+        "amounts": [
+          0.9,
+          0.9,
+          0.8
+        ]
+      },
+      "does_not_mark_previous_answer_correct": true
+    }
+  ],
+  "player_facing_constraints": {
+    "surface_summary_must_not_show_actor": true,
+    "surface_summary_is_scored": false,
+    "raw_audit_must_not_state_bypass_conclusion": true,
+    "raw_audit_must_not_use_management_override_as_route_label": true,
+    "baseline_personnel_must_not_reveal_final_responsibility": true,
+    "conflict_evidence_unlock_stage": "Responsibility Attribution",
+    "answer_key_must_never_bind_to_player_ui": true
+  }
+}

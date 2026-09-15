@@ -1,0 +1,114 @@
+{
+  "materiality_reference": 1.1,
+  "currency_unit": "USD_million",
+  "screening_rules": {
+    "DSRI": {
+      "normal_lower": 0.9,
+      "normal_upper": 1.15,
+      "note": "Case-specific pedagogical review range; not official Beneish cutoff."
+    },
+    "SGAI": {
+      "review_above": 1.1,
+      "note": "Case-specific routing rule."
+    },
+    "TATA": {
+      "absolute_review_above": 0.05,
+      "note": "Case-specific pedagogical review rule."
+    }
+  },
+  "approval_policy": [
+    {
+      "min_exclusive": null,
+      "max_inclusive": 0.5,
+      "required_roles": [
+        "Department Head"
+      ]
+    },
+    {
+      "min_exclusive": 0.5,
+      "max_inclusive": 1.0,
+      "required_roles": [
+        "Department Head",
+        "Finance Manager"
+      ]
+    },
+    {
+      "min_exclusive": 1.0,
+      "max_inclusive": null,
+      "required_roles": [
+        "CFO",
+        "Board"
+      ]
+    }
+  ],
+  "proxy_route_rule": {
+    "display_name": "Special Proxy Completion Route",
+    "internal_code": "PRX-SPECIAL",
+    "allowed_only_for_special_case": true,
+    "case_specific_simulated_policy": true,
+    "required_conditions": [
+      "documented_justification",
+      "valid_reason_code",
+      "retrospective_finance_manager_review"
+    ],
+    "note": "Simulated Aster Holdings internal policy. The route name is intentionally neutral; route use alone does not establish Management Override."
+  },
+  "aggregation_rule": {
+    "required_link_fields": [
+      "agreement_id",
+      "economic_purpose_code"
+    ],
+    "vendor_match_required": true,
+    "initiator_match_supportive": true,
+    "note": "Do not aggregate merely because transactions share a vendor."
+  },
+  "evidence_state_rule": {
+    "allowed_states": [
+      "unreviewed",
+      "reviewed",
+      "confirmed",
+      "unresolved",
+      "assisted",
+      "contradicted"
+    ],
+    "note": "Evidence State drives the reasoning chain and Trace Map; it is separate from gameplay score."
+  },
+  "evidence_selection_rule": {
+    "classes": [
+      "required_relevant",
+      "additional_relevant",
+      "irrelevant",
+      "contradictory"
+    ],
+    "full_reasoning_credit_requires": [
+      "correct_judgment",
+      "required_evidence_coverage",
+      "acceptable_evidence_relevance"
+    ],
+    "select_all_does_not_guarantee_full_credit": true,
+    "exact_scoring_formula_defined_in": "Week 4"
+  },
+  "assisted_continuation_rule": {
+    "enabled": true,
+    "trigger_example": "transaction_group_unresolved",
+    "resulting_state": "assisted",
+    "referral_packet_id": "REF-NORTHSTAR-01",
+    "previous_node_is_not_marked_confirmed": true,
+    "full_reasoning_credit_allowed_for_assisted_node": false,
+    "purpose": "Keep downstream learning flow available without pretending the previous judgment was correct."
+  },
+  "legacy_system_assumption": {
+    "records_workflow_events": true,
+    "supports_retrospective_review": true,
+    "full_real_time_compliance_detection": false,
+    "automatic_policy_exception_alerting": false,
+    "investigation_trigger": "succession_review",
+    "case_specific_simulated_assumption": true
+  },
+  "surface_approval_rule": {
+    "interaction_type": "read_only_observation",
+    "scored": false,
+    "must_not_expose_actor": true,
+    "purpose": "Create contrast between surface status and actual process without a pseudo-choice."
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "_internal_only": true,
+  "expected_focus_area": "SG&A",
+  "expected_subaccount": "Advisory Expense",
+  "expected_transaction_group": "AGR-NST-01",
+  "surface_approval_behavior": {
+    "scored": false,
+    "expected_state_after_view": "reviewed"
+  },
+  "expected_factual_finding": {
+    "finding_id": "FINANCE_STEP_NO_RECORDED_FINANCE_APPROVER",
+    "text": "Finance step is recorded as Completed, but no Finance Manager approver is recorded; the Proxy Route was initiated by Victor."
+  },
+  "expected_control_interpretation": {
+    "interpretation_id": "POSSIBLE_FINANCE_APPROVAL_BYPASS",
+    "text": "Finance approval control may have been bypassed."
+  },
+  "expected_proxy_route_compliance": "Non-Compliant",
+  "expected_aggregate_approval_roles": [
+    "CFO",
+    "Board"
+  ],
+  "expected_override_assessment": "Supported",
+  "expected_primary_responsible_person_id": "P-VICTOR",
+  "management_override_synthesis": {
+    "uses_gameplay_score": false,
+    "required_evidence_states": [
+      {
+        "node_id": "finance_control_interpretation",
+        "required_state": "confirmed"
+      },
+      {
+        "node_id": "proxy_route_compliance",
+        "required_state": "confirmed"
+      },
+      {
+        "node_id": "aggregate_approval_requirement",
+        "required_state": "confirmed"
+      },
+      {
+        "node_id": "direct_management_connection",
+        "required_state": "confirmed"
+      }
+    ],
+    "supported_result": "Supported"
+  },
+  "evidence_matching": {
+    "control_interpretation": {
+      "required_groups": [
+        {
+          "group_id": "finance_role_requirement",
+          "evidence_ids": [
+            "POL-FIN-01"
+          ],
+          "min_selected": 1
+        },
+        {
+          "group_id": "raw_audit_record",
+          "evidence_ids": [
+            "AUD-01",
+            "AUD-02",
+            "AUD-03"
+          ],
+          "min_selected": 1
+        }
+      ],
+      "additional_relevant": [
+        "AUD-01",
+        "AUD-02",
+        "AUD-03"
+      ],
+      "irrelevant": [
+        "CTX-01",
+        "CTX-02"
+      ],
+      "contradictory": []
+    },
+    "override_assessment": {
+      "required_groups": [
+        {
+          "group_id": "finance_control_issue",
+          "evidence_ids": [
+            "POL-FIN-01",
+            "AUD-01",
+            "AUD-02",
+            "AUD-03"
+          ],
+          "min_selected": 2,
+          "note": "Must include POL-FIN-01 and at least one AUD record; exact enforcement belongs to Week 4."
+        },
+        {
+          "group_id": "proxy_route_compliance",
+          "evidence_ids": [
+            "POL-PROXY-01",
+            "AUD-01",
+            "AUD-02",
+            "AUD-03"
+          ],
+          "min_selected": 2,
+          "note": "Must include POL-PROXY-01 and at least one AUD record; exact enforcement belongs to Week 4."
+        },
+        {
+          "group_id": "aggregate_escalation",
+          "evidence_ids": [
+            "POL-AGG-01",
+            "AGR-01"
+          ],
+          "min_selected": 2
+        }
+      ],
+      "additional_relevant": [
+        "AUD-01",
+        "AUD-02",
+        "AUD-03",
+        "RESP-VIC-01",
+        "RESP-VIC-02"
+      ],
+      "irrelevant": [
+        "CTX-01",
+        "CTX-02"
+      ],
+      "contradictory": []
+    },
+    "responsibility_attribution": {
+      "required_groups": [
+        {
+          "group_id": "direct_control_connection",
+          "evidence_ids": [
+            "AUD-01",
+            "AUD-02",
+            "AUD-03"
+          ],
+          "min_selected": 1
+        },
+        {
+          "group_id": "transaction_or_agreement_connection",
+          "evidence_ids": [
+            "AGR-01",
+            "RESP-VIC-01",
+            "RESP-VIC-02"
+          ],
+          "min_selected": 1
+        },
+        {
+          "group_id": "conflict_corroboration",
+          "evidence_ids": [
+            "PUB-01"
+          ],
+          "min_selected": 1
+        }
+      ],
+      "additional_relevant": [
+        "RESP-LUC-01",
+        "RESP-DAV-01",
+        "RESP-SOP-01"
+      ],
+      "irrelevant": [
+        "CTX-01",
+        "CTX-02"
+      ],
+      "contradictory": []
+    }
+  },
+  "anti_guess_rule": {
+    "full_reasoning_credit_requires": [
+      "correct_judgment",
+      "required_evidence_coverage",
+      "acceptable_evidence_relevance"
+    ],
+    "single_select_correct_answer_is_not_sufficient": true,
+    "exact_scoring_formula_defined_in": "Week 4"
+  },
+  "assisted_path": {
+    "transaction_group_unresolved": {
+      "resulting_state": "assisted",
+      "referral_packet_id": "REF-NORTHSTAR-01",
+      "full_credit_for_transaction_node": false,
+      "downstream_control_investigation_allowed": true
+    }
+  },
+  "note": "Internal validation only. Never show as player evidence."
+}
