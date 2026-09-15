@@ -208,30 +208,7 @@ Nguyên tắc:
 
 ---
 
-## 7. Những feature của Week 5 cũ bị loại
-
-Các feature/logic sau **không còn phù hợp với Weeks 1–4 hiện hành** và không được tiếp tục:
-
-- main flow chỉ gồm Tab 1 → Tab 4 → Tab 6;
-- full Beneish M-Score;
-- M-Score threshold `-1.78`;
-- chọn “biến lệch mạnh nhất” bằng raw deviation;
-- COSO/SOX Material Weakness severity engine;
-- Magnitude 470 triệu USD;
-- 23/26 transactions below threshold;
-- Northstar fair-market-price gap;
-- Fraud Triangle dùng để classification người chịu trách nhiệm;
-- Final output `Victor — Fraud`;
-- PV loss 3 năm;
-- discount rate 15%;
-- `Financial Consequence` là main output;
-- 5-area UI architecture `DESK / BOARD / FILES / SYSTEM / REVIEW` nếu nó làm thay đổi 6-tab logic đã formalize ở Week 4.
-
-Week 5 hiện tại chỉ thay đổi **cách user tương tác**, không thay đổi logic case.
-
----
-
-## 8. Visible Contribution & Ownership
+## 7. Visible Contribution & Ownership
 
 Feature ownership phải phản ánh đúng loại contribution, không đồng nghĩa một người làm toàn bộ feature.
 
@@ -257,7 +234,7 @@ Feature ownership phải phản ánh đúng loại contribution, không đồng 
 
 ---
 
-## 9. Revision Log
+## 8. Revision Log
 
 | Revision | Nội dung cũ | Nội dung mới | Lý do |
 |---|---|---|---|
@@ -272,7 +249,7 @@ Feature ownership phải phản ánh đúng loại contribution, không đồng 
 
 ---
 
-## 10. Feature-Scope Checklist
+## 9. Feature-Scope Checklist
 
 - [x] Main feature trực tiếp tạo main output.
 - [x] Supporting features hỗ trợ core task.
