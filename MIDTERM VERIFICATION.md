@@ -2,10 +2,10 @@
 
 **Group:** G08  
 **Product:** The Last Heir — Financial Investigation Game  
-**Date:** [Điền ngày nộp]  
+**Date:** 16/09/2026 
 **Team Representative:** Phạm Quỳnh Phương  
 **Repository:** https://github.com/FTU-Legacy-63/G08  
-**Instructor:** [Điền tên giảng viên]
+**Instructor:** Phan Trần Trung Dũng
 
 ---
 
@@ -49,8 +49,8 @@ The Control Investigation must therefore require the player to connect several e
 
 If this logic is not designed carefully, the product can fail in two ways:
 
-- **The game becomes too obvious.** One document effectively states the conclusion, so the player only needs to recognize and select it.
-- **The game becomes unfair.** The player is asked to make a judgment without enough evidence to distinguish a reasoning failure from missing information.
+- **The game becomes too obvious:** One document effectively states the conclusion, so the player only needs to recognize and select it.
+- **The game becomes unfair:** The player is asked to make a judgment without enough evidence to distinguish a reasoning failure from missing information.
 
 For this reason, the project separates **raw evidence, interpretation, and final assessment**, requires major judgments to be supported by relevant evidence, and determines the final case conclusion from confirmed **Evidence States** rather than from the player's cumulative score. This design is also reflected in the project's **No-Answer-Leak, Meaningful Interaction, Anti-Guess, and Assisted Continuation** principles.
 
@@ -60,20 +60,20 @@ For this reason, the project separates **raw evidence, interpretation, and final
 
 The team has revised the Control Investigation several times after identifying where earlier versions made the reasoning either too transparent or too fragile. The current design reflects four main improvements.
 
-- **Surface Approval was converted into passive observation.**  
+- **Surface Approval was converted into passive observation:**  
   The approval screen is now read-only rather than a scored question. The player can observe that the workflow appears “Completed,” but this is not treated as proof that the underlying control operated correctly. This preserves the distinction between what the system displays and what actually happened.
 
-- **Direct conclusion wording was removed from raw evidence.**  
+- **Direct conclusion wording was removed from raw evidence:**  
   Earlier versions used clues such as a direct “missing Finance Manager signature,” which made the control failure too easy to identify. The current version requires the player to compare policy, personnel roles, Surface Approval, the Raw Approval Audit Trail, and transaction-route records. Raw evidence now presents **facts and events**, not labels such as “bypass,” “Management Override,” or “responsible person.”
 
-- **The reasoning process was divided into distinct stages.**  
+- **The reasoning process was divided into distinct stages:**  
   Instead of asking for one broad judgment, the current flow separates the investigation into:
 
   > **Surface Observation → Expected Process → Raw Evidence → Fact Finding → Control Interpretation → Route Compliance → Aggregate Approval → Management Override Synthesis**
 
   This allows the player to establish what happened first, interpret the control implication second, and only then reach the final assessment.
 
-- **Evidence quality and player performance were separated.**  
+- **Evidence quality and player performance were separated:**  
   The project now applies the **Anti-Guess Principle**: a correct judgment without valid supporting evidence does not receive full reasoning credit. Supporting evidence is classified as `required_relevant`, `additional_relevant`, `irrelevant`, or `contradictory`. At the same time, **Evidence State** (`unreviewed`, `reviewed`, `confirmed`, `unresolved`, `assisted`, `contradicted`) is kept separate from **Performance Score**. Score evaluates how well the player performs; Evidence State determines what the case evidence actually supports.
 
 The team also added **Assisted Continuation** so that an early mistake does not block the remaining investigation. For example, if the player fails to identify Northstar correctly, the system can provide the minimum referral packet (`REF-NORTHSTAR-01`) needed to continue, while preserving the earlier node as **assisted rather than confirmed**.
@@ -92,19 +92,19 @@ Before and during Week 6, the team will focus on **stabilizing and testing the f
 
 The next actions are:
 
-- **Finalize one canonical Tab 4 sequence.**  
+- **Finalize one canonical Tab 4 sequence:**  
   The same terminology, evidence order, and reasoning structure will be used consistently across the Week 3 case content, Week 4 gameplay mechanics, Week 5 interface specification, and Week 6 implementation.
 
-- **Red-team every major decision point.**  
+- **Red-team every major decision point:**  
   The team will deliberately test weak and exploitative paths, including correct judgment with wrong evidence, correct judgment with irrelevant evidence, incorrect factual findings, missed aggregate-approval issues, wrong Northstar selection followed by Assisted Continuation, “select-all” evidence behavior, and pure guessing.
 
-- **Finalize the Evidence Scoring formula.**  
+- **Finalize the Evidence Scoring formula:**  
   The current conceptual model of **Coverage + Relevance + Contradiction penalty** will be converted into explicit scoring rules and point values so that the Anti-Guess Principle is enforceable in the implemented game.
 
-- **Add a dedicated “Guess-Only Path” test.**  
+- **Add a dedicated “Guess-Only Path” test:**  
   This test will check whether a player who repeatedly chooses the correct labels but provides no valid supporting evidence can still reach a fully confirmed evidence chain. The expected outcome is that they cannot.
 
-- **Review all player-facing evidence for answer leakage.**  
+- **Review all player-facing evidence for answer leakage:**  
   The team will confirm that no single document independently reveals the final Management Override conclusion, that Surface Approval does not reveal the actual approver too early, and that responsibility evidence does not identify the primary responsible individual before the required reasoning is completed.
 
 The Week 6 objective is therefore not to redesign the case again, but to ensure that the final investigation flow is **coherent, testable, fair, and resistant to guessing**.
