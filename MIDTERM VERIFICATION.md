@@ -4,6 +4,7 @@
 **Product:** The Last Heir — Financial Investigation Game  
 **Date:** 16/09/2026 
 **Team Representative:** Phạm Quỳnh Phương  
+**Prototpye**: https://drive.google.com/file/d/1GvQ_7H2EFwmwiUNvIBEraRtGNoV_0Myu/view?usp=drivesdk&fbclid=IwY2xjawUW8kZwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMU5ZeFZjN214WkU2SEZzb1lzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe5A7Cra3ZQgl1zfhZ3uh8yTC8dpGZ6zKZDRr7M4WnM1nu3wuqSeQcKOaxBOk_aem_NDb63VWMWYWQjji7swFtIw
 **Repository:** https://github.com/FTU-Legacy-63/G08  
 **Instructor:** Phan Trần Trung Dũng
 
