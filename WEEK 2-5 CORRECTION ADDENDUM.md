@@ -1696,6 +1696,6 @@ UI anti-guess behavior
 
 thì sử dụng rule trong:
 
-> **WEEK_2_5_CORRECTION_ADDENDUM_FINAL.md**
+> **WEEK 2-5 CORRECTION ADDENDUM.md**
 
 File này không thay Product Direction; nó chỉ chuẩn hóa các điểm cần thiết để project có thể được implement và test nhất quán.
