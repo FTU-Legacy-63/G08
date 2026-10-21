@@ -1,212 +1,204 @@
-# The Last Heir — Financial Investigation Game
+# WEEK 1 — PROBLEM DIRECTION AND PROJECT README
 
-Học phần: NHA408E  
-Nhóm: G08
+**Dự án:** The Last Heir  
+**Học phần:** NHA408E · **Nhóm:** G08
 
-## Team Members
+## 1. Purpose and Document Coverage
 
-| Họ tên | MSSV | Vai trò chính |
+Tài liệu xác định vấn đề, người dùng và nhiệm vụ học tập làm nền tảng cho The Last Heir. Nội dung được tổ chức theo yêu cầu Tuần 1: so sánh ít nhất ba hướng vấn đề, lựa chọn người dùng, mô tả khó khăn, giải thích tính chất tài chính, phân công đầu ra và ghi nhận điều chỉnh sau buổi kiểm tra tiến độ.
+
+Đây là hồ sơ vấn đề của dự án. Hình thức sản phẩm, phạm vi và công nghệ được trình bày trong [đề xuất Tuần 2](WEEK_2/PROJECT-PROPOSAL.md); chuỗi xử lý nằm trong [cấu trúc giải pháp](WEEK_2/SOLUTION-STRUCTURE.md). Dữ liệu, giả định và liên kết với trò chơi được lập danh mục tại [tổng quan Tuần 3](WEEK_3/OVERVIEW_FINAL.md).
+
+## 2. Team Members
+
+| Thành viên | Mã sinh viên | Trách nhiệm chính |
 |---|---|---|
-| Phạm Quỳnh Phương | 2411380865 | Team Lead và Project Integration Owner |
-| Phạm Triệu Tiến Dũng | 2412380014 | Financial Content và Input Owner |
-| Nguyễn Minh Hiền | 2412380018 | Gameplay và Logic Owner |
-| Tôn Khánh Ngọc | 2412380035 | Storyline và Output Owner |
-| Đinh Thị Minh Khuê | 2412380022 | UI/UX và Code Integration Owner |
+| Phạm Quỳnh Phương | 2411380865 | Điều phối nhóm và thống nhất hồ sơ dự án |
+| Phạm Triệu Tiến Dũng | 2412380014 | Nội dung tài chính và dữ liệu đầu vào |
+| Nguyễn Minh Hiền | 2412380018 | Nhiệm vụ học tập và logic điều tra |
+| Tôn Khánh Ngọc | 2412380035 | Bối cảnh tình huống, bằng chứng và đầu ra |
+| Đinh Thị Minh Khuê | 2412380022 | Tổ chức thông tin, giao diện và tích hợp kỹ thuật |
 
-# WEEK 1 — PROBLEM DIRECTION
+## 3. Three Problem Candidates
 
-## 1. Three Problem Candidates
+### 3.1 Information Integration
 
-### Problem Candidate 1 — Information Integration
+Sinh viên có thể đọc từng báo cáo hoặc hiểu từng khái niệm riêng lẻ nhưng gặp khó khăn khi kết nối thông tin nằm ở nhiều nguồn để giải thích một vấn đề doanh nghiệp. Dấu hiệu ban đầu nằm trên báo cáo tổng hợp, trong khi bản chất giao dịch, yêu cầu phê duyệt và hành động của người liên quan lại nằm trong sổ chi tiết, hợp đồng, chính sách và nhật ký xử lý.
 
-Sinh viên có thể hiểu từng bảng số liệu, báo cáo hoặc khái niệm tài chính riêng lẻ nhưng gặp khó khăn khi phải kết nối thông tin nằm ở nhiều nguồn khác nhau để hiểu đầy đủ một vấn đề doanh nghiệp. Trong một tình huống thực tế, dấu hiệu ban đầu có thể xuất hiện ở dữ liệu tài chính tổng hợp, trong khi nguyên nhân, bằng chứng liên quan và trách nhiệm của các cá nhân lại nằm ở dữ liệu giao dịch, hồ sơ phê duyệt, thông tin về vai trò và tài liệu kiểm soát.
+Nhiệm vụ cần hỗ trợ là xác định nguồn cần xem tiếp, liên kết thông tin nói về cùng một vấn đề và hình thành một chuỗi lập luận nhất quán.
 
-### Problem Candidate 2 — Evidence Verification
+### 3.2 Evidence Verification
 
-Sinh viên gặp khó khăn trong việc phân biệt giữa một tín hiệu đáng chú ý và một bằng chứng đủ mạnh để hỗ trợ kết luận. Một tỷ lệ bất thường, một giao dịch lớn hoặc một trạng thái phê duyệt hiển thị `Completed` có thể tạo ra cảm giác an toàn hoặc nghi vấn, nhưng chưa chắc phản ánh đầy đủ ai đã thực hiện hành động, quy trình thực tế được hoàn tất như thế nào hoặc kiểm soát có vận hành đúng như thiết kế hay không.
+Sinh viên có thể nhầm một dấu hiệu đáng chú ý hoặc một trạng thái xử lý với bằng chứng đủ mạnh để kết luận. Ví dụ, giao dịch được đánh dấu đã xử lý chưa tự chứng minh rằng đúng cấp thẩm quyền đã phê duyệt; một tỷ lệ bất thường cũng chưa tự chứng minh sai phạm.
 
-### Problem Candidate 3 — Evidence-Based Reasoning
+Nhiệm vụ cần hỗ trợ là kiểm tra nguồn, vai trò chứng minh và giới hạn của từng tài liệu trước khi chấp nhận hoặc bác bỏ một nhận định.
 
-Sinh viên có thể nhận diện nhiều dấu hiệu riêng lẻ nhưng gặp khó khăn khi xây dựng một chuỗi lập luận trong đó các bằng chứng được kết nối, so sánh và sử dụng để hỗ trợ hoặc bác bỏ một giả thuyết, sau đó quy trách nhiệm cho cá nhân phù hợp với mức độ bằng chứng hiện có.
+### 3.3 Evidence-Based Reasoning
 
-### Selected Problem Direction
+Sinh viên có thể nhận ra nhiều dữ kiện nhưng chưa biết tổ chức chúng thành một lập luận giải thích được. Khi đánh giá trách nhiệm, người học dễ suy luận từ chức danh, sự hiện diện trong hồ sơ hoặc quan hệ cá nhân thay vì kiểm tra thẩm quyền, hiểu biết cụ thể và hành động thực tế.
 
-Nhóm lựa chọn **Information Integration** làm định hướng vấn đề chính. Evidence Verification và Evidence-Based Reasoning vẫn liên quan đến sản phẩm, nhưng được xem là các kỹ năng hỗ trợ trong quá trình giải quyết vấn đề tổng hợp thông tin.
+Nhiệm vụ cần hỗ trợ là chọn và kết nối bằng chứng để đưa ra kết luận tương xứng, đồng thời chỉ rõ điều chưa thể kết luận.
 
-Việc lựa chọn Information Integration phù hợp với bản chất của tình huống mà nhóm muốn xây dựng. Người học không thiếu hoàn toàn kiến thức về từng công thức hoặc khung lý thuyết riêng lẻ; khó khăn nằm ở việc xác định thông tin nào cần được xem tiếp, bằng chứng nào thực sự liên quan với nhau, thông tin nào chỉ là trạng thái bề mặt và khi nào một tập hợp bằng chứng đủ mạnh để hỗ trợ một kết luận.
+### 3.4 Candidate Comparison
 
----
+Ba hướng có quan hệ với nhau nhưng khác về trọng tâm. Nhóm sử dụng năm tiêu chí trong hướng dẫn để lựa chọn một vấn đề chính, thay vì phát triển đồng thời ba mục tiêu ngang nhau.
 
-## 2. Selected Target User
+| Tiêu chí | Tổng hợp thông tin | Kiểm chứng bằng chứng | Lập luận dựa trên bằng chứng |
+|---|---|---|---|
+| Cụ thể | Khó nối báo cáo, giao dịch và kiểm soát trong một nhiệm vụ | Khó đánh giá giá trị chứng minh của từng nguồn | Khó tổ chức dữ kiện và xác định giới hạn kết luận |
+| Liên quan tài chính | Trực tiếp kết nối phân tích báo cáo, chi phí, giao dịch và quản trị | Trực tiếp liên quan đối chiếu và kiểm toán | Trực tiếp liên quan đánh giá kiểm soát và trách nhiệm |
+| Có ý nghĩa | Giúp người học đi từ dấu hiệu đến giải thích toàn bộ vấn đề | Hạn chế chấp nhận tài liệu hoặc trạng thái quá sớm | Hạn chế kết luận vượt bằng chứng |
+| Có thể được hỗ trợ | Tổ chức nguồn, truy vết và ghi nhận kết quả từng bước | Phân loại vai trò tài liệu và đối chiếu nguồn | Yêu cầu chọn bằng chứng và giải thích nhận định |
+| Khả thi | Có thể thu hẹp vào một tình huống và một chuỗi điều tra | Phù hợp như kỹ năng hỗ trợ trong cùng tình huống | Phù hợp như tiêu chí đánh giá đầu ra của chuỗi điều tra |
 
-Người dùng mục tiêu là sinh viên đại học thuộc các ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh, đã có kiến thức tài chính cơ bản và đã được tiếp cận các khung lý thuyết về Kiểm soát nội bộ như COSO và Fraud Triangle, nhưng chưa nhất thiết có nhiều kinh nghiệm áp dụng các khung này vào một tình huống doanh nghiệp có dữ liệu và bằng chứng phân tán ở nhiều nguồn.
+Nhóm chọn **tổng hợp thông tin** làm hướng vấn đề chính. Kiểm chứng và lập luận dựa trên bằng chứng là hai kỹ năng hỗ trợ để giải quyết vấn đề đó. Cách lựa chọn này tạo một nhiệm vụ xuyên suốt, tránh biến dự án thành tập hợp bài tập tài chính rời rạc.
 
-Nhóm không hướng tới người dùng hoàn toàn mới với tài chính hoặc kiểm soát nội bộ. Giá trị của dự án nằm ở việc giúp người học vận dụng kiến thức đã biết vào một tình huống yêu cầu tổng hợp và đánh giá bằng chứng.
+## 4. Selected Target User
 
-Trong project, Fraud Triangle chỉ đóng vai trò **background fraud-risk context**. Nhóm không sử dụng Pressure, Opportunity và Rationalization như một hệ thống chấm điểm và không dùng Fraud Triangle để tự động xác định cá nhân chịu trách nhiệm chính.
+Người dùng mục tiêu là sinh viên đại học thuộc các ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh, đã có kiến thức cơ bản về báo cáo tài chính và đã tiếp cận kiểm soát nội bộ, nhưng chưa có nhiều kinh nghiệm xử lý tình huống doanh nghiệp với bằng chứng phân tán.
 
----
+Nhóm người dùng được xác định theo năng lực và nhiệm vụ, không chỉ theo ngành học. Người học có thể tính tỷ lệ hoặc đọc một tài liệu, nhưng cần thực hành cách lựa chọn, kết nối và đánh giá nhiều nguồn trong cùng một vấn đề.
 
-## 3. User Task or Decision
+- **Bối cảnh sử dụng:** bài tập tình huống, hoạt động tự học hoặc thực hành sau phần lý thuyết.
+- **Kiến thức đầu vào:** đọc báo cáo tài chính cơ bản; hiểu khái niệm phê duyệt, thẩm quyền và kiểm soát.
+- **Nhu cầu trọng tâm:** giải thích một kết luận bằng chuỗi bằng chứng có nguồn và có giới hạn.
+- **Khả năng tiếp cận:** sinh viên cùng học phần hoặc nhóm ngành để quan sát, trao đổi và thử nghiệm sản phẩm.
 
-Người dùng cần xác định một vấn đề tài chính đáng chú ý từ dữ liệu doanh nghiệp, tìm các thông tin liên quan ở nhiều nguồn khác nhau và kết nối chúng thành một kết luận có căn cứ.
+Kiến thức về tam giác gian lận chỉ cung cấp bối cảnh rủi ro. Người dùng không cần dùng mô hình này như một công thức xác định người chịu trách nhiệm.
 
-Sau khi phạm vi được thu hẹp, nhiệm vụ của người dùng được xác định theo chuỗi:
+## 5. User Task and Final Decisions
 
-**Quan sát thông tin tài chính → Xác định tín hiệu đáng chú ý → Khoanh vùng và truy vết xuống giao dịch liên quan → Đối chiếu nhiều nguồn bằng chứng kiểm soát → Xác định factual finding → Diễn giải control implication → Đánh giá Management Override → Quy trách nhiệm chính → Đưa ra kết luận dựa trên bằng chứng**
+Người học cần xác định một vấn đề đáng chú ý từ dữ liệu doanh nghiệp, tìm thông tin liên quan ở nhiều nguồn và kết nối thành kết luận có căn cứ. Nhiệm vụ không kết thúc ở việc tìm một chỉ số lớn hoặc gọi tên một nhân vật.
 
-User task kết thúc bằng hai quyết định có liên hệ trực tiếp với nhau:
+| Bước lập luận | Việc người học cần làm |
+|---|---|
+| Nhận diện | Phát hiện biến động hoặc khoản chênh lệch cần giải thích |
+| Khoanh vùng | Xác định tài khoản và giao dịch liên quan |
+| Đối chiếu | Kết nối yêu cầu kiểm soát với chứng từ và diễn biến xử lý |
+| Đánh giá | Phân biệt dữ kiện, nhận định kiểm soát và mức kết luận |
+| Quy trách nhiệm | Kiểm tra bằng chứng về thẩm quyền, hiểu biết và hành động của từng người |
+| Giải thích | Trình bày kết luận và chỉ ra những vấn đề vẫn cần điều tra |
 
-1. Các bằng chứng hiện có có hỗ trợ kết luận rằng Management Override đã xảy ra hay không?
-2. Cá nhân nào chịu trách nhiệm chính, và bằng chứng nào hỗ trợ việc quy trách nhiệm đó?
+Hai quyết định cuối cùng của nhiệm vụ là:
 
-Khó khăn chính không nằm ở từng phép tính riêng lẻ. Người dùng phải biết nên xem thông tin nào tiếp theo, khi nào một thông tin chỉ là signal hoặc raw fact, khi nào nó cho phép tạo một control interpretation và khi nào toàn bộ evidence set đã đủ mạnh để hỗ trợ một kết luận.
+1. Bằng chứng hiện có có hỗ trợ kết luận nhà quản lý đã chủ động vượt qua hoặc vô hiệu hóa kiểm soát hay không?
+2. Cá nhân nào chịu trách nhiệm chính và bằng chứng nào hỗ trợ việc quy trách nhiệm?
 
-Một judgment đúng nhưng không có supporting evidence chưa được xem là hoàn thành đầy đủ learning task. Giá trị của sản phẩm nằm ở việc người học có thể giải thích **vì sao** họ đưa ra kết luận đó.
+Sau khi được hỗ trợ, người học cần giải thích vì sao một kết luận được chấp nhận và vì sao một kết luận mạnh hơn chưa có đủ căn cứ. Chọn đúng đáp án nhưng không kết nối được bằng chứng chưa phản ánh đầy đủ năng lực mục tiêu.
 
----
+## 6. Specific Difficulty
 
-## 4. Draft Problem Statement
+Khó khăn chính nằm ở quan hệ giữa các nguồn. Báo cáo tài chính cho thấy biến động nhưng không chỉ rõ giao dịch; sổ chi tiết cho thấy khoản ghi nhận nhưng không tự xác lập ranh giới kinh tế; chính sách cho biết yêu cầu nhưng không chứng minh người có trách nhiệm đã thực hiện; nhật ký cho thấy sự kiện nhưng có thể không xác định đầy đủ người thao tác.
 
-Sinh viên đại học thuộc các ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản gặp khó khăn khi xử lý các tình huống doanh nghiệp có nhiều nguồn thông tin, vì dữ liệu cần thiết để hiểu và giải thích vấn đề thường được phân tán giữa báo cáo tài chính, dữ liệu giao dịch, hồ sơ phê duyệt, thông tin về vai trò và tài liệu kiểm soát.
+Những nhầm lẫn cần được nhận diện gồm:
 
-Việc hiểu từng nguồn riêng lẻ chưa đủ. Người học cần có khả năng kết nối các nguồn này thành một chuỗi lập luận tài chính và kiểm soát nhất quán. Đặc biệt, một giao dịch có thể hiển thị đầy đủ và hợp lệ về hình thức nhưng điều đó chưa tự chứng minh rằng đúng cá nhân đã thực hiện hành động hoặc actual control process đã vận hành đúng như thiết kế.
+- Dùng thông tin bối cảnh để thay cho giải trình định lượng.
+- Gộp giao dịch theo tên nhà cung cấp mà chưa kiểm tra hợp đồng và mục đích.
+- Coi trạng thái đã xử lý là bằng chứng đã phê duyệt đúng cấp.
+- Quy trách nhiệm theo chức danh hoặc tên xuất hiện trong hồ sơ.
+- Nhảy từ thiếu sót kiểm soát hoặc xung đột lợi ích sang kết luận gian lận đã được chứng minh.
 
-Người học vì vậy không chỉ đọc một approval status hoặc một audit record riêng lẻ. Họ phải đối chiếu requirement, role/authority information và raw records trước khi tạo control interpretation.
+Vì vậy, vấn đề không được mô tả đơn giản là thiếu một ứng dụng hoặc thiếu kiến thức tài chính nói chung. Phần cần hỗ trợ là một nhiệm vụ cụ thể: tổng hợp bằng chứng để giải thích và kết luận đúng mức.
 
-Vấn đề cần giải quyết không chỉ là nhận diện khả năng Management Override mà còn là xác định cá nhân chịu trách nhiệm chính bằng evidence phù hợp.
+## 7. Problem Statement
 
----
+> Sinh viên đại học thuộc các ngành Tài chính, Kế toán, Ngân hàng và Kinh doanh có kiến thức tài chính cơ bản gặp khó khăn khi kết nối dữ liệu từ báo cáo tài chính, sổ chi tiết, hợp đồng, chính sách và hồ sơ xử lý để đánh giá một vấn đề kiểm soát và trách nhiệm cá nhân, vì các nguồn thông tin phân tán, có vai trò chứng minh khác nhau và không tự thể hiện đầy đủ mối liên hệ giữa yêu cầu kiểm soát với hành động thực tế.
 
-## 5. Initial Source or Observation
+Phạm vi giải quyết là hỗ trợ người học thực hành một chuỗi tổng hợp thông tin trong một tình huống doanh nghiệp. Mục tiêu không phải đào tạo toàn bộ nghiệp vụ kiểm toán, tự động phát hiện mọi gian lận hoặc thay thế phán quyết chuyên môn, pháp lý.
 
-Giả định ban đầu của nhóm là sinh viên có thể xử lý từng bảng số liệu hoặc tài liệu tài chính riêng biệt nhưng gặp nhiều khó khăn hơn khi phải xác định mối liên hệ giữa chúng trong cùng một tình huống.
+## 8. Initial Observation and Validation Plan
 
-Một biểu hiện cụ thể là người học có thể dùng sự hiện diện của trạng thái phê duyệt như một tín hiệu an toàn mà chưa kiểm tra ai thực sự thực hiện bước phê duyệt, role nào được yêu cầu hoặc quy trình được hoàn tất bằng cách nào. Ngược lại, người học cũng có thể nhảy quá nhanh từ một raw fact sang kết luận Management Override mà chưa đối chiếu đủ các nguồn liên quan.
+README gốc xác định đây là giả định ban đầu của nhóm: người học xử lý từng bảng hoặc tài liệu riêng biệt thuận lợi hơn việc kết nối chúng trong cùng tình huống. Hồ sơ chưa cung cấp số lượng người tham gia, kết quả khảo sát hoặc phép đo trước và sau; vì vậy, không trình bày giả định này như kết quả nghiên cứu đã được chứng minh.
 
-Ngay cả khi nhận ra một vấn đề kiểm soát, người học vẫn có thể nhầm giữa người chỉ có role liên quan, người đáng lẽ phải tham gia quy trình và người có direct evidence gắn với hành vi vượt qua kiểm soát.
+Nhóm có thể kiểm tra giả định bằng một tình huống ngắn có dữ liệu tài chính, sổ chi tiết, hợp đồng, yêu cầu phê duyệt và nhật ký. Người tham gia được yêu cầu nêu kết luận kèm nguồn hỗ trợ; người quan sát ghi lại lựa chọn và cách giải thích.
 
-Để kiểm tra giả định này, nhóm có thể sử dụng một tình huống ngắn gồm dữ liệu tài chính, dữ liệu giao dịch, approval/control requirements, role information và một số raw control records, sau đó quan sát xem người dùng có thể:
-
-1. xác định đúng thông tin cần ưu tiên;
-2. lựa chọn đúng nguồn cần xem tiếp;
-3. liên kết các thông tin nói về cùng một vấn đề;
-4. phân biệt signal, raw fact, interpretation và conclusion;
-5. phân biệt surface status với actual process;
-6. lựa chọn evidence hỗ trợ judgment thay vì chỉ đoán đáp án;
-7. đánh giá Management Override từ một evidence set;
-8. xác định primary responsible individual dựa trên evidence thay vì chức danh hoặc phỏng đoán.
-
----
-
-## 6. Why This Is a Finance or Banking Problem
-
-Vấn đề liên quan trực tiếp đến các kỹ năng tài chính như phân tích biến động, truy vết giao dịch, đối chiếu dữ liệu, đánh giá bằng chứng và xem xét vai trò của kiểm soát tài chính trong doanh nghiệp.
-
-Cụ thể hơn, vấn đề nằm ở giao điểm giữa Phân tích tài chính, Kiểm toán, Kiểm soát nội bộ và Quản trị công ty. Khái niệm Management Override of Controls mô tả rủi ro khi người có thẩm quyền có khả năng vượt qua hoặc vô hiệu hóa các kiểm soát vốn được thiết kế để bảo đảm tính hợp lệ của giao dịch.
-
-Việc đánh giá Management Override và việc quy trách nhiệm là hai bước có liên hệ nhưng không đồng nhất. Đánh giá Management Override trả lời câu hỏi liệu cơ chế kiểm soát có bị vượt qua hay không, trong khi quy trách nhiệm yêu cầu xác định ai có thẩm quyền, mức độ tham gia và mối liên hệ trực tiếp với hành vi đó.
-
-Fraud Triangle chỉ hỗ trợ giải thích bối cảnh rủi ro gian lận. Framework này không được operationalize thành score và không được sử dụng độc lập để xác định cá nhân chịu trách nhiệm.
-
-Giá trị chính của dự án nằm ở lập luận tài chính kết hợp với lập luận về kiểm soát và quy trách nhiệm dựa trên bằng chứng. Công nghệ chỉ đóng vai trò hỗ trợ người dùng tiếp cận, đối chiếu và kết nối thông tin theo một cấu trúc rõ ràng hơn.
-
-Các nguồn học thuật và chuyên môn dùng để hỗ trợ Beneish, Management Override, Internal Control và Fraud Risk được tổng hợp ở **Week 3 — Source Register**.
-
----
-
-## 7. Visible Contribution
-
-| Thành viên | Trách nhiệm trong Week 1 | Visible Output |
+| Nội dung quan sát | Bằng chứng cần ghi | Mục đích |
 |---|---|---|
-| Phạm Quỳnh Phương | Tổng hợp Three Problem Candidates, kiểm tra consistency giữa problem direction, target user và user task, đồng thời ghi lại decision/revision | Bản tổng hợp Three Problem Candidates, quyết định chọn Information Integration, cấu trúc README.md và decision log |
-| Phạm Triệu Tiến Dũng | Làm rõ bản chất tài chính của vấn đề và cách information phân tán giữa các nguồn | Initial Financial Information Structure |
-| Nguyễn Minh Hiền | Xác định user task và investigation reasoning flow | User Task Flow từ signal đến evidence integration, Management Override và responsibility |
-| Tôn Khánh Ngọc | Xây dựng bối cảnh doanh nghiệp ban đầu | Initial Case Context của Aster Holdings |
-| Đinh Thị Minh Khuê | Xác định cách trình bày information và chuyển investigation flow thành interface | Initial User Observation Layout và prototype giao diện ban đầu |
+| Chọn nguồn tiếp theo | Tài liệu được chọn và lý do | Kiểm tra khả năng định hướng giữa các nguồn |
+| Liên kết dữ kiện | Các tài liệu được nối với cùng một vấn đề | Kiểm tra đúng ranh giới và tính liên quan |
+| Giới hạn suy luận | Điều người học khẳng định và điều còn nghi ngờ | Nhận diện kết luận vượt bằng chứng |
+| Quy trách nhiệm | Bằng chứng được gắn với từng cá nhân | Phân biệt vai trò với hành động thực tế |
+| Khả năng giải thích | Lập luận cuối cùng và phần người học cần hỗ trợ | Đánh giá giá trị của sản phẩm tương lai |
 
-Các đầu ra trên phục vụ trực tiếp cho Week 1 và chưa giả định trước toàn bộ product form hoặc technical route.
+Hoạt động kiểm chứng cần lưu thời điểm, số người, đề bài, kết quả gốc và điều chỉnh thiết kế phát sinh. Phân tích mã trò chơi xác nhận cách sản phẩm hoạt động; nó không tự xác nhận khó khăn hoặc hiệu quả học tập của người dùng.
 
----
+## 9. Finance and Banking Relevance
 
-## 8. Open Questions
+Vấn đề thuộc lĩnh vực tài chính vì người học phải hiểu biến động doanh thu, cơ cấu chi phí, ngân sách, dòng tiền và giá trị giao dịch. Việc khoanh vùng dựa trên phân tích tài chính; việc giải thích nguyên nhân và trách nhiệm tiếp tục dựa trên kiểm soát tài chính, kiểm toán và quản trị công ty.
 
-Ở cuối Week 1, nhóm chưa quyết định:
+Đánh giá việc kiểm soát bị vượt qua và đánh giá trách nhiệm cá nhân là hai bước liên quan nhưng khác nhau. Bước thứ nhất đối chiếu yêu cầu với diễn biến; bước thứ hai cần bằng chứng gắn với một người cụ thể. Rủi ro gian lận là vấn đề cần xem xét tiếp, không phải kết quả tự động của một khoản vượt ngân sách.
 
-1. sản phẩm cụ thể sẽ có hình thức gì;
-2. đầu ra nhìn thấy được chính là gì;
-3. quy trình nào biến input thành output;
-4. MVP nên giữ những thành phần nào;
-5. phạm vi nào khả thi trong thời gian học phần;
-6. technical route nào phù hợp;
-7. sản phẩm sẽ thể hiện evidence chain như thế nào để người học không chỉ chọn đáp án cuối;
-8. làm thế nào để raw evidence không tự tiết lộ conclusion trước khi user reasoning;
-9. làm thế nào để mỗi interaction là một meaningful decision thay vì một pseudo-choice chỉ có tác dụng “bấm tiếp”;
-10. làm thế nào để một người chơi không thể đoán judgment mà vẫn nhận full reasoning credit;
-11. nếu user chọn sai một bước nhưng dữ liệu của bước đó cần cho phần sau, fallback phải cung cấp thông tin tối thiểu nào để game tiếp tục mà không giả vờ rằng user đã làm đúng;
-12. làm thế nào để tách factual finding, control interpretation và final assessment.
+Nguồn chuyên môn dùng để hỗ trợ các khái niệm và kỹ thuật được tập hợp trong [danh mục nguồn Tuần 3](WEEK_3/SOURCES_FINAL.md). Chính sách và nhân vật của Aster Foods thuộc tình huống giả lập, không phải quy định chung cho doanh nghiệp hoặc ngân hàng thật.
 
-Những câu hỏi này được chuyển sang Week 2.
+## 10. Repository and PBL Evidence
 
----
+Hồ sơ dự án được tổ chức để có thể xem đầu ra, nhận phản hồi và nhận biết thay đổi sau phản hồi. Các tài liệu được liên kết theo ba bước: xác định vấn đề, thiết kế giải pháp và chuẩn bị đầu vào. Đường dẫn dưới đây tính từ thư mục gốc chứa `WEEK_1.md`, cùng cấp với các thư mục `WEEK_2` và `WEEK_3`.
 
-# AFTER CHECKPOINT 1
+| Thành phần hồ sơ | Nội dung cần quan sát |
+|---|---|
+| [WEEK_1.md](WEEK_1.md) | Ba hướng vấn đề, lựa chọn, người dùng, nhiệm vụ, khó khăn, phân công và điều chỉnh |
+| [WEEK_2/PROJECT-PROPOSAL.md](WEEK_2/PROJECT-PROPOSAL.md) và [WEEK_2/SOLUTION-STRUCTURE.md](WEEK_2/SOLUTION-STRUCTURE.md) | Định hướng sản phẩm, đầu ra, cấu trúc xử lý, phạm vi tối thiểu và kỹ thuật |
+| [WEEK_3/OVERVIEW_FINAL.md](WEEK_3/OVERVIEW_FINAL.md) và [WEEK_3/SOURCES_FINAL.md](WEEK_3/SOURCES_FINAL.md) | Danh mục tài liệu đầu vào, nguồn, dữ liệu mẫu, giả định, luồng, kiểm tra và liên kết HTML |
+| Kho mã nguồn của nhóm | Phiên bản sản phẩm và lịch sử đóng góp thực tế |
 
-## Feedback Received
+Khi trình bày trên GitHub, nhóm cần gắn đúng liên kết kho và lịch sử thay đổi. Bộ tài liệu này không tự tạo địa chỉ kho, mã bản thay đổi hoặc bằng chứng truy cập chưa được cung cấp.
 
-Nhóm cần thu hẹp phạm vi vấn đề và tránh xây dựng một tình huống dựa trên quá nhiều bất thường tài chính hoặc nhiều hướng điều tra độc lập. Nếu mỗi chỉ số hoặc dấu hiệu mở ra một nhánh riêng, sản phẩm có nguy cơ chuyển từ việc rèn luyện Information Integration sang xử lý một danh sách lớn các vấn đề tài chính không liên kết.
+## 11. Visible Contribution
 
-## Decision
+Phân công dưới đây kế thừa README nhóm. Bảng gắn trách nhiệm với đầu ra cụ thể; bằng chứng người thực hiện cần được đối chiếu bằng lịch sử thực tế, không chỉ bằng danh sách thành viên.
 
-**KEEP + SIMPLIFY**
+| Thành viên | Trách nhiệm Tuần 1 | Đầu ra có thể xem | Vị trí trong hồ sơ |
+|---|---|---|---|
+| Phạm Quỳnh Phương | Tổng hợp các hướng vấn đề và ghi quyết định | So sánh ba hướng, lựa chọn và nhật ký điều chỉnh | Mục 3, 12 |
+| Phạm Triệu Tiến Dũng | Làm rõ bản chất tài chính và sự phân tán dữ liệu | Mô tả khó khăn và tính chất tài chính của nhiệm vụ | Mục 6, 9 |
+| Nguyễn Minh Hiền | Xác định nhiệm vụ và trình tự lập luận | Chuỗi nhiệm vụ và hai quyết định cuối | Mục 5 |
+| Tôn Khánh Ngọc | Xây dựng bối cảnh doanh nghiệp ban đầu | Bối cảnh người học xử lý hồ sơ doanh nghiệp | Mục 4, 6, 8 |
+| Đinh Thị Minh Khuê | Nghiên cứu cách tổ chức thông tin | Đề xuất cách người học tiếp cận và liên kết nguồn | Mục 8, 10; phát triển tiếp ở Tuần 2 |
 
-Nhóm giữ nguyên Information Integration làm định hướng vấn đề nhưng đơn giản hóa tình huống quanh một chuỗi điều tra chính.
+## 12. Checkpoint Feedback and Revision
 
-## Revision Made
+### 12.1 Recorded Feedback
 
-Nhóm chuyển từ ý tưởng xử lý nhiều bất thường tài chính độc lập sang một cấu trúc trong đó người dùng bắt đầu từ dữ liệu doanh nghiệp tổng hợp, xác định một tín hiệu đáng chú ý, khoanh vùng và truy vết xuống một giao dịch liên quan, sau đó sử dụng nhiều evidence sources để hiểu vấn đề.
+Theo phần phản hồi sau buổi kiểm tra tiến độ thứ nhất trong README gốc, nhóm cần thu hẹp phạm vi và tránh triển khai nhiều bất thường tài chính độc lập. Nếu mỗi dấu hiệu tạo thành một tuyến riêng, sản phẩm dễ trở thành danh sách bài tập thay vì nhiệm vụ tổng hợp thông tin.
 
-Cấu trúc sau điều chỉnh:
+### 12.2 Decision
 
-**Thông tin tài chính → Tín hiệu đáng chú ý → Giao dịch liên quan → Nhiều nguồn bằng chứng liên quan → Kết luận dựa trên bằng chứng**
+Nhóm **giữ định hướng và đơn giản hóa phạm vi**. Vấn đề chính vẫn là tổng hợp thông tin; tình huống tập trung vào một chuỗi điều tra có liên hệ từ đầu đến cuối.
 
-Việc thu hẹp này giúp các nguồn information phục vụ cùng một investigation chain thay vì tạo ra nhiều tuyến phân tích không liên kết.
+### 12.3 Revision Made
 
----
+| Nội dung | Trước điều chỉnh | Sau điều chỉnh |
+|---|---|---|
+| Phạm vi | Nhiều dấu hiệu và hướng phân tích độc lập | Một vấn đề được khoanh vùng rồi truy vết |
+| Vai trò nguồn | Mỗi nguồn có thể tạo một bài tập riêng | Nhiều nguồn cùng phục vụ một chuỗi giải thích |
+| Đầu ra học tập | Nhận diện các bất thường | Kết luận có căn cứ và nêu giới hạn |
 
-# AFTER CHECKPOINT 2
+Phản hồi tiếp theo được README ghi nhận đã thu hẹp thêm nhiệm vụ về đánh giá hành vi vô hiệu hóa kiểm soát và trách nhiệm chính. Hai quyết định này được giữ nhất quán trong bản hồ sơ hiện tại; phần lựa chọn sản phẩm tương ứng thuộc Tuần 2.
 
-## Feedback Received
+## 13. Open Questions for Week 2
 
-Nhóm nhận thấy phạm vi kiến thức đang có xu hướng dàn trải trên quá nhiều framework và nhiều dạng bài tập tài chính. Điều này có thể khiến sản phẩm nghiêng về khối lượng phép tính thay vì rèn luyện một kỹ năng cụ thể.
+Các câu hỏi được chuyển sang bước thiết kế giải pháp gồm:
 
-Problem Direction Information Integration ở dạng ban đầu cũng chưa đủ sắc để quyết định người chơi cần đi tới loại conclusion nào.
+1. Đầu ra nào giúp người học nhìn lại và giải thích chuỗi bằng chứng?
+2. Hình thức sản phẩm nào phù hợp với một tình huống nhiều nguồn thông tin?
+3. Phạm vi tối thiểu cần giữ những bước lập luận nào?
+4. Làm thế nào để các lựa chọn có ý nghĩa và hạn chế việc đoán lần lượt?
+5. Người học sẽ tiếp tục thế nào khi gặp khó khăn mà kết quả vẫn phản ánh đúng mức hỗ trợ?
+6. Làm thế nào để phân biệt dữ kiện, nhận định kiểm soát và kết luận cuối?
 
-## Decision
+## 14. Week 1 Completion Record
 
-**KEEP + SIMPLIFY**, tiếp nối từ Checkpoint 1 thay vì Restart.
+| Yêu cầu | Nội dung đáp ứng |
+|---|---|
+| Ít nhất ba hướng vấn đề | Mục 3 |
+| Lựa chọn và lý do | Mục 3.4 |
+| Người dùng cụ thể | Mục 4 |
+| Nhiệm vụ và quyết định | Mục 5 |
+| Khó khăn và phát biểu vấn đề | Mục 6–7 |
+| Cơ sở ban đầu và cách kiểm chứng | Mục 8 |
+| Tính chất tài chính | Mục 9 |
+| Tổ chức hồ sơ và đóng góp | Mục 10–11 |
+| Phản hồi và điều chỉnh đã ghi nhận | Mục 12 |
+| Câu hỏi chuyển tiếp | Mục 13 |
 
-Nhóm giữ nguyên Information Integration và investigation chain đã có, đồng thời thu hẹp thêm bằng cách xác định rõ hai final decisions.
-
-## Revision Made
-
-Người chơi phải trả lời:
-
-1. **Các bằng chứng hiện có có hỗ trợ kết luận rằng Management Override đã xảy ra hay không?**
-2. **Cá nhân nào chịu trách nhiệm chính, và bằng chứng nào hỗ trợ việc quy trách nhiệm đó?**
-
-Financial analysis chỉ đóng vai trò screening và khoanh vùng. Governance và Internal Control trở thành trọng tâm khi đánh giá Management Override.
-
-Để tránh biến investigation thành việc đọc một document rồi chọn đáp án, người chơi phải đối chiếu nhiều nguồn control evidence và đi qua ba mức reasoning:
-
-**Raw Fact → Control Interpretation → Final Assessment**
-
-Judgment ở các decision point quan trọng phải được hỗ trợ bằng evidence selection hoặc evidence reasoning, thay vì chỉ được chấm dựa trên việc chọn đúng một đáp án.
-
-Việc quy trách nhiệm dựa trên authority, direct involvement, transaction connection, conflict evidence và evidence về control circumvention.
-
-Cấu trúc sau điều chỉnh:
-
-**Thông tin tài chính → Tín hiệu đáng chú ý → Khoanh vùng và truy vết xuống giao dịch → Đối chiếu nhiều nguồn control evidence → Factual Finding → Control Interpretation → Đánh giá Management Override → Quy trách nhiệm chính → Kết luận dựa trên bằng chứng**
-
-Cấu trúc này là đầu vào trực tiếp cho Week 2, nơi nhóm chuyển Problem Direction thành Product Direction.
+Tài liệu hoàn thiện phần nội dung của hồ sơ Tuần 1. Liên kết GitHub, lịch sử đóng góp và kết quả quan sát người dùng phải phản ánh bằng chứng thực tế của nhóm khi nộp.
