@@ -136,7 +136,7 @@ Hồ sơ dự án được tổ chức để có thể xem đầu ra, nhận ph�
 
 | Thành phần hồ sơ | Nội dung cần quan sát |
 |---|---|
-| [WEEK_1.md](README.md) | Ba hướng vấn đề, lựa chọn, người dùng, nhiệm vụ, khó khăn, phân công và điều chỉnh |
+| [README.md](README.md) | Ba hướng vấn đề, lựa chọn, người dùng, nhiệm vụ, khó khăn, phân công và điều chỉnh |
 | [WEEK_2/PROJECT-PROPOSAL.md](WEEK_2/PROJECT-PROPOSAL.md) và [WEEK_2/SOLUTION-STRUCTURE.md](WEEK_2/SOLUTION-STRUCTURE.md) | Định hướng sản phẩm, đầu ra, cấu trúc xử lý, phạm vi tối thiểu và kỹ thuật |
 | [WEEK_3/OVERVIEW_FINAL.md](WEEK_3/OVERVIEW_FINAL.md) và [WEEK_3/SOURCES_FINAL.md](WEEK_3/SOURCES_FINAL.md) | Danh mục tài liệu đầu vào, nguồn, dữ liệu mẫu, giả định, luồng, kiểm tra và liên kết HTML |
 | Kho mã nguồn của nhóm | Phiên bản sản phẩm và lịch sử đóng góp thực tế |
