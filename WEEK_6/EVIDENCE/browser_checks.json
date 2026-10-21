@@ -1,0 +1,21 @@
+{
+  "review_date": "2026-10-21",
+  "status": "not_executed",
+  "reason": "Môi trường rà soát chưa có trình duyệt thực thi; việc chuẩn bị Chromium chưa thành công. Không có kết quả giao diện để xác nhận trong đợt này.",
+  "game_failure_conclusion": false,
+  "planned_cases": [
+    "UI01",
+    "UI02",
+    "UI03",
+    "UI04",
+    "UI05",
+    "UI06",
+    "UI07",
+    "UI08",
+    "UI09",
+    "UI10",
+    "UI11",
+    "UI12"
+  ],
+  "scope_note": "Kết quả Node.js chỉ xác nhận hàm và dữ liệu trong phạm vi đã chạy, không thay chơi thử toàn bộ, nhiều trình duyệt hoặc máy đích."
+}

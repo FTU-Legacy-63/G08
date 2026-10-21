@@ -1,0 +1,618 @@
+{
+  "review_date": "2026-10-21",
+  "method": "Giải nén đủ năm chương từ HTML, đọc các lớp nhúng và chạy hàm gốc trong Node.js vm với phần phụ thuộc giao diện được thay bằng đối tượng tối thiểu. Không chạy trình duyệt hoặc chứng minh toàn bộ giao diện.",
+  "results": [
+    {
+      "id": "L01",
+      "label": "Chưa đủ ba quyết định chưa tính kết quả",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "id": "L02",
+      "label": "Đủ 45 điểm kiểm tra",
+      "actual": 45,
+      "expected": 45,
+      "passed": true
+    },
+    {
+      "id": "L03",
+      "label": "Tự giải hoàn toàn và ba quyết định cân bằng",
+      "actual": [
+        35,
+        30,
+        25,
+        10,
+        100,
+        "successor"
+      ],
+      "expected": [
+        35,
+        30,
+        25,
+        10,
+        100,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L04",
+      "label": "Một lần sai không giảm mức làm chủ",
+      "actual": [
+        35,
+        30,
+        25,
+        10,
+        100,
+        "successor"
+      ],
+      "expected": [
+        35,
+        30,
+        25,
+        10,
+        100,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L05",
+      "label": "Hai lần sai ở câu đầu Chương I",
+      "actual": [
+        34.6,
+        28.5,
+        25,
+        10,
+        98.1,
+        "successor"
+      ],
+      "expected": [
+        34.6,
+        28.5,
+        25,
+        10,
+        98.1,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L06",
+      "label": "Ba lần sai ở câu đầu Chương I",
+      "actual": [
+        34.2,
+        27,
+        25,
+        10,
+        96.2,
+        "successor"
+      ],
+      "expected": [
+        34.2,
+        27,
+        25,
+        10,
+        96.2,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L07",
+      "label": "Mỗi khóa gợi ý chỉ ghi một lần",
+      "actual": [
+        1,
+        9
+      ],
+      "expected": [
+        1,
+        9
+      ],
+      "passed": true
+    },
+    {
+      "id": "L08",
+      "label": "Hai gợi ý độc lập được làm tròn sau khi cộng",
+      "actual": 9,
+      "expected": 9,
+      "passed": true
+    },
+    {
+      "id": "L09",
+      "label": "Xem lời giải cả Chương I",
+      "actual": [
+        28,
+        24,
+        25,
+        8,
+        85,
+        "successor"
+      ],
+      "expected": [
+        28,
+        24,
+        25,
+        8,
+        85,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L10",
+      "label": "Hai quyết định vội vàng",
+      "actual": [
+        35,
+        30,
+        13,
+        10,
+        88,
+        "reckless"
+      ],
+      "expected": [
+        35,
+        30,
+        13,
+        10,
+        88,
+        "reckless"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L11",
+      "label": "Hai quyết định do dự",
+      "actual": [
+        35,
+        30,
+        17,
+        10,
+        92,
+        "hesitant"
+      ],
+      "expected": [
+        35,
+        30,
+        17,
+        10,
+        92,
+        "hesitant"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L12",
+      "label": "Ưu tiên kết thúc vội vàng khi điều kiện chồng lấn",
+      "actual": [
+        21,
+        18,
+        11,
+        6,
+        56,
+        "reckless"
+      ],
+      "expected": [
+        21,
+        18,
+        11,
+        6,
+        56,
+        "reckless"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L13",
+      "label": "Hết giờ một lời khai vẫn chấm các phần còn lại",
+      "actual": [
+        34.4,
+        29.5,
+        25,
+        10,
+        98.9,
+        "successor"
+      ],
+      "expected": [
+        34.4,
+        29.5,
+        25,
+        10,
+        98.9,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L14",
+      "label": "Không tước kết quả lời khai đã được chấp nhận",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "L15",
+      "label": "Dữ kiện chuyển tiếp phải có nguồn và nhận định sử dụng",
+      "actual": [
+        "valid"
+      ],
+      "expected": [
+        "valid"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L16",
+      "label": "Giữ nguyên dữ kiện sau khi Chương IV hoàn thành",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "id": "L17",
+      "label": "Bắt đầu lại xóa tiến trình và dữ kiện",
+      "actual": [
+        0,
+        0,
+        null
+      ],
+      "expected": [
+        0,
+        0,
+        null
+      ],
+      "passed": true
+    },
+    {
+      "id": "L18",
+      "label": "Ba khoản NST-01 đầy đủ",
+      "actual": {
+        "pass": true,
+        "complete": true,
+        "total": 2.6,
+        "awarded": true
+      },
+      "expected": {
+        "pass": true,
+        "complete": true,
+        "total": 2.6,
+        "awarded": true
+      },
+      "passed": true
+    },
+    {
+      "id": "L19",
+      "label": "Thiếu một khoản NST-01",
+      "actual": {
+        "pass": true,
+        "complete": false,
+        "total": null,
+        "awarded": false
+      },
+      "expected": {
+        "pass": true,
+        "complete": false,
+        "total": null,
+        "awarded": false
+      },
+      "passed": true
+    },
+    {
+      "id": "L20",
+      "label": "Thêm NS-119 và nhận diện đúng hai ranh giới",
+      "actual": {
+        "pass": false,
+        "complete": false,
+        "total": null,
+        "awarded": false
+      },
+      "expected": {
+        "pass": false,
+        "complete": false,
+        "total": null,
+        "awarded": false
+      },
+      "passed": true
+    },
+    {
+      "id": "L21",
+      "label": "Nhận sai cùng hợp đồng khi có NS-119",
+      "actual": {
+        "pass": false,
+        "complete": false,
+        "total": null,
+        "awarded": false
+      },
+      "expected": {
+        "pass": false,
+        "complete": false,
+        "total": null,
+        "awarded": false
+      },
+      "passed": true
+    },
+    {
+      "id": "L22",
+      "label": "Một gợi ý và hai lỗi ở t4.n73",
+      "actual": [
+        34.8,
+        28.5,
+        25,
+        9,
+        97.3,
+        "successor"
+      ],
+      "expected": [
+        34.8,
+        28.5,
+        25,
+        9,
+        97.3,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L23",
+      "label": "Bốn câu Chương IV sai ba lần, ba gợi ý",
+      "actual": [
+        33.4,
+        24,
+        25,
+        8,
+        90.4,
+        "successor"
+      ],
+      "expected": [
+        33.4,
+        24,
+        25,
+        8,
+        90.4,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L24",
+      "label": "Xem lời giải cả Chương III",
+      "actual": [
+        28,
+        24,
+        25,
+        8,
+        85,
+        "successor"
+      ],
+      "expected": [
+        28,
+        24,
+        25,
+        8,
+        85,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L25",
+      "label": "Một quyết định vội vàng dù điểm cao",
+      "actual": [
+        35,
+        30,
+        19,
+        10,
+        94,
+        "conditional"
+      ],
+      "expected": [
+        35,
+        30,
+        19,
+        10,
+        94,
+        "conditional"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L26",
+      "label": "Một quyết định do dự dù điểm cao",
+      "actual": [
+        35,
+        30,
+        21,
+        10,
+        96,
+        "conditional"
+      ],
+      "expected": [
+        35,
+        30,
+        21,
+        10,
+        96,
+        "conditional"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L27",
+      "label": "Hai sự kiện gợi ý không có khóa vẫn ghi hai lần",
+      "actual": [
+        2,
+        9
+      ],
+      "expected": [
+        2,
+        9
+      ],
+      "passed": true
+    },
+    {
+      "id": "L28",
+      "label": "Câu đã giải trong chương hoàn thành không nhận thêm lỗi",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "id": "L29",
+      "label": "calculate chỉ chặn quyết định, không tự chặn năm chương",
+      "actual": [
+        0,
+        0,
+        18,
+        10,
+        28,
+        "conditional"
+      ],
+      "expected": [
+        0,
+        0,
+        18,
+        10,
+        28,
+        "conditional"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L30",
+      "label": "Mức tự thực hiện đúng ngưỡng 5",
+      "actual": [
+        5,
+        "successor"
+      ],
+      "expected": [
+        5,
+        "successor"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L31",
+      "label": "Mức tự thực hiện dưới ngưỡng, còn 4",
+      "actual": [
+        4,
+        "conditional"
+      ],
+      "expected": [
+        4,
+        "conditional"
+      ],
+      "passed": true
+    },
+    {
+      "id": "L32",
+      "label": "Chương V: đúng tập và đúng đánh giá",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "id": "L33",
+      "label": "Chương V: tập dư không được chấp nhận",
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "passed": true
+    },
+    {
+      "id": "L34",
+      "label": "Chương V: mã hồ sơ trùng không được chấp nhận",
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "passed": true
+    },
+    {
+      "id": "L35",
+      "label": "Chương V: tập đúng nhưng đánh giá sai",
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "passed": true
+    },
+    {
+      "id": "L36",
+      "label": "Chương V: chưa chọn hồ sơ không chấm",
+      "actual": [
+        null,
+        false
+      ],
+      "expected": [
+        null,
+        false
+      ],
+      "passed": true
+    },
+    {
+      "id": "L37",
+      "label": "Tạm dừng từ lỗi mới thứ hai và tự hết sau 15 giây",
+      "actual": [
+        false,
+        true,
+        false
+      ],
+      "expected": [
+        false,
+        true,
+        false
+      ],
+      "passed": true
+    },
+    {
+      "id": "L38",
+      "label": "Mở lại hồ sơ giải phóng tạm dừng",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "L39",
+      "label": "Lặp lại cùng mã lỗi không tăng số sai",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "id": "L40",
+      "label": "Lỗi mới thứ ba gửi sự kiện gợi ý",
+      "actual": [
+        3,
+        3,
+        1
+      ],
+      "expected": [
+        3,
+        3,
+        1
+      ],
+      "passed": true
+    }
+  ]
+}

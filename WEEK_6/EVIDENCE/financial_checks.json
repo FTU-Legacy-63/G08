@@ -1,0 +1,242 @@
+{
+  "review_date": "2026-10-21",
+  "method": "Tính trên dữ liệu mẫu đã chuẩn hóa; đối chiếu các số báo cáo và đối tượng dữ liệu với HTML được giải nén trực tiếp.",
+  "results": [
+    {
+      "id": "F01",
+      "label": "Tăng doanh thu",
+      "actual": 25,
+      "expected": 25,
+      "passed": true
+    },
+    {
+      "id": "F02",
+      "label": "Cầu nối doanh thu",
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "id": "F03",
+      "label": "Tăng phải thu",
+      "actual": 16.7,
+      "expected": 16.7,
+      "passed": true
+    },
+    {
+      "id": "F04",
+      "label": "Số ngày thu tiền ước tính",
+      "actual": [
+        54.8,
+        51.1
+      ],
+      "expected": [
+        54.8,
+        51.1
+      ],
+      "passed": true
+    },
+    {
+      "id": "F05",
+      "label": "Biên lợi nhuận hoạt động",
+      "actual": [
+        18.6,
+        13.7
+      ],
+      "expected": [
+        18.6,
+        13.7
+      ],
+      "passed": true
+    },
+    {
+      "id": "F06",
+      "label": "Lợi nhuận gộp và lợi nhuận hoạt động",
+      "actual": [
+        [
+          55,
+          22.3
+        ],
+        [
+          65,
+          20.5
+        ]
+      ],
+      "expected": [
+        [
+          55,
+          22.3
+        ],
+        [
+          65,
+          20.5
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "id": "F07",
+      "label": "Tách biến động hai năm và chênh lệch kế hoạch",
+      "actual": [
+        -2.5,
+        -0.7,
+        1.6,
+        0.1,
+        2.5,
+        0.2
+      ],
+      "expected": [
+        -2.5,
+        -0.7,
+        1.6,
+        0.1,
+        2.5,
+        0.2
+      ],
+      "passed": true
+    },
+    {
+      "id": "F08",
+      "label": "Năm tài khoản: ngân sách, thực tế và chênh lệch",
+      "actual": [
+        18,
+        21,
+        3
+      ],
+      "expected": [
+        18,
+        21,
+        3
+      ],
+      "passed": true
+    },
+    {
+      "id": "F09",
+      "label": "Sổ tư vấn đầy đủ",
+      "actual": [
+        9,
+        4.2
+      ],
+      "expected": [
+        9,
+        4.2
+      ],
+      "passed": true
+    },
+    {
+      "id": "F10",
+      "label": "Đủ hợp đồng tham chiếu",
+      "actual": [
+        7,
+        0
+      ],
+      "expected": [
+        7,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "id": "F11",
+      "label": "Đủ hồ sơ bàn giao",
+      "actual": [
+        9,
+        0
+      ],
+      "expected": [
+        9,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "id": "F12",
+      "label": "NST-01 đúng ranh giới",
+      "actual": [
+        3,
+        2.6
+      ],
+      "expected": [
+        3,
+        2.6
+      ],
+      "passed": true
+    },
+    {
+      "id": "F13",
+      "label": "Báo cáo giám sát đủ dòng",
+      "actual": [
+        10,
+        3
+      ],
+      "expected": [
+        10,
+        3
+      ],
+      "passed": true
+    },
+    {
+      "id": "F14",
+      "label": "Dòng tiền và tiền cuối kỳ",
+      "actual": [
+        11,
+        -11,
+        -2,
+        6
+      ],
+      "expected": [
+        11,
+        -11,
+        -2,
+        6
+      ],
+      "passed": true
+    },
+    {
+      "id": "F15",
+      "label": "Các số báo cáo chuẩn hóa khớp HTML",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "F16",
+      "label": "Bản dữ liệu giao dịch khớp mã nguồn",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "F17",
+      "label": "Vai trò chứng từ mẫu và tài khoản khác",
+      "actual": [
+        [
+          "WAGE_BENCH",
+          "NEW_MARKETS"
+        ],
+        []
+      ],
+      "expected": [
+        [
+          "WAGE_BENCH",
+          "NEW_MARKETS"
+        ],
+        []
+      ],
+      "passed": true
+    },
+    {
+      "id": "F18",
+      "label": "Giữ ngày nghiệm thu theo nguồn",
+      "actual": [
+        "05/05",
+        true
+      ],
+      "expected": [
+        "05/05",
+        true
+      ],
+      "passed": true
+    }
+  ]
+}

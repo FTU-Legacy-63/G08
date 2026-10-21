@@ -1,0 +1,58 @@
+{
+  "review_date": "2026-10-21",
+  "node_version": "v24.19.0",
+  "source_file": "THE_LAST_HEIR_FULL_GAME_FINAL(3).html",
+  "source_size_bytes": 120507192,
+  "source_sha256": "aa2e501a80c7abea6948f2a5c1a7de73f0853e0d188bf4598c53dac24a431f42",
+  "chapters": [
+    {
+      "chapter": 1,
+      "decoded_bytes": 23812579,
+      "decoded_characters": 23812484,
+      "original_bytes": 15322078
+    },
+    {
+      "chapter": 2,
+      "decoded_bytes": 7761526,
+      "decoded_characters": 7761321,
+      "original_bytes": 732003
+    },
+    {
+      "chapter": 3,
+      "decoded_bytes": 7501758,
+      "decoded_characters": 7501601,
+      "original_bytes": 703967
+    },
+    {
+      "chapter": 4,
+      "decoded_bytes": 7788213,
+      "decoded_characters": 7787483,
+      "original_bytes": 1141696
+    },
+    {
+      "chapter": 5,
+      "decoded_bytes": 17413553,
+      "decoded_characters": 17413278,
+      "original_bytes": 17413553
+    }
+  ],
+  "source_counts": {
+    "chapter_1_documents": 21,
+    "chapter_2_accounts": 5,
+    "chapter_2_documents": 20,
+    "chapter_3_transactions": 9,
+    "chapter_3_contracts": 7,
+    "chapter_3_deliverables": 9,
+    "chapter_4_monitoring_rows": 10,
+    "chapter_5_documents": 13,
+    "chapter_5_statements": 5,
+    "checkpoints": {
+      "1": 9,
+      "2": 6,
+      "3": 2,
+      "4": 17,
+      "5": 11
+    }
+  },
+  "method": "Giải nén đủ năm chương từ HTML, đọc các lớp nhúng và chạy hàm gốc trong Node.js vm với phần phụ thuộc giao diện được thay bằng đối tượng tối thiểu. Không chạy trình duyệt hoặc chứng minh toàn bộ giao diện."
+}
