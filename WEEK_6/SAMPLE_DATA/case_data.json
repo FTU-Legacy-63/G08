@@ -1,0 +1,587 @@
+{
+  "case_id": "ASTER-FOODS-NST01",
+  "company": "Aster Foods",
+  "fiscal_years": [
+    "2024",
+    "2025"
+  ],
+  "currency_unit": "USD_million",
+  "income_statement": {
+    "net_revenue": {
+      "2024": 120.0,
+      "2025": 150.0
+    },
+    "cost_of_goods_sold": {
+      "2024": 65.0,
+      "2025": 85.0
+    },
+    "gross_profit": {
+      "2024": 55.0,
+      "2025": 65.0
+    },
+    "distribution_expenses": {
+      "2024": 10.0,
+      "2025": 12.0
+    },
+    "marketing_and_administrative_expenses": {
+      "2024": 15.0,
+      "2025": 21.0
+    },
+    "research_and_development_expenses": {
+      "2024": 4.5,
+      "2025": 6.1
+    },
+    "other_operating_income": {
+      "2024": 1.2,
+      "2025": 1.5
+    },
+    "other_operating_expenses": {
+      "2024": 4.4,
+      "2025": 6.9
+    },
+    "operating_profit": {
+      "2024": 22.3,
+      "2025": 20.5
+    },
+    "profit_after_tax": {
+      "2024": 13.5,
+      "2025": 12.8
+    }
+  },
+  "balance_sheet_extract": {
+    "cash_and_cash_equivalents": {
+      "2024": 8.0,
+      "2025": 6.0
+    },
+    "inventories": {
+      "2024": 16.0,
+      "2025": 20.0
+    },
+    "trade_receivables": {
+      "2024": 18.0,
+      "2025": 21.0
+    },
+    "allowance_for_doubtful_receivables": {
+      "2024": 0.5,
+      "2025": 0.57
+    },
+    "trade_payables": {
+      "2024": 15.0,
+      "2025": 17.0
+    },
+    "accrued_expenses": {
+      "2024": 7.0,
+      "2025": 8.0
+    }
+  },
+  "revenue_bridge": {
+    "revenue_2024": 120.0,
+    "volume_index_2024": 100,
+    "volume_index_2025": 117,
+    "revenue_2025_at_2024_prices": 140.4,
+    "volume_effect": 20.4,
+    "price_mix_effect": 9.6,
+    "revenue_2025": 150.0
+  },
+  "receivables_quality": {
+    "dso_days": {
+      "2024": 54.8,
+      "2025": 51.1
+    },
+    "allowance_ratio": {
+      "2024": 0.028,
+      "2025": 0.027
+    },
+    "over_90_days_ratio": {
+      "2024": 0.034,
+      "2025": 0.032
+    },
+    "bad_debt_to_revenue": {
+      "2024": 0.006,
+      "2025": 0.005
+    },
+    "ageing": {
+      "under_30": {
+        "2024": 14.7,
+        "2025": 17.4
+      },
+      "31_90": {
+        "2024": 2.69,
+        "2025": 2.93
+      },
+      "over_90": {
+        "2024": 0.61,
+        "2025": 0.67
+      }
+    }
+  },
+  "market_expansion": {
+    "new_market_1": "April 2025",
+    "new_market_2": "August 2025",
+    "distributors": {
+      "2024": 31,
+      "2025": 36
+    }
+  },
+  "aop_2025": {
+    "record": "AOP-2025",
+    "approved_by": "Board of Directors",
+    "approval_date": "2024-12-18",
+    "gross_margin_plan": 0.44,
+    "marketing_and_administration_plan": 18.0,
+    "research_and_development_plan": 6.0,
+    "other_operating_expenses_plan": 6.7
+  },
+  "actual_cost_records": {
+    "cost_of_sales": {
+      "raw_materials": [
+        41.0,
+        54.2
+      ],
+      "packaging_and_inbound_freight": [
+        8.0,
+        11.0
+      ],
+      "production_conversion_and_losses": [
+        14.5,
+        18.1
+      ],
+      "inventory_and_other_adjustments": [
+        1.5,
+        1.7
+      ],
+      "supported_gross_margin_effect_pts": {
+        "supplier_price": -1.7,
+        "packaging_freight": -0.6,
+        "yield_loss": -0.4,
+        "sales_mix": 0.2,
+        "net": -2.5
+      }
+    },
+    "marketing_and_administration": {
+      "commercial_operations_and_customer_support": [
+        6.2,
+        7.1
+      ],
+      "market_expansion_and_launch_support": [
+        2.7,
+        4.5
+      ],
+      "registration_compliance_corporate_filings": [
+        1.6,
+        2.0
+      ],
+      "professional_services_and_shared_projects": [
+        4.5,
+        7.4
+      ],
+      "total": [
+        15.0,
+        21.0
+      ]
+    },
+    "research_and_development": {
+      "base_formulation": [
+        1.0,
+        1.0
+      ],
+      "recipe_improvement_new_markets": [
+        1.2,
+        2.1
+      ],
+      "packaging_shelf_life_trials": [
+        1.3,
+        1.7
+      ],
+      "local_registration_trials": [
+        1.0,
+        1.3
+      ],
+      "total": [
+        4.5,
+        6.1
+      ]
+    },
+    "other_operating_expenses": {
+      "recurring": [
+        4.4,
+        4.4
+      ],
+      "RC_25_restructuring": [
+        0.0,
+        2.5
+      ],
+      "total": [
+        4.4,
+        6.9
+      ]
+    }
+  },
+  "cash_flow": {
+    "operating": {
+      "2024": 13.5,
+      "2025": 11.0
+    },
+    "investing": {
+      "2024": -8.0,
+      "2025": -11.0
+    },
+    "financing": {
+      "2024": -3.0,
+      "2025": -2.0
+    },
+    "operating_bridge_2025": {
+      "operating_profit": 20.5,
+      "non_cash_adjustments": 5.5,
+      "working_capital": -5.0,
+      "other_operating": -1.0,
+      "interest_and_tax_paid": -9.0
+    },
+    "investing_2025": [
+      {
+        "item": "New distribution centre",
+        "amount": -8.0,
+        "record": "CAPEX-25-01"
+      },
+      {
+        "item": "Multi-market traceability system",
+        "amount": -4.0,
+        "record": "SYS-25-02"
+      },
+      {
+        "item": "Sale of old equipment",
+        "amount": 1.0,
+        "record": "DISP-25-03"
+      }
+    ],
+    "financing_2025": [
+      {
+        "item": "Net borrowings",
+        "amount": 6.0
+      },
+      {
+        "item": "Cash dividends",
+        "amount": -7.0
+      },
+      {
+        "item": "Lease principal",
+        "amount": -1.0
+      }
+    ]
+  },
+  "cost_accounts_2025": [
+    {
+      "id": "PERSONNEL",
+      "name": "Personnel",
+      "budget": 8.7,
+      "actual": 9,
+      "variance": 0.3
+    },
+    {
+      "id": "TRADE_MKT",
+      "name": "Marketing & Sales Support",
+      "budget": 4.4,
+      "actual": 4.5,
+      "variance": 0.1
+    },
+    {
+      "id": "REG_LEGAL",
+      "name": "Legal & Registration",
+      "budget": 1.6,
+      "actual": 1.8,
+      "variance": 0.2
+    },
+    {
+      "id": "ADVISORY",
+      "name": "Advisory",
+      "budget": 1.6,
+      "actual": 4.2,
+      "variance": 2.6
+    },
+    {
+      "id": "OTHER",
+      "name": "Other",
+      "budget": 1.7,
+      "actual": 1.5,
+      "variance": -0.2
+    }
+  ],
+  "advisory_ledger_2025": [
+    {
+      "id": "A1",
+      "ref": "GC-214",
+      "vendor": "Global Consulting",
+      "unit": "Strategy",
+      "contract": "GCL-01",
+      "program": "ENT-25",
+      "date": "2025-02-12",
+      "amount": 0.4,
+      "description": "Market entry scenario report"
+    },
+    {
+      "id": "N1",
+      "ref": "NS-051",
+      "vendor": "Northstar Advisory",
+      "unit": "Regional Development",
+      "contract": "NST-01",
+      "program": "ROP-25",
+      "date": "2025-05-08",
+      "amount": 0.9,
+      "description": "Assessment of the current operating model"
+    },
+    {
+      "id": "B1",
+      "ref": "BP-311",
+      "vendor": "Bright Path",
+      "unit": "Operations",
+      "contract": "BRP-01",
+      "program": "SUP-25",
+      "date": "2025-05-27",
+      "amount": 0.3,
+      "description": "Supply route review"
+    },
+    {
+      "id": "N2",
+      "ref": "NS-073",
+      "vendor": "Northstar Advisory",
+      "unit": "Regional Development",
+      "contract": "NST-01",
+      "program": "ROP-25",
+      "date": "2025-07-19",
+      "amount": 0.9,
+      "description": "Workshop on designing the governance framework"
+    },
+    {
+      "id": "A2",
+      "ref": "GC-388",
+      "vendor": "Global Consulting",
+      "unit": "Commercial",
+      "contract": "GCL-02",
+      "program": "PRC-25",
+      "date": "2025-08-03",
+      "amount": 0.25,
+      "description": "Note on product price architecture"
+    },
+    {
+      "id": "N3",
+      "ref": "NS-101",
+      "vendor": "Northstar Advisory",
+      "unit": "Regional Development",
+      "contract": "NST-01",
+      "program": "ROP-25",
+      "date": "2025-10-14",
+      "amount": 0.8,
+      "description": "Design of the transition sequence"
+    },
+    {
+      "id": "N4",
+      "ref": "NS-119",
+      "vendor": "Northstar Advisory",
+      "unit": "Finance",
+      "contract": "NST-02",
+      "program": "TAX-25",
+      "date": "2025-10-22",
+      "amount": 0.2,
+      "description": "Review of tax structure in new markets"
+    },
+    {
+      "id": "B2",
+      "ref": "BP-442",
+      "vendor": "Bright Path",
+      "unit": "Commercial",
+      "contract": "BRP-02",
+      "program": "PLR-25",
+      "date": "2025-11-06",
+      "amount": 0.25,
+      "description": "Post-launch assessment"
+    },
+    {
+      "id": "M1",
+      "ref": "MA-090",
+      "vendor": "Meridian Analytics",
+      "unit": "Marketing",
+      "contract": "MER-01",
+      "program": "CUS-25",
+      "date": "2025-12-02",
+      "amount": 0.2,
+      "description": "Consumer survey"
+    }
+  ],
+  "contracts": {
+    "GCL-01": {
+      "vendor": "Global Consulting",
+      "scope": "Market Entry Scenarios",
+      "objective": "Building market entry scenarios and the assumptions for roll-out.",
+      "program": "ENT-25",
+      "owner": "Strategy",
+      "ceiling": 0.45,
+      "payment": "Per acceptance report"
+    },
+    "GCL-02": {
+      "vendor": "Global Consulting",
+      "scope": "Product Price Architecture",
+      "objective": "Designing the price architecture for the product range in the new markets.",
+      "program": "PRC-25",
+      "owner": "Commercial",
+      "ceiling": 0.3,
+      "payment": "Per acceptance report"
+    },
+    "NST-01": {
+      "vendor": "Northstar Advisory",
+      "scope": "Regional Operating Model Design Programme",
+      "objective": "Designing the operating model and transition sequence for the regional expansion programme.",
+      "program": "ROP-25",
+      "owner": "Regional Development",
+      "ceiling": 2.8,
+      "payment": "Per accepted deliverable"
+    },
+    "NST-02": {
+      "vendor": "Northstar Advisory",
+      "scope": "Review of tax structure in new markets",
+      "objective": "Assessing the tax effect of the distribution structure in the new markets.",
+      "program": "TAX-25",
+      "owner": "Finance",
+      "ceiling": 0.25,
+      "payment": "Single payment"
+    },
+    "BRP-01": {
+      "vendor": "Bright Path",
+      "scope": "Supply route review",
+      "objective": "Reviewing supply routes and logistical bottlenecks before the expansion phase.",
+      "program": "SUP-25",
+      "owner": "Operations",
+      "ceiling": 0.35,
+      "payment": "Single payment"
+    },
+    "BRP-02": {
+      "vendor": "Bright Path",
+      "scope": "Post-launch assessment",
+      "objective": "Post-launch assessment and summary of commercial issues needing correction.",
+      "program": "PLR-25",
+      "owner": "Commercial",
+      "ceiling": 0.3,
+      "payment": "Single payment"
+    },
+    "MER-01": {
+      "vendor": "Meridian Analytics",
+      "scope": "Consumer survey",
+      "objective": "A consumer survey to test the response to the value proposition.",
+      "program": "CUS-25",
+      "owner": "Marketing",
+      "ceiling": 0.25,
+      "payment": "Single payment"
+    }
+  },
+  "deliverables": {
+    "GC-214": {
+      "deliverable": "ENT-25-D1",
+      "done": "2025-02-07",
+      "accepted": "2025-02-10"
+    },
+    "NS-051": {
+      "deliverable": "ROP-25-D1",
+      "done": "2025-04-30",
+      "accepted": "2025-05-05"
+    },
+    "BP-311": {
+      "deliverable": "SUP-25-D1",
+      "done": "2025-05-24",
+      "accepted": "2025-05-26"
+    },
+    "NS-073": {
+      "deliverable": "ROP-25-D2",
+      "done": "2025-07-15",
+      "accepted": "2025-07-18"
+    },
+    "GC-388": {
+      "deliverable": "PRC-25-D1",
+      "done": "2025-07-28",
+      "accepted": "2025-07-31"
+    },
+    "NS-101": {
+      "deliverable": "ROP-25-D3",
+      "done": "2025-10-10",
+      "accepted": "2025-10-13"
+    },
+    "NS-119": {
+      "deliverable": "TAX-25-D1",
+      "done": "2025-10-18",
+      "accepted": "2025-10-21"
+    },
+    "BP-442": {
+      "deliverable": "PLR-25-D1",
+      "done": "2025-11-02",
+      "accepted": "2025-11-05"
+    },
+    "MA-090": {
+      "deliverable": "CUS-25-D1",
+      "done": "2025-11-28",
+      "accepted": "2025-12-01"
+    }
+  },
+  "people": [
+    {
+      "id": "Victor",
+      "name": "Victor Hale",
+      "title": "Director of Business Development",
+      "role": "Business owner of ROP-25; raises requests and confirms deliverables"
+    },
+    {
+      "id": "Lucas",
+      "name": "Lucas Meyer",
+      "title": "Finance Manager",
+      "role": "Reviews files; checks the related total value; approves within the delegated scope or escalates"
+    },
+    {
+      "id": "David",
+      "name": "David Cole",
+      "title": "Chief Financial Officer",
+      "role": "Approval level for transactions above the threshold under FIN-AUTH-05"
+    },
+    {
+      "id": "Sophia",
+      "name": "Sophia Lin",
+      "title": "Internal Control Manager",
+      "role": "Oversees exceptions, recurring patterns and signs that controls are not working as designed"
+    },
+    {
+      "id": "Maya",
+      "name": "Maya Chen",
+      "title": "Finance delegate under FIN-DEL-18",
+      "role": "Approved PR-117 within Finance Manager authority"
+    }
+  ],
+  "_metadata": {
+    "schema_version": "1.0",
+    "source_html": "THE_LAST_HEIR_FULL_GAME_FINAL(3).html",
+    "source_sha256": "aa2e501a80c7abea6948f2a5c1a7de73f0853e0d188bf4598c53dac24a431f42",
+    "review_date": "2026-10-21",
+    "runtime_loading": false,
+    "note": "Bản dữ liệu đối chiếu phục vụ hồ sơ Tuần 3. Trò chơi hiện tại dùng dữ liệu nhúng, không tự nạp tệp JSON này.",
+    "normalization": {
+      "TX.amt": "advisory_ledger_2025[].amount",
+      "TX.desc": "advisory_ledger_2025[].description",
+      "CONTRACTS.pay": "contracts[code].payment",
+      "TX.date/WORK.done/WORK.accepted": "Ngày/tháng trong 2025 đổi thành YYYY-MM-DD; chuỗi chứng từ gốc giữ nguyên."
+    }
+  },
+  "source_discrepancies": [
+    {
+      "ref": "NS-051",
+      "field": "accepted",
+      "chapter_3_WORK": "2025-05-05",
+      "chapter_4_record": "2025-05-07",
+      "handling": "Giữ theo từng nguồn; chưa tự thay bằng một ngày thống nhất."
+    },
+    {
+      "contract": "NST-01",
+      "ceiling": 2.8,
+      "incurred_totals": [
+        0.9,
+        1.8,
+        2.6
+      ],
+      "handling": "Không đồng nhất trần cam kết với tổng phát sinh; thời điểm cam kết toàn bộ cần làm rõ."
+    }
+  ]
+}
