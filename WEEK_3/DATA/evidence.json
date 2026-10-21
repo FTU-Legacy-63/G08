@@ -1,0 +1,821 @@
+{
+  "_metadata": {
+    "schema_version": "1.0",
+    "source_html": "THE_LAST_HEIR_FULL_GAME_FINAL(3).html",
+    "source_sha256": "aa2e501a80c7abea6948f2a5c1a7de73f0853e0d188bf4598c53dac24a431f42",
+    "review_date": "2026-10-21",
+    "runtime_loading": false,
+    "note": "Bản dữ liệu đối chiếu phục vụ hồ sơ Tuần 3. Trò chơi hiện tại dùng dữ liệu nhúng, không tự nạp tệp JSON này.",
+    "source_language": "Giữ nguyên nội dung tiếng Anh của chứng từ và lời khai để truy vết; thuyết minh trong tài liệu dùng tiếng Việt.",
+    "internal_separation": "Siêu dữ liệu vai trò, tập bằng chứng đúng, mã đánh giá và đáp án được lưu ở answer_key.json. Nội dung hồ sơ và giới hạn có sẵn trong trò chơi được giữ theo nguồn."
+  },
+  "case_id": "ASTER-FOODS-NST01",
+  "chapter_1_documents": {
+    "management": {
+      "part": "Growth",
+      "type": "Letter from the Executive Board",
+      "title": "Explanation of the 2025 Results",
+      "purpose": "The official explanation must be tested against the financial statements and the measures of revenue quality",
+      "html": "<div class=\"docsection\"><h3>Extract from the Letter to the Board</h3><p>The Executive Board describes 2025 as a year of strong growth, owing to expansion into two new markets and an improved product mix.</p></div><table class=\"dtable\"><thead><tr><th>Statement</th><th>Figures Attached to the Letter</th></tr></thead><tbody><tr><td>Market expansion supported growth</td><td>Revenue of the two new markets not shown separately</td></tr><tr><td>The quality of growth was maintained</td><td>No measures of receivables or collection quality attached</td></tr></tbody></table><div class=\"doclimit\"><b>Limit:</b> this is the Executive Board’s own explanation. Chapter I must test it against the financial statements and the related notes.</div>"
+    },
+    "pnl": {
+      "part": "Growth / Profit Margin",
+      "type": "Financial Statements",
+      "title": "Income Statement · 2024-2025",
+      "purpose": "The original source of figures for analysing growth and the movement in profit margin",
+      "html": "<div class=\"docunit\">Unit: USD million, except percentages.</div><table class=\"dtable\"><thead><tr><th>Line Item</th><th>2024</th><th>2025</th><th>Change</th></tr></thead><tbody><tr><td>Net revenue</td><td class=\"num\">120.0</td><td class=\"num\">150.0</td><td class=\"num\">+25.0%</td></tr><tr><td>Cost of goods sold</td><td class=\"num\">(65.0)</td><td class=\"num\">(85.0)</td><td class=\"num\">+30.8%</td></tr><tr><td><b>Gross profit</b></td><td class=\"num\"><b>55.0</b></td><td class=\"num\"><b>65.0</b></td><td class=\"num\">+18.2%</td></tr><tr><td>Distribution expenses</td><td class=\"num\">(10.0)</td><td class=\"num\">(12.0)</td><td class=\"num\">+20.0%</td></tr><tr><td>Marketing and administrative expenses</td><td class=\"num\">(15.0)</td><td class=\"num\">(21.0)</td><td class=\"num\">+40.0%</td></tr><tr><td>Research and development expenses</td><td class=\"num\">(4.5)</td><td class=\"num\">(6.1)</td><td class=\"num\">+35.6%</td></tr><tr><td>Other operating income</td><td class=\"num\">1.2</td><td class=\"num\">1.5</td><td class=\"num\">+25.0%</td></tr><tr><td>Other operating expenses</td><td class=\"num\">(4.4)</td><td class=\"num\">(6.9)</td><td class=\"num\">+56.8%</td></tr><tr><td><b>Operating profit</b></td><td class=\"num\"><b>22.3</b></td><td class=\"num\"><b>20.5</b></td><td class=\"num\">−8.1%</td></tr><tr><td><b>Profit after tax</b></td><td class=\"num\"><b>13.5</b></td><td class=\"num\"><b>12.8</b></td><td class=\"num\">−5.2%</td></tr></tbody></table><div class=\"doclimit\"><b>How to use:</b> horizontal analysis shows which items moved strongly; the causes must be tested with other reports and reconciliation records.</div>"
+    },
+    "common": {
+      "part": "Profit Margin",
+      "type": "Financial Analysis Report",
+      "title": "Common-Size Income Statement (as % of Revenue)",
+      "purpose": "Brings every cost onto the same revenue base to find what pulled the margin",
+      "html": "<div class=\"docunit\">Unit: % of revenue.</div><table class=\"dtable\"><thead><tr><th>Line Item</th><th>2024</th><th>2025</th><th>Change</th></tr></thead><tbody><tr><td>Cost of goods sold</td><td class=\"num\">54.2%</td><td class=\"num\">56.7%</td><td class=\"num\">+2.5 pts</td></tr><tr><td><b>Gross margin</b></td><td class=\"num\"><b>45.8%</b></td><td class=\"num\"><b>43.3%</b></td><td class=\"num\">−2.5 pts</td></tr><tr><td>Distribution expenses</td><td class=\"num\">8.3%</td><td class=\"num\">8.0%</td><td class=\"num\">−0.3 pts</td></tr><tr><td>Marketing and administrative expenses</td><td class=\"num\">12.5%</td><td class=\"num\">14.0%</td><td class=\"num\">+1.5 pts</td></tr><tr><td>Research and development expenses</td><td class=\"num\">3.8%</td><td class=\"num\">4.1%</td><td class=\"num\">+0.3 pts</td></tr><tr><td>Other operating income</td><td class=\"num\">1.0%</td><td class=\"num\">1.0%</td><td class=\"num\">0.0 pts</td></tr><tr><td>Other operating expenses</td><td class=\"num\">3.7%</td><td class=\"num\">4.6%</td><td class=\"num\">+0.9 pts</td></tr><tr><td><b>Operating margin</b></td><td class=\"num\"><b>18.6%</b></td><td class=\"num\"><b>13.7%</b></td><td class=\"num\">−4.9 pts</td></tr></tbody></table><div class=\"docnote\">Operating margin fell by 4.9 percentage points.</div>"
+    },
+    "bs": {
+      "part": "Growth / Cash Flow",
+      "type": "Financial Statements",
+      "title": "Balance Sheet · Extract of Related Items",
+      "purpose": "Tests the relation between revenue growth, receivables and working capital",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Line Item</th><th>2024</th><th>2025</th><th>Change</th></tr></thead><tbody><tr><td>Cash and cash equivalents</td><td class=\"num\">8.0</td><td class=\"num\">6.0</td><td class=\"num\">−2.0</td></tr><tr><td>Inventories</td><td class=\"num\">16.0</td><td class=\"num\">20.0</td><td class=\"num\">+25.0%</td></tr><tr><td>Trade receivables</td><td class=\"num\">18.0</td><td class=\"num\">21.0</td><td class=\"num\">+16.7%</td></tr><tr><td>Allowance for doubtful receivables</td><td class=\"num\">0.50</td><td class=\"num\">0.57</td><td class=\"num\">+14.0%</td></tr><tr><td>Trade payables</td><td class=\"num\">15.0</td><td class=\"num\">17.0</td><td class=\"num\">+13.3%</td></tr><tr><td>Accrued expenses</td><td class=\"num\">7.0</td><td class=\"num\">8.0</td><td class=\"num\">+14.3%</td></tr></tbody></table><div class=\"doclimit\"><b>Limit:</b> closing balances help reveal unusual relations, but must be joined with receivable measures and notes to judge the quality of revenue.</div>"
+    },
+    "creditq": {
+      "part": "Growth",
+      "type": "Financial Statement Ratios & Receivables Note",
+      "title": "Table of Revenue and Receivable Quality Measures",
+      "purpose": "Places the receivables measures beside revenue growth so the player can judge whether the two stories remain consistent",
+      "html": "<div class=\"docsection\"><h3>Measures prepared from the financial statements and the receivables note</h3><p>Read the direction and size of each measure together. No single line settles the quality of revenue on its own.</p></div><table class=\"dtable\"><thead><tr><th>Measure</th><th>2024</th><th>2025</th><th>Movement</th></tr></thead><tbody><tr><td>Revenue growth</td><td class=\"num\">-</td><td class=\"num\">+25.0%</td><td>Reference point</td></tr><tr><td>Growth in trade receivables</td><td class=\"num\">-</td><td class=\"num\">+16.7%</td><td>+16.7%</td></tr><tr><td>Estimated days of receivables</td><td class=\"num\">54.8</td><td class=\"num\">51.1</td><td>−3.7 days</td></tr><tr><td>Allowance / gross receivables</td><td class=\"num\">2.8%</td><td class=\"num\">2.7%</td><td>−0.1 pt</td></tr><tr><td>Receivables over 90 days past due / receivables</td><td class=\"num\">3.4%</td><td class=\"num\">3.2%</td><td>−0.2 pt</td></tr><tr><td>Bad debt expense / revenue</td><td class=\"num\">0.6%</td><td class=\"num\">0.5%</td><td>−0.1 pt</td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> compare these movements with the 25% rise in revenue, then decide how far the combined evidence can take you.</div>"
+    },
+    "markets": {
+      "part": "Growth",
+      "type": "Business Record",
+      "title": "Market Expansion Record 2025",
+      "purpose": "Places the Executive Board’s explanation in context; not to be used in place of financial statement evidence",
+      "html": "<table class=\"dtable\"><thead><tr><th>Milestone</th><th>Time</th><th>Status</th></tr></thead><tbody><tr><td>New market 1</td><td>April 2025</td><td>Commercial sales begun</td></tr><tr><td>New market 2</td><td>August 2025</td><td>Commercial sales begun</td></tr><tr><td>Number of distributors</td><td>31 → 36</td><td>Expanded</td></tr></tbody></table><div class=\"doclimit\"><b>Limit:</b> the record confirms the expansion was real but does not separate the revenue of the two markets. It is therefore supporting context, not a breakdown of the 25% growth.</div>"
+    },
+    "salesvol": {
+      "part": "Growth",
+      "type": "Sales Analysis Report",
+      "title": "Revenue Bridge by Sales Volume",
+      "purpose": "Quantifies the revenue growth due to change in volume, holding 2024 net selling prices as the basis of comparison",
+      "html": "<div class=\"docunit\">Unit: USD million; volume index 2024 = 100.</div><div class=\"docsection\"><h3>Analysis from the sales ledger and invoiced quantities</h3><p>Finance restated 2025 volumes at the average 2024 net selling price to isolate the effect of quantity sold.</p></div><table class=\"dtable\"><thead><tr><th>Indicator</th><th>2024</th><th>2025 / effect</th></tr></thead><tbody><tr><td>Net revenue</td><td class=\"num\">120.0</td><td class=\"num\">150.0</td></tr><tr><td>Sales volume index</td><td class=\"num\">100</td><td class=\"num\">117</td></tr><tr><td>2025 revenue at 2024 prices/mix</td><td class=\"num\">120.0</td><td class=\"num\">140.4</td></tr><tr><td><b>Volume effect</b></td><td></td><td class=\"num\"><b>+20.4</b></td></tr></tbody></table><div class=\"doclimit\"><b>Meaning:</b> this is an analytical bridge at aggregate level, drawn from the sales ledger; it does not yet tell how much each market contributed.</div>"
+    },
+    "pricemix": {
+      "part": "Growth",
+      "type": "Sales Analysis Report",
+      "title": "Bridge for Net Selling Price and Product Mix",
+      "purpose": "Quantifies the revenue growth that remains after the volume effect is removed",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><div class=\"docsection\"><h3>Reconciled by customer and product group</h3><p>The report takes actual revenue from the sales ledger and sets it against the volume-adjusted revenue of 140.4 million, to find the difference due to net selling price and product mix.</p></div><table class=\"dtable\"><thead><tr><th>Bridge</th><th>Value</th></tr></thead><tbody><tr><td>Revenue after volume effect</td><td class=\"num\">140.4</td></tr><tr><td>Net selling price and mix effect</td><td class=\"num\">+9.6</td></tr><tr><td><b>Actual revenue 2025</b></td><td class=\"num\"><b>150.0</b></td></tr></tbody></table><div class=\"doclimit\"><b>Meaning:</b> 120.0 + 20.4 + 9.6 = 150.0. This is a test of the reasonableness of revenue growth, not proof that every transaction or every market is accurate.</div>"
+    },
+    "arnote": {
+      "part": "Growth",
+      "type": "Notes to the Financial Statements",
+      "title": "Note on Trade Receivables and Ageing",
+      "purpose": "Tests the ageing structure, the allowance, and any sign of weakening collection",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Ageing band</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><td>Not yet due / under 30 days</td><td class=\"num\">14.7</td><td class=\"num\">17.4</td></tr><tr><td>31-90 days</td><td class=\"num\">2.69</td><td class=\"num\">2.93</td></tr><tr><td>Over 90 days</td><td class=\"num\">0.61</td><td class=\"num\">0.67</td></tr><tr><td><b>Gross receivables</b></td><td class=\"num\"><b>18.0</b></td><td class=\"num\"><b>21.0</b></td></tr><tr><td>Allowance for doubtful receivables</td><td class=\"num\">0.50</td><td class=\"num\">0.57</td></tr></tbody></table><div class=\"docnote\">Share over 90 days: 3.4% → 3.2%. Allowance as a share of receivables: 2.8% → 2.7%.</div><div class=\"doclimit\"><b>Limit:</b> the note helps judge receivable quality at aggregate level; it does not replace verification of single revenue transactions.</div>"
+    },
+    "opplan": {
+      "part": "Profit Margin",
+      "type": "Approved Annual Operating Plan",
+      "title": "2025 Annual Operating Plan · Approved Extract",
+      "purpose": "Provides the approved planning reference for the main operating lines before actual results are reconciled",
+      "html": "<div class=\"docmeta\"><div><b>Record</b><span>AOP-2025 · Approved extract</span></div><div><b>Approved by</b><span>Board of Directors</span></div><div><b>Approval date</b><span>18 Dec 2024</span></div></div><div class=\"docunit\">Unit: USD million, except percentages.</div><table class=\"dtable\"><thead><tr><th>Operating line</th><th>2024 actual</th><th>2025 approved plan</th><th>Planning note</th></tr></thead><tbody><tr><td>Gross margin</td><td class=\"num\">45.8%</td><td class=\"num\">44.0%</td><td>Reflects planned input-cost pressure during expansion</td></tr><tr><td>Marketing & Administration</td><td class=\"num\">15.0</td><td class=\"num\">18.0</td><td>Includes commercial support and new-market operating capacity</td></tr><tr><td>Research & Development</td><td class=\"num\">4.5</td><td class=\"num\">6.0</td><td>Includes product adaptation and registration trials</td></tr><tr><td>Other operating expenses</td><td class=\"num\">4.4</td><td class=\"num\">6.7</td><td>Includes the planned restructuring programme</td></tr></tbody></table><div class=\"doclimit\"><b>Limit:</b> this is an approved plan, not proof that any cost was actually incurred. Use it only as a planning reference, then test actual results against the accounting records and source documents.</div>"
+    },
+    "grossbridge": {
+      "part": "Profit Margin",
+      "type": "Actual Cost Sub-ledger",
+      "title": "Cost of Sales Sub-ledger · 2024-2025",
+      "purpose": "Shows actual cost of sales by cost group before the player tests why gross margin moved",
+      "html": "<div class=\"docunit\">Unit: USD million, except percentages.</div><table class=\"dtable\"><thead><tr><th>Actual cost group</th><th>2024</th><th>2025</th><th>Movement</th></tr></thead><tbody><tr><td>Raw materials</td><td class=\"num\">41.0</td><td class=\"num\">54.2</td><td class=\"num\">+13.2</td></tr><tr><td>Packaging and inbound freight</td><td class=\"num\">8.0</td><td class=\"num\">11.0</td><td class=\"num\">+3.0</td></tr><tr><td>Production conversion and losses</td><td class=\"num\">14.5</td><td class=\"num\">18.1</td><td class=\"num\">+3.6</td></tr><tr><td>Inventory and other cost adjustments</td><td class=\"num\">1.5</td><td class=\"num\">1.7</td><td class=\"num\">+0.2</td></tr><tr><td><b>Total cost of sales</b></td><td class=\"num\"><b>65.0</b></td><td class=\"num\"><b>85.0</b></td><td class=\"num\"><b>+20.0</b></td></tr><tr><td><b>Gross margin</b></td><td class=\"num\"><b>45.8%</b></td><td class=\"num\"><b>43.3%</b></td><td class=\"num\"><b>−2.5 pts</b></td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> this ledger establishes the actual movement. Use the supporting records separately to judge whether the movement is explained closely enough to close.</div>"
+    },
+    "grossdocs": {
+      "part": "Profit Margin",
+      "type": "Supporting Actual-Cost Records",
+      "title": "Cost of Sales Supporting Records · 2025",
+      "purpose": "Provides the underlying purchase, freight, production and sales-mix records for the gross-margin movement",
+      "html": "<div class=\"docunit\">Unit: percentage points of gross margin.</div><table class=\"dtable\"><thead><tr><th>Observed driver</th><th>Effect</th><th>Source record</th></tr></thead><tbody><tr><td>Supplier purchase-price movement</td><td class=\"num\">−1.7</td><td>Supplier invoices + purchase-price variance ledger</td></tr><tr><td>Packaging and inbound freight</td><td class=\"num\">−0.6</td><td>Freight invoices + receiving ledger</td></tr><tr><td>Production yield / loss</td><td class=\"num\">−0.4</td><td>Actual production and loss report</td></tr><tr><td>Sales mix effect</td><td class=\"num\">+0.2</td><td>Actual sales ledger by product group</td></tr><tr><td><b>Net effect supported by records</b></td><td class=\"num\"><b>−2.5</b></td><td>Cross-check to reported gross-margin movement</td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> assess the numerical tie-out yourself; the title of the record does not state the conclusion.</div>"
+    },
+    "mkt": {
+      "part": "Profit Margin",
+      "type": "Actual Cost Sub-ledger",
+      "title": "Marketing & Administration Sub-ledger · 2024-2025",
+      "purpose": "Shows actual recorded spending by workstream at the same level of detail used for the other cost lines",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Actual workstream</th><th>2024</th><th>2025</th><th>Movement</th></tr></thead><tbody><tr><td>Commercial operations and customer support</td><td class=\"num\">6.2</td><td class=\"num\">7.1</td><td class=\"num\">+0.9</td></tr><tr><td>Market expansion and launch support</td><td class=\"num\">2.7</td><td class=\"num\">4.5</td><td class=\"num\">+1.8</td></tr><tr><td>Registration, compliance and corporate filings</td><td class=\"num\">1.6</td><td class=\"num\">2.0</td><td class=\"num\">+0.4</td></tr><tr><td>Professional services and shared corporate projects</td><td class=\"num\">4.5</td><td class=\"num\">7.4</td><td class=\"num\">+2.9</td></tr><tr><td><b>Total actual expense</b></td><td class=\"num\"><b>15.0</b></td><td class=\"num\"><b>21.0</b></td><td class=\"num\"><b>+6.0</b></td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> this is an actual-cost ledger. It establishes the recorded workstreams and the total expense actually recognised; compare it with the other records before deciding what, if anything, remains unexplained.</div>"
+    },
+    "mktdocs": {
+      "part": "Profit Margin",
+      "type": "Supporting Actual-Cost Records",
+      "title": "Marketing & Administration Supporting Records · 2025",
+      "purpose": "Checks whether the 2025 expense total is backed by recorded documents by workstream",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Workstream supported</th><th>2025 amount traced</th><th>Examples of source records</th></tr></thead><tbody><tr><td>Commercial operations and customer support</td><td class=\"num\">7.1</td><td>Payroll schedules, distributor-support invoices, office-service records</td></tr><tr><td>Market expansion and launch support</td><td class=\"num\">4.5</td><td>Campaign procurement, field-support invoices, launch-service acceptances</td></tr><tr><td>Registration, compliance and corporate filings</td><td class=\"num\">2.0</td><td>Registration receipts, filing fees, legal-service invoices</td></tr><tr><td>Professional services and shared corporate projects</td><td class=\"num\">7.4</td><td>Project invoices, service-acceptance logs, journal-batch listing</td></tr><tr><td><b>Total actual expense traced</b></td><td class=\"num\"><b>21.0</b></td><td>Agrees to the general ledger and income statement</td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> these records establish that the 2025 expense total was recorded and supported by source documents. They do not, by themselves, explain every variance against an approved plan.</div>"
+    },
+    "rnd": {
+      "part": "Profit Margin",
+      "type": "Actual Cost Sub-ledger",
+      "title": "Research & Development Sub-ledger · 2024-2025",
+      "purpose": "Shows actual R&D spending by project workstream before the movement is tested against supporting documents",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Actual project workstream</th><th>2024</th><th>2025</th><th>Movement</th></tr></thead><tbody><tr><td>Base formulation maintenance</td><td class=\"num\">1.0</td><td class=\"num\">1.0</td><td class=\"num\">0.0</td></tr><tr><td>Recipe improvement for new markets</td><td class=\"num\">1.2</td><td class=\"num\">2.1</td><td class=\"num\">+0.9</td></tr><tr><td>Packaging and shelf-life trials</td><td class=\"num\">1.3</td><td class=\"num\">1.7</td><td class=\"num\">+0.4</td></tr><tr><td>Local-registration trials</td><td class=\"num\">1.0</td><td class=\"num\">1.3</td><td class=\"num\">+0.3</td></tr><tr><td><b>Total actual R&D</b></td><td class=\"num\"><b>4.5</b></td><td class=\"num\"><b>6.1</b></td><td class=\"num\"><b>+1.6</b></td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> the ledger establishes the movement; the supporting records must still be read before deciding whether it is explained.</div>"
+    },
+    "rnddocs": {
+      "part": "Profit Margin",
+      "type": "Supporting Actual-Cost Records",
+      "title": "Research & Development Supporting Records · 2025",
+      "purpose": "Provides invoices, project payroll and service records for the additional R&D work performed in 2025",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Additional 2025 work</th><th>Amount</th><th>Source records</th></tr></thead><tbody><tr><td>Recipe improvement for new markets</td><td class=\"num\">0.9</td><td>Trial invoices + project payroll RD-25-04</td></tr><tr><td>Packaging and shelf-life trials</td><td class=\"num\">0.4</td><td>Laboratory invoices RD-25-07</td></tr><tr><td>Local-registration trials</td><td class=\"num\">0.3</td><td>Service invoices RD-25-09</td></tr><tr><td><b>Total additional cost supported</b></td><td class=\"num\"><b>1.6</b></td><td>Cross-check to the movement in the R&D sub-ledger</td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> compare the supported additions with the actual increase before deciding whether this line can be closed.</div>"
+    },
+    "restructure": {
+      "part": "Profit Margin",
+      "type": "Actual Cost Sub-ledger",
+      "title": "Other Operating Expenses Sub-ledger · 2024-2025",
+      "purpose": "Shows actual other operating expenses by workstream before the increase is tested against supporting records",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Actual workstream</th><th>2024</th><th>2025</th><th>Movement</th></tr></thead><tbody><tr><td>Recurring other operating charges</td><td class=\"num\">4.4</td><td class=\"num\">4.4</td><td class=\"num\">0.0</td></tr><tr><td>RC-25 restructuring programme</td><td class=\"num\">0.0</td><td class=\"num\">2.5</td><td class=\"num\">+2.5</td></tr><tr><td><b>Total actual other operating expenses</b></td><td class=\"num\"><b>4.4</b></td><td class=\"num\"><b>6.9</b></td><td class=\"num\"><b>+2.5</b></td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> this ledger establishes the movement. The RC-25 records must still be read to decide whether the increase is supported.</div>"
+    },
+    "restructureExtra": {
+      "part": "Profit Margin",
+      "type": "Supporting Actual-Cost Records",
+      "title": "Other Operating Expenses Supporting Records · RC-25",
+      "purpose": "Provides the actual invoices and acceptance records behind the 2025 restructuring workstream",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>RC-25 actual item</th><th>Amount</th><th>Source records</th></tr></thead><tbody><tr><td>Line shutdown and removal of equipment</td><td class=\"num\">1.35</td><td>Contractor invoices RC-2511/12</td></tr><tr><td>Relocation, rearrangement and inspection</td><td class=\"num\">0.55</td><td>Acceptance minutes RC-2518</td></tr><tr><td>Cost of ending related services</td><td class=\"num\">0.30</td><td>Termination agreement RC-2521</td></tr><tr><td>Disposal of materials after removal</td><td class=\"num\">0.18</td><td>Invoice BB-TH-118</td></tr><tr><td>Fee for ending the maintenance contract</td><td class=\"num\">0.12</td><td>Invoice / minutes PL-HD-44</td></tr><tr><td><b>Total RC-25 cost supported</b></td><td class=\"num\"><b>2.50</b></td><td>Cross-check to the RC-25 workstream in the sub-ledger</td></tr></tbody></table><div class=\"doclimit\"><b>Use:</b> compare the supported RC-25 amount with the actual increase before deciding whether this line can be closed.</div>"
+    },
+    "cf": {
+      "part": "Cash Flow",
+      "type": "Financial Statements",
+      "title": "Cash Flow Statement · 2024-2025",
+      "purpose": "Determines why operating cash flow weakened and tests the large investing and financing flows",
+      "html": "<div class=\"docunit\">Unit: USD million.</div><table class=\"dtable\"><thead><tr><th>Cash flow group</th><th>2024</th><th>2025</th></tr></thead><tbody><tr><td><b>Net cash from operating activities</b></td><td class=\"num\"><b>+13.5</b></td><td class=\"num\"><b>+11.0</b></td></tr><tr><td>Net cash from investing activities</td><td class=\"num\">−8.0</td><td class=\"num\">−11.0</td></tr><tr><td>Net cash from financing activities</td><td class=\"num\">−3.0</td><td class=\"num\">−2.0</td></tr></tbody></table><div class=\"docsection\"><h3>Operating cash flow bridge 2025</h3></div><table class=\"dtable\"><tbody><tr><td>Operating profit</td><td class=\"num\">20.5</td></tr><tr><td>Depreciation and non-cash adjustments</td><td class=\"num\">+5.5</td></tr><tr><td>Movement in working capital</td><td class=\"num\">−5.0</td></tr><tr><td>Other operating assets/liabilities</td><td class=\"num\">−1.0</td></tr><tr><td>Interest and tax paid</td><td class=\"num\">−9.0</td></tr><tr><td><b>Net cash from operating activities</b></td><td class=\"num\"><b>11.0</b></td></tr></tbody></table>"
+    },
+    "investpack": {
+      "part": "Cash Flow",
+      "type": "Reconciliation Table",
+      "title": "Reconciliation of Investing Cash Flows 2025",
+      "purpose": "Traces the large investing flows back to projects and asset balances",
+      "html": "<table class=\"dtable\"><thead><tr><th>Description</th><th>Cash Flow</th><th>Record</th></tr></thead><tbody><tr><td>New distribution centre</td><td class=\"num\">−8.0</td><td>CAPEX-25-01</td></tr><tr><td>Multi-market traceability system</td><td class=\"num\">−4.0</td><td>SYS-25-02</td></tr><tr><td>Proceeds from sale of old equipment</td><td class=\"num\">+1.0</td><td>DISP-25-03</td></tr><tr><td><b>Total</b></td><td class=\"num\"><b>−11.0</b></td><td>Agrees to the cash flow statement</td></tr></tbody></table><div class=\"doclimit\">The records prove the source and purpose of spending; they do not by themselves prove the final worth of the investment.</div>"
+    },
+    "financepack": {
+      "part": "Cash Flow",
+      "type": "Reconciliation Table",
+      "title": "Reconciliation of Financing Cash Flows 2025",
+      "purpose": "Traces borrowings, dividends and lease obligations back to source records",
+      "html": "<table class=\"dtable\"><thead><tr><th>Description</th><th>Cash Flow</th><th>Cross-check</th></tr></thead><tbody><tr><td>Net borrowings</td><td class=\"num\">+6.0</td><td>Balance Sheet borrowings rose by 6.0</td></tr><tr><td>Cash dividends</td><td class=\"num\">−7.0</td><td>Board resolution; equity bridge</td></tr><tr><td>Repayment of lease principal</td><td class=\"num\">−1.0</td><td>Lease obligation schedule</td></tr><tr><td><b>Total</b></td><td class=\"num\"><b>−2.0</b></td><td>Agrees to the cash flow statement</td></tr></tbody></table>"
+    }
+  },
+  "chapter_2_documents": [
+    {
+      "id": "BUDGET_ALLOC",
+      "src": "Plan 2025",
+      "date": "15/01/2025",
+      "owner": "CFO / Board",
+      "title": "Budget Allocation Table 2025",
+      "preview": "The annual budget allocated across five cost groups.",
+      "detail": "Personnel 8.7; Marketing & Sales Support 4.4; Legal & Registration 1.6; Advisory 1.6; Other 1.7; total 18.0 million. Status: approved."
+    },
+    {
+      "id": "REC_PERSONNEL",
+      "src": "Finance",
+      "date": "31/12/2025",
+      "owner": "Finance",
+      "title": "Personnel Cost Sub-ledger",
+      "preview": "Amounts incurred in 2025 on the personnel account.",
+      "detail": "The sub-ledger has been reconciled to the general ledger; total personnel cost recorded in 2025 is 9.0 million."
+    },
+    {
+      "id": "PAYROLL_RECON",
+      "src": "HR / Finance",
+      "date": "20/12/2025",
+      "owner": "HR / Finance",
+      "title": "Payroll and New Hire Reconciliation",
+      "preview": "Reconciles new positions, start dates and salary adjustments.",
+      "detail": "The reconciliation confirms that the 0.3 million above plan arose from the timing of hires and the salary adjustments recorded in payroll."
+    },
+    {
+      "id": "WAGE_BENCH",
+      "src": "Market",
+      "date": "Q3/2025",
+      "owner": "Market Data",
+      "title": "Regional Salary Bulletin",
+      "preview": "Reference salary levels rose by about 4%.",
+      "detail": "The bulletin gives context on the labour market. It is not an approval of spending and does not of itself reconcile the increase in the personnel account."
+    },
+    {
+      "id": "LAUNCH_PO",
+      "src": "Purchasing",
+      "date": "10/02/2025",
+      "owner": "Marketing / Purchasing",
+      "title": "POs for Two Launch Campaigns",
+      "preview": "Two POs for product launch activities in the new markets.",
+      "detail": "The total commitment approved for the two campaigns is 4.4 million."
+    },
+    {
+      "id": "REC_TRADE",
+      "src": "Finance",
+      "date": "31/12/2025",
+      "owner": "Finance",
+      "title": "Marketing and Sales Support Sub-ledger",
+      "preview": "The total recorded to the account during the year.",
+      "detail": "The sub-ledger has been reconciled to the general ledger, which records 4.5 million of marketing and sales support cost for 2025."
+    },
+    {
+      "id": "CAMPAIGN_RECON",
+      "src": "Marketing / Finance",
+      "date": "18/12/2025",
+      "owner": "Marketing / Finance",
+      "title": "Campaign Invoice Reconciliation",
+      "preview": "Reconciles the POs, invoices and recorded amounts for the two campaigns.",
+      "detail": "The reconciliation shows total recorded cost of 4.5 million; the 0.1 million increase is linked to media unit prices at the time of execution."
+    },
+    {
+      "id": "MEDIA_INDEX",
+      "src": "Market",
+      "date": "Q2-Q4/2025",
+      "owner": "Market Data",
+      "title": "Media Price Index",
+      "preview": "Media unit prices in the market rose slightly.",
+      "detail": "The index helps form a hypothesis as to why executed prices may have been above expectation, but it is not a document that directly reconciles the 0.1 million increase."
+    },
+    {
+      "id": "LOCAL_COUNSEL",
+      "src": "Legal Affairs",
+      "date": "22/01/2025",
+      "owner": "Legal Affairs",
+      "title": "Engagement Letter for Legal Counsel",
+      "preview": "Engagement letter for legal work and market registration.",
+      "detail": "The approved fee ceiling for legal counsel and registration is 1.6 million."
+    },
+    {
+      "id": "REC_REG",
+      "src": "Finance",
+      "date": "31/12/2025",
+      "owner": "Finance",
+      "title": "Legal and Registration Sub-ledger",
+      "preview": "Amounts incurred in 2025 on the legal account.",
+      "detail": "The sub-ledger has been reconciled to the general ledger, which records 1.8 million of legal and registration cost for 2025."
+    },
+    {
+      "id": "REG_FEE",
+      "src": "Operations / Legal Affairs",
+      "date": "30/11/2025",
+      "owner": "Product Regulatory / Finance",
+      "title": "Registration Fee Receipts and Filing Reconciliation",
+      "preview": "Fees for registration, testing and filings during the year.",
+      "detail": "The receipts and reconciliation confirm 0.2 million of additional fees for registration, testing and filings."
+    },
+    {
+      "id": "REG_CTX",
+      "src": "Operations",
+      "date": "2025",
+      "owner": "Product Regulatory",
+      "title": "Registration Requirements in the Two New Markets",
+      "preview": "A list of procedures to be completed before launch.",
+      "detail": "The document shows that opening a food market brings legal and technical procedures with it. It does not quantify the 0.2 million variance on its own."
+    },
+    {
+      "id": "ADVISORY_BUDGET",
+      "src": "Plan 2025",
+      "date": "15/01/2025",
+      "owner": "CFO / Board",
+      "title": "Signed Advisory Budget Annex",
+      "preview": "Allocation of the advisory budget for routine work and expansion support.",
+      "detail": "1.2 million routine advisory + 0.4 million expansion support = 1.6 million. No additional programme is approved in this annex."
+    },
+    {
+      "id": "REC_ADVISORY",
+      "src": "Finance",
+      "date": "31/12/2025",
+      "owner": "Finance",
+      "title": "Advisory Cost Sub-ledger",
+      "preview": "The total recorded to the advisory account during the year.",
+      "detail": "The sub-ledger has been reconciled to the general ledger, which records 4.2 million of advisory cost in total. Transaction detail is not yet opened in Chapter II."
+    },
+    {
+      "id": "STEERING_MIN",
+      "src": "Steering Committee",
+      "date": "10/04/2025",
+      "owner": "Executive Board",
+      "title": "Steering Committee Minutes, April",
+      "preview": "Discussion of the need for outside support during expansion.",
+      "detail": "The minutes say that more outside advisory may be needed to support expansion. They approve no supplier, no final scope and no additional amount."
+    },
+    {
+      "id": "REFORECAST",
+      "src": "Management Forecast",
+      "date": "15/09/2025",
+      "owner": "Finance / Executive Board",
+      "title": "September Reforecast",
+      "preview": "Estimates full-year advisory cost at about 4.0 million.",
+      "detail": "The internal forecast estimates advisory cost at about 4.0 million. Status: draft; there is no signed, approved budget adjustment."
+    },
+    {
+      "id": "NEW_MARKETS",
+      "src": "Kinh doanh",
+      "date": "2025",
+      "owner": "Strategy",
+      "title": "Record of Opening Two New Markets",
+      "preview": "Two new markets were opened in 2025.",
+      "detail": "The record confirms that the expansion took place. It is context that may raise the need for staff, marketing, legal work and advisory, but it does not quantify any particular variance."
+    },
+    {
+      "id": "REC_OTHER",
+      "src": "Finance",
+      "date": "31/12/2025",
+      "owner": "Finance",
+      "title": "Other Cost Sub-ledger",
+      "preview": "Total office, travel and other support costs incurred.",
+      "detail": "The sub-ledger has been reconciled to the general ledger, which records 1.5 million of other cost for 2025."
+    },
+    {
+      "id": "OFFICE_TRAVEL",
+      "src": "Operations / Finance",
+      "date": "20/12/2025",
+      "owner": "Operations / Finance",
+      "title": "Travel and Conference Records",
+      "preview": "Travel schedules, conference registrations and trip records.",
+      "detail": "The cancellation/postponement records show actual cost 0.2 million below plan, as some trips and conferences did not take place."
+    },
+    {
+      "id": "SYSTEM_INVOICE",
+      "src": "Technology",
+      "date": "05/10/2025",
+      "owner": "Technology / Finance",
+      "title": "System Implementation Invoice",
+      "preview": "Cost of implementing the new system: 4.0 million.",
+      "detail": "This item is capitalised as an intangible asset and lies within investing activities; it does not belong to the cost group under investigation."
+    }
+  ],
+  "chapter_2_document_placement": {
+    "ACCOUNT_DOCS": {
+      "TRADE_MKT": [
+        "LAUNCH_PO",
+        "REC_TRADE",
+        "CAMPAIGN_RECON",
+        "MEDIA_INDEX",
+        "NEW_MARKETS",
+        "BUDGET_ALLOC",
+        "SYSTEM_INVOICE"
+      ],
+      "REG_LEGAL": [
+        "LOCAL_COUNSEL",
+        "REC_REG",
+        "REG_FEE",
+        "REG_CTX",
+        "NEW_MARKETS",
+        "BUDGET_ALLOC",
+        "STEERING_MIN"
+      ],
+      "ADVISORY": [
+        "ADVISORY_BUDGET",
+        "REC_ADVISORY",
+        "STEERING_MIN",
+        "REFORECAST",
+        "NEW_MARKETS",
+        "LOCAL_COUNSEL",
+        "SYSTEM_INVOICE"
+      ],
+      "OTHER": [
+        "BUDGET_ALLOC",
+        "REC_OTHER",
+        "OFFICE_TRAVEL",
+        "NEW_MARKETS",
+        "SYSTEM_INVOICE",
+        "REFORECAST"
+      ]
+    },
+    "SAMPLE_DOCS": [
+      "BUDGET_ALLOC",
+      "REC_PERSONNEL",
+      "PAYROLL_RECON",
+      "WAGE_BENCH",
+      "NEW_MARKETS",
+      "SYSTEM_INVOICE"
+    ]
+  },
+  "chapter_4_documents": [
+    {
+      "id": "handoff",
+      "title": "Handover Minutes from Chapter III",
+      "sub": "The matter passed on for approval testing",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Record</b><span>P3-HO-04</span></div><div class=\"metaCell\"><b>Date prepared</b><span>31/10/2025</span></div><div class=\"metaCell\"><b>Source</b><span>Review team</span></div><div class=\"metaCell\"><b>Status</b><span>Established in Chapter III</span></div></div><div class=\"docsec\"><h3>Result Handed Over</h3><table class=\"docTbl\"><tr><th>Reference</th><th>Contract</th><th>Purpose</th><th>Value</th></tr><tr><td>NS-051</td><td>NST-01</td><td>ROP-25 · operating model</td><td>0.9 million USD</td></tr><tr><td>NS-073</td><td>NST-01</td><td>ROP-25 · governance framework</td><td>0.9 million USD</td></tr><tr><td>NS-101</td><td>NST-01</td><td>ROP-25 · transition sequence</td><td>0.8 million USD</td></tr></table><p><b>Conclusion of Chapter III:</b> the three items above belong to the same NST-01 and to one economic purpose of the ROP-25 programme; the matter carried into Chapter IV is an economic transaction of 2.6 million USD.</p></div>"
+    },
+    {
+      "id": "auth",
+      "title": "FIN-AUTH-05 · Approval Authority Policy",
+      "sub": "Version 5.2 · effective 01/01/2025",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Owner</b><span>Finance Governance</span></div><div class=\"metaCell\"><b>Version</b><span>5.2</span></div><div class=\"metaCell\"><b>Effective</b><span>01/01/2025</span></div><div class=\"metaCell\"><b>Scope</b><span>Commitments and payments</span></div></div><div class=\"docsec\"><h3>3. Determining the transaction value</h3><p>3.1. Items arising under the same contract and serving the same economic purpose must be judged by their <b>related total value</b> when the level of authority is determined.</p><p>3.2. Arising as several invoices, deliverables or payments does not of itself change the unit of the economic transaction.</p></div><div class=\"docsec\"><h3>5. Authority matrix</h3><table class=\"docTbl\"><tr><th>Value of the economic transaction</th><th>Minimum approval level</th></tr><tr><td>Up to 0.5 million USD</td><td>Head of Department</td></tr><tr><td>Above 0.5 up to 1.0 million USD</td><td>Head of Department + Finance Manager</td></tr><tr><td>Above 1.0 million USD</td><td>Chief Financial Officer + Board of Directors</td></tr></table></div><div class=\"docsec\"><h3>6-7. Timing and effect</h3><p>A commitment must receive all required approvals before it is put into effect. Approval of a later single disbursement does not replace the approval of the original transaction/commitment.</p></div>"
+    },
+    {
+      "id": "proc",
+      "title": "FIN-PROC-11 · Review and Disbursement Procedure",
+      "sub": "Operating guidance of the Finance Department",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Owner</b><span>Finance Department</span></div><div class=\"metaCell\"><b>Version</b><span>3.7</span></div><div class=\"metaCell\"><b>Effective</b><span>01/02/2025</span></div><div class=\"metaCell\"><b>Applies to</b><span>Service contracts</span></div></div><div class=\"docsec\"><h3>Before a commitment takes effect</h3><p>Finance checks the budget, the referenced contract, the related items already incurred and the total value to be used in determining authority. When the total value changes the approval level, the file must be passed to the new level before proceeding.</p></div><div class=\"docsec\"><h3>Before each disbursement</h3><p>Finance checks the invoice, evidence of acceptance, the contract reference and evidence of approval of the original commitment. Disbursement in parts must not be used to lower the approval level of the economic transaction.</p></div><div class=\"docsec\"><h3>When the electronic route cannot be used</h3><p>The alternative approval route under FIN-ALT-02 may be used. Changing the manner of obtaining a decision does not change the level of authority.</p></div>"
+    },
+    {
+      "id": "roles",
+      "title": "Directory of Control Roles 2025",
+      "sub": "Extract of the organisational records in force at the time of the investigation",
+      "html": "<table class=\"docTbl\"><tr><th>Person</th><th>Title</th><th>Related role</th></tr><tr><td>Victor Hale</td><td>Director of Business Development</td><td>Business owner of ROP-25; raises requests and confirms deliverables</td></tr><tr><td>Lucas Meyer</td><td>Finance Manager</td><td>Reviews files; checks the related total value; approves within the delegated scope or escalates</td></tr><tr><td>David Cole</td><td>Chief Financial Officer</td><td>Approval level for transactions above the threshold under FIN-AUTH-05</td></tr><tr><td>Sophia Lin</td><td>Internal Control Manager</td><td>Oversees exceptions, recurring patterns and signs that controls are not working as designed</td></tr></table><div class=\"callout\">The directory tells of <b>roles</b>; it does not prove that any person took or omitted any action in NST-01.</div>"
+    },
+    {
+      "id": "e0805",
+      "title": "08/05 · Record NS-051",
+      "sub": "Record as it stood on 08/05/2025",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Deliverable</b><span>NS-051</span></div><div class=\"metaCell\"><b>Payment request</b><span>PR-117</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Value</b><span>0.9 million USD</span></div></div><div class=\"docsec\"><h3>Record details</h3><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Supplier</td><td>Northstar Advisory</td></tr><tr><td>Programme</td><td>ROP-25</td></tr><tr><td>Requester</td><td>Victor Hale</td></tr><tr><td>Prior item under NST-01</td><td>None</td></tr><tr><td>Invoice</td><td>NSA-2025-041</td></tr><tr><td>Acceptance date</td><td>07/05/2025</td></tr><tr><td>Cost centre</td><td>RD-410</td></tr><tr><td>Payment terms</td><td>Work milestone 1 · after acceptance</td></tr></table></div>"
+    },
+    {
+      "id": "e1907",
+      "title": "19/07 · Record NS-073",
+      "sub": "Record as it stood on 19/07/2025",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Deliverable</b><span>NS-073</span></div><div class=\"metaCell\"><b>Payment request</b><span>PR-204</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Value</b><span>0.9 million USD</span></div></div><div class=\"docsec\"><h3>Record details</h3><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Supplier</td><td>Northstar Advisory</td></tr><tr><td>Programme</td><td>ROP-25</td></tr><tr><td>Requester</td><td>Victor Hale</td></tr><tr><td>Prior item under NST-01</td><td>NS-051 · 0.9 million USD</td></tr><tr><td>Invoice</td><td>NSA-2025-072</td></tr><tr><td>Acceptance date</td><td>18/07/2025</td></tr><tr><td>Cost centre</td><td>RD-410</td></tr><tr><td>Payment terms</td><td>Work milestone 2 · after the working session</td></tr></table></div>"
+    },
+    {
+      "id": "e1410",
+      "title": "14/10 · Record NS-101",
+      "sub": "Record as it stood on 14/10/2025",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Deliverable</b><span>NS-101</span></div><div class=\"metaCell\"><b>Payment request</b><span>PR-331</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Value</b><span>0.8 million USD</span></div></div><div class=\"docsec\"><h3>Record details</h3><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Supplier</td><td>Northstar Advisory</td></tr><tr><td>Programme</td><td>ROP-25</td></tr><tr><td>Requester</td><td>Victor Hale</td></tr><tr><td>Prior items under NST-01</td><td>NS-051 · 0.9; NS-073 · 0.9</td></tr><tr><td>Invoice</td><td>NSA-2025-109</td></tr><tr><td>Acceptance date</td><td>13/10/2025</td></tr><tr><td>Cost centre</td><td>RD-410</td></tr><tr><td>Payment terms</td><td>Work milestone 3 · after handover</td></tr></table></div>"
+    },
+    {
+      "id": "route",
+      "title": "Routing Log of 19/07",
+      "sub": "System extract at the moment PR-204 was created",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Time</b><span>19/07/2025 · 10:48</span></div><div class=\"metaCell\"><b>Request</b><span>PR-204</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Source</b><span>Approval routing tool</span></div></div><div class=\"docsec\"><table class=\"docTbl\"><tr><th>Field</th><th>Recorded value</th></tr><tr><td>Value of the current request</td><td>900,000 USD</td></tr><tr><td>Prior requests under the same contract</td><td>Yes</td></tr><tr><td>Rule for adding prior requests</td><td>Not triggered</td></tr><tr><td>Value used to choose the approval route</td><td>900,000 USD</td></tr><tr><td>Approval route created</td><td>Head of Department → Finance Manager</td></tr><tr><td>CFO-level task</td><td>Not created at the time of routing</td></tr></table></div>"
+    },
+    {
+      "id": "outage",
+      "title": "INC-4472 · Approval Portal Outage",
+      "sub": "IT incident report of 19/07",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Incident code</b><span>INC-4472</span></div><div class=\"metaCell\"><b>Severity</b><span>SEV-2</span></div><div class=\"metaCell\"><b>Start</b><span>10:51</span></div><div class=\"metaCell\"><b>Restored</b><span>12:17</span></div></div><div class=\"docsec\"><h3>Scope of impact</h3><p>During the outage the electronic approval portal did not allow users to open or confirm new tasks. The ERP system and the document store remained accessible.</p></div><div class=\"docsec\"><h3>Timeline</h3><table class=\"docTbl\"><tr><th>Time</th><th>Event</th></tr><tr><td>10:51</td><td>IT Support confirms the approval portal fault</td></tr><tr><td>11:02</td><td>Finance Operations is instructed to use the fallback procedure if a transaction cannot wait</td></tr><tr><td>12:17</td><td>Service restored</td></tr><tr><td>12:43</td><td>Fallback records begin to be re-entered into the system</td></tr></table></div>"
+    },
+    {
+      "id": "alt",
+      "title": "FIN-ALT-02 · Alternative Approval Route",
+      "sub": "Version 4.0 · effective 01/03/2025",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Owner</b><span>Finance Governance</span></div><div class=\"metaCell\"><b>Version</b><span>4.0</span></div><div class=\"metaCell\"><b>Effective</b><span>01/03/2025</span></div><div class=\"metaCell\"><b>Purpose</b><span>To maintain approval when the normal route cannot be used</span></div></div><div class=\"docsec\"><h3>Principle</h3><p>The alternative route changes only <b>the manner of obtaining a decision</b>. It must not lower the level of authority that applies to the transaction.</p></div><div class=\"docsec\"><h3>Some permitted cases</h3><table class=\"docTbl\"><tr><th>Situation</th><th>Minimum requirement</th></tr><tr><td>Principal approver absent</td><td>Delegation in force + the delegate approves the very transaction</td></tr><tr><td>Approval system interrupted</td><td>IT incident code + a fallback decision by the person with authority + re-recording when the system is restored</td></tr><tr><td>Legal deadline that cannot be deferred</td><td>A specific legal basis + urgent approval by the person with authority</td></tr></table></div>"
+    },
+    {
+      "id": "n51tx",
+      "title": "NS-051 · Transaction Record",
+      "sub": "Request, invoice and acceptance",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>PR</b><span>PR-117</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Amount</b><span>0.9 million USD</span></div><div class=\"metaCell\"><b>Requester</b><span>Victor Hale</span></div></div><div class=\"docsec\"><h3>Payment request</h3><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Supplier</td><td>Northstar Advisory</td></tr><tr><td>Item</td><td>Assessment of the current operating model</td></tr><tr><td>Invoice</td><td>NSA-2025-041</td></tr><tr><td>Acceptance date</td><td>07/05/2025</td></tr><tr><td>Cost centre</td><td>RD-410</td></tr><tr><td>Tax code</td><td>SV-01</td></tr><tr><td>Bank account check</td><td>Reconciled</td></tr></table></div><div class=\"docsec\"><h3>Acceptance minutes</h3><p>The deliverable is confirmed complete within the scope of work milestone 1. No dispute over the quality of service is recorded.</p></div>"
+    },
+    {
+      "id": "n51ex",
+      "title": "NS-051 · Exception Handling Record",
+      "sub": "Reason for using the alternative route, and the delegation decision",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Exception type</b><span>Principal approver absent</span></div><div class=\"metaCell\"><b>Date</b><span>08/05/2025</span></div><div class=\"metaCell\"><b>Requester</b><span>Victor Hale</span></div><div class=\"metaCell\"><b>File code</b><span>EX-117</span></div></div><div class=\"docsec\"><h3>Delegation decision FIN-DEL-18</h3><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Delegator</td><td>Lucas Meyer</td></tr><tr><td>Delegate</td><td>Maya Chen</td></tr><tr><td>Effective</td><td>07/05 00:00 - 09/05 23:59</td></tr><tr><td>Scope</td><td>Finance Manager authority within a limit of up to 1.0 million USD</td></tr><tr><td>Not included</td><td>Authority to stand in for the Chief Financial Officer or to change the level of authority</td></tr></table></div>"
+    },
+    {
+      "id": "n51fin",
+      "title": "NS-051 · Finance and Approval Record",
+      "sub": "Total value checklist and Maya’s decision",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Reviewer</b><span>Maya Chen</span></div><div class=\"metaCell\"><b>Date</b><span>08/05/2025</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Form</b><span>FIN-RVW-07</span></div></div><div class=\"docsec\"><h3>Checklist</h3><table class=\"docTbl\"><tr><th>Description</th><th>Result</th></tr><tr><td>Budget sufficient</td><td>Yes</td></tr><tr><td>Prior item under NST-01</td><td>0</td></tr><tr><td>PR-117</td><td>+0.9 million</td></tr><tr><td>Total after this item</td><td>0.9 million</td></tr><tr><td>Applicable level of authority</td><td>Head of Department + Finance Manager</td></tr></table></div><div class=\"docsec\"><h3>Decision</h3><p>“I approve PR-117 for 900,000 USD under FIN-DEL-18.” - Maya Chen · 08/05/2025 10:26</p></div>"
+    },
+    {
+      "id": "n51log",
+      "title": "NS-051 · Processing Log",
+      "sub": "System and operator trail",
+      "html": "<table class=\"docTbl\"><tr><th>Time</th><th>Account</th><th>Action</th></tr><tr><td>08:41</td><td>VHALE</td><td>Create PR-117</td></tr><tr><td>09:02</td><td>FIN-OPS</td><td>Open EX-117</td></tr><tr><td>09:17</td><td>MCHEN</td><td>Open checklist FIN-RVW-07</td></tr><tr><td>10:26</td><td>MCHEN</td><td>Approve PR-117</td></tr><tr><td>10:31</td><td>SYSTEM</td><td>Mark Finance approval complete</td></tr></table>"
+    },
+    {
+      "id": "n73tx",
+      "title": "NS-073 · Transaction Record",
+      "sub": "Request, invoice and acceptance",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>PR</b><span>PR-204</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Amount</b><span>0.9 million USD</span></div><div class=\"metaCell\"><b>Requester</b><span>Victor Hale</span></div></div><div class=\"docsec\"><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Supplier</td><td>Northstar Advisory</td></tr><tr><td>Item</td><td>Workshop on designing the governance framework</td></tr><tr><td>Invoice</td><td>NSA-2025-072</td></tr><tr><td>Acceptance date</td><td>18/07/2025</td></tr><tr><td>Cost centre</td><td>RD-410</td></tr><tr><td>Bank account check</td><td>Reconciled</td></tr><tr><td>Prior item under NST-01</td><td>NS-051 · 0.9 million USD</td></tr></table></div>"
+    },
+    {
+      "id": "n73ex",
+      "title": "NS-073 · Exception Handling Record",
+      "sub": "IT outage and request to move to the alternative route",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Exception</b><span>EX-204</span></div><div class=\"metaCell\"><b>Reason</b><span>Approval portal interrupted</span></div><div class=\"metaCell\"><b>Incident code</b><span>INC-4472</span></div><div class=\"metaCell\"><b>Opened by</b><span>Finance Operations</span></div></div><div class=\"docsec\"><h3>Incident confirmation</h3><p>INC-4472 confirms the approval portal was down from 10:51 to 12:17 on 19/07.</p></div><div class=\"docsec\"><h3>Request from the business side · 11:06</h3><div class=\"mail\"><div class=\"mh\"><b>From:</b> Victor Hale · <b>To:</b> Finance Operations · <b>CC:</b> Lucas Meyer<br><b>Subject:</b> ROP-25 / Northstar - processing payment while the approval portal is down</div><p>The ROP-25 team has confirmed that Northstar’s working session is complete. The approval portal returns an error, and IT Support has given the code INC-4472. Kindly advise whether the file may be processed by the fallback route while the system is interrupted.</p></div></div>"
+    },
+    {
+      "id": "n73fin",
+      "title": "NS-073 · Finance and Approval Record",
+      "sub": "Lucas’s correspondence and the checklist of 19/07",
+      "html": "<div class=\"docsec\"><h3>Email thread of 19/07 · 11:18</h3><div class=\"mail\"><div class=\"mh\"><b>From:</b> Lucas Meyer · <b>To:</b> Finance Operations · <b>CC:</b> Victor Hale; Maya Chen<br><b>Subject:</b> RE: ROP-25 / Northstar - processing payment while the approval portal is down</div><p>I have read the message below and the IT incident code. As the approval portal is not working at present, I agree that Finance Operations may continue processing under the issued fallback procedure, so that the payment is not held back merely because the system is interrupted.</p><p>Kindly ensure that the supporting documents and the related evidence of approval are kept with the file. <b>Should this request fall at an approval level above the ordinary scope of Finance Operations, continue to observe the authority requirements in force.</b></p><p>Lucas Meyer · Finance Manager</p></div></div><div class=\"docsec\"><h3>Checklist FIN-RVW-07 · PR-204</h3><table class=\"docTbl\"><tr><th>Description</th><th>Entry</th></tr><tr><td>Budget sufficient</td><td>Yes</td></tr><tr><td>Contract</td><td>NST-01</td></tr><tr><td>Prior item under the same contract</td><td>NS-051 · 0.9 million</td></tr><tr><td>PR-204</td><td>+0.9 million</td></tr><tr><td>Total after this item</td><td>-</td></tr><tr><td>Level of authority after review</td><td>-</td></tr><tr><td>Escalation</td><td>-</td></tr></table></div><div class=\"docsec\"><h3>Comparison sample · an ordinary approval by Lucas</h3><p><b>PR-188 · 620,000 USD:</b> “I approve PR-188 for 620,000 USD under contract HZ-044. The supporting records have been reviewed.”</p></div>"
+    },
+    {
+      "id": "n73log",
+      "title": "NS-073 · Processing Log",
+      "sub": "Routing, the fallback route, and the CFO-level queue",
+      "html": "<table class=\"docTbl\"><tr><th>Time</th><th>Source</th><th>Event</th></tr><tr><td>10:48</td><td>SYSTEM</td><td>PR-204 routed by 900,000 USD</td></tr><tr><td>10:51</td><td>CNTT</td><td>INC-4472 begins</td></tr><tr><td>11:06</td><td>VHALE</td><td>Sends a request asking about the fallback route</td></tr><tr><td>11:18</td><td>LMEYER</td><td>Sends a reply permitting the fallback procedure if authority is still observed</td></tr><tr><td>11:24</td><td>FIN-OPS</td><td>EX-204 moves to status “in progress”</td></tr><tr><td>12:43</td><td>SYSTEM</td><td>Fallback records re-entered after the portal is restored</td></tr><tr><td>-</td><td>CFO QUEUE</td><td>No NST-01/PR-204 task was created for David</td></tr></table>"
+    },
+    {
+      "id": "n101tx",
+      "title": "NS-101 · Transaction Record",
+      "sub": "Request, invoice and acceptance",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>PR</b><span>PR-331</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Amount</b><span>0.8 million USD</span></div><div class=\"metaCell\"><b>Requester</b><span>Victor Hale</span></div></div><div class=\"docsec\"><table class=\"docTbl\"><tr><th>Field</th><th>Value</th></tr><tr><td>Supplier</td><td>Northstar Advisory</td></tr><tr><td>Item</td><td>Design of the transition sequence</td></tr><tr><td>Invoice</td><td>NSA-2025-109</td></tr><tr><td>Acceptance date</td><td>13/10/2025</td></tr><tr><td>Cost centre</td><td>RD-410</td></tr><tr><td>Bank account check</td><td>Reconciled</td></tr><tr><td>Prior items under NST-01</td><td>NS-051 · 0.9; NS-073 · 0.9</td></tr></table></div>"
+    },
+    {
+      "id": "n101ex",
+      "title": "NS-101 · Exception Handling Record",
+      "sub": "Exception form and supporting document",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Exception</b><span>EX-331</span></div><div class=\"metaCell\"><b>Type stated on the form</b><span>Legal deadline that cannot be deferred</span></div><div class=\"metaCell\"><b>Date</b><span>14/10/2025</span></div><div class=\"metaCell\"><b>Requester of urgent processing</b><span>Victor Hale</span></div></div><div class=\"docsec\"><h3>Attachment · email from the Programme Office of 13/10</h3><div class=\"mail\"><div class=\"mh\"><b>From:</b> Hannah Cole · ROP-25 Programme Office · <b>To:</b> Victor Hale<br><b>Subject:</b> Northstar - confirmation of work package 3 before the 15/10 roll-out</div><p>Northstar needs confirmation before the end of 15/10 to keep the present team of specialists. If confirmed after that time, the schedule of working sessions in the three markets may slip by at least two weeks.</p><p>As confirmed by the Programme Office, this is an <b>internal programme milestone</b>, not a filing deadline set by a regulator. The Programme Office at present holds no further legal document.</p></div></div>"
+    },
+    {
+      "id": "n101fin",
+      "title": "NS-101 · Finance and Approval Record",
+      "sub": "Review status and the authority fields",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Checklist</b><span>FIN-RVW-07</span></div><div class=\"metaCell\"><b>Date</b><span>14/10/2025</span></div><div class=\"metaCell\"><b>Contract</b><span>NST-01</span></div><div class=\"metaCell\"><b>Condition</b><span>Not completed</span></div></div><div class=\"docsec\"><table class=\"docTbl\"><tr><th>Description</th><th>Entry</th></tr><tr><td>Budget sufficient</td><td>Yes</td></tr><tr><td>Items incurred before 14/10</td><td>1.8 million USD</td></tr><tr><td>PR-331</td><td>+0.8 million USD</td></tr><tr><td>Total after this item</td><td>-</td></tr><tr><td>Level of authority after review</td><td>-</td></tr><tr><td>Alternate approver</td><td>-</td></tr><tr><td>CFO/Board approval reference</td><td>-</td></tr></table></div>"
+    },
+    {
+      "id": "n101log",
+      "title": "NS-101 · Processing Log",
+      "sub": "Trail of who entered what, and how the transaction went on",
+      "html": "<table class=\"docTbl\"><tr><th>Time</th><th>Account</th><th>Action</th></tr><tr><td>09:11</td><td>VHALE</td><td>Create PR-331</td></tr><tr><td>09:13</td><td>VHALE</td><td>Attach Programme Office email_1310</td></tr><tr><td>09:29</td><td>FIN-OPS-Q2</td><td>Open EX-331</td></tr><tr><td>09:31</td><td>FIN-OPS-Q2</td><td>Choose exception type LEGAL-DEADLINE</td></tr><tr><td>09:32</td><td>FIN-OPS-Q2</td><td>Attach ROP25_1310 as the supporting document</td></tr><tr><td>09:38</td><td>FIN-OPS-Q2</td><td>Status moved to “ready for processing”</td></tr><tr><td>10:06</td><td>SYSTEM</td><td>PR-331 moved to “processed”</td></tr><tr><td>-</td><td>CFO QUEUE</td><td>No NST-01/PR-331 task was created for David</td></tr></table><div class=\"callout\">FIN-OPS-Q2 is a shared queue account of Finance Operations; this log does not identify the particular person behind the account.</div>"
+    },
+    {
+      "id": "monrep",
+      "title": "Exception Monitoring Report · October",
+      "sub": "A set of 10 exceptions from many suppliers and units",
+      "html": "<div class=\"reportwrap\"><table class=\"rpt\"><tr><th></th><th>Date</th><th>Exception code</th><th>Supplier</th><th>Contract</th><th>Requester</th><th>Value (million)</th><th>Reason</th><th>Alternate approver</th><th>Document status</th></tr><tr class=\"\"><td></td><td>05/05</td><td>EX-104</td><td>Redbridge Consulting</td><td>RB-22</td><td>Amelia</td><td>0.30</td><td>Approver absent</td><td>James</td><td>Complete</td></tr><tr class=\"\"><td></td><td>08/05</td><td>EX-117</td><td>Northstar Advisory</td><td>NST-01</td><td>Victor</td><td>0.90</td><td>Approver absent</td><td>Maya</td><td>Complete</td></tr><tr class=\"\"><td></td><td>21/05</td><td>EX-139</td><td>Blue Arc Systems</td><td>BAS-18</td><td>Noah</td><td>0.42</td><td>System fault</td><td>Irene</td><td>Complete</td></tr><tr class=\"\"><td></td><td>02/06</td><td>EX-166</td><td>Redbridge Consulting</td><td>RB-22</td><td>Amelia</td><td>0.28</td><td>System fault</td><td>James</td><td>Complete</td></tr><tr class=\"\"><td></td><td>19/07</td><td>EX-204</td><td>Northstar Advisory</td><td>NST-01</td><td>Victor</td><td>0.90</td><td>System fault</td><td>-</td><td>Awaiting review</td></tr><tr class=\"\"><td></td><td>30/07</td><td>EX-219</td><td>Crescent Legal</td><td>CL-09</td><td>Daniel</td><td>0.16</td><td>Legal deadline</td><td>Nora</td><td>Complete</td></tr><tr class=\"\"><td></td><td>18/08</td><td>EX-244</td><td>Blue Arc Systems</td><td>BAS-18</td><td>Noah</td><td>0.37</td><td>Approver absent</td><td>Irene</td><td>Complete</td></tr><tr class=\"\"><td></td><td>03/09</td><td>EX-271</td><td>Kestrel Data</td><td>KD-31</td><td>Mira</td><td>0.51</td><td>System fault</td><td>Owen</td><td>Complete</td></tr><tr class=\"\"><td></td><td>14/10</td><td>EX-331</td><td>Northstar Advisory</td><td>NST-01</td><td>Victor</td><td>0.80</td><td>Legal deadline</td><td>-</td><td>Basis lacking</td></tr><tr class=\"\"><td></td><td>21/10</td><td>EX-349</td><td>Meridian Labs</td><td>ML-07</td><td>Priya</td><td>0.40</td><td>System fault</td><td>Jon</td><td>Complete</td></tr></table></div>"
+    },
+    {
+      "id": "monwork",
+      "title": "IC-25-104 · Sophia’s Review File",
+      "sub": "Review of a transaction cluster opened on 17/10/2025",
+      "html": "<div class=\"docmeta\"><div class=\"metaCell\"><b>Reviewer</b><span>Sophia Lin</span></div><div class=\"metaCell\"><b>Date opened</b><span>17/10/2025</span></div><div class=\"metaCell\"><b>Status</b><span>Awaiting response</span></div><div class=\"metaCell\"><b>Unit receiving the request</b><span>Finance Operations</span></div></div><div class=\"docsec\"><h3>Reason for opening the file</h3><p>NST-01 appears repeatedly in the set of exceptions, with the same Northstar Advisory and the same requester. The total of the related lines in the report is 2.6 million USD.</p></div><div class=\"docsec\"><h3>Questions sent to Finance Operations</h3><ol><li>Where was the total value and the level of authority of NST-01 assessed?</li><li>What is the specific evidence of approval for NS-073/PR-204?</li><li>What legal basis supports the exception type of NS-101/EX-331?</li><li>Was NST-01 ever passed to the Chief Financial Officer/Board?</li></ol><p><b>Response due:</b> 22/10/2025 · <b>Status at the date of extract:</b> no complete response yet.</p></div>"
+    }
+  ],
+  "monitoring_report": [
+    {
+      "date": "2025-05-05",
+      "exception": "EX-104",
+      "vendor": "Redbridge Consulting",
+      "contract": "RB-22",
+      "requester": "Amelia",
+      "amount": 0.3,
+      "reason": "Approver absent",
+      "alternate_approver": "James",
+      "status": "Complete",
+      "source_row_index": 0
+    },
+    {
+      "date": "2025-05-08",
+      "exception": "EX-117",
+      "vendor": "Northstar Advisory",
+      "contract": "NST-01",
+      "requester": "Victor",
+      "amount": 0.9,
+      "reason": "Approver absent",
+      "alternate_approver": "Maya",
+      "status": "Complete",
+      "source_row_index": 1
+    },
+    {
+      "date": "2025-05-21",
+      "exception": "EX-139",
+      "vendor": "Blue Arc Systems",
+      "contract": "BAS-18",
+      "requester": "Noah",
+      "amount": 0.42,
+      "reason": "System fault",
+      "alternate_approver": "Irene",
+      "status": "Complete",
+      "source_row_index": 2
+    },
+    {
+      "date": "2025-06-02",
+      "exception": "EX-166",
+      "vendor": "Redbridge Consulting",
+      "contract": "RB-22",
+      "requester": "Amelia",
+      "amount": 0.28,
+      "reason": "System fault",
+      "alternate_approver": "James",
+      "status": "Complete",
+      "source_row_index": 3
+    },
+    {
+      "date": "2025-07-19",
+      "exception": "EX-204",
+      "vendor": "Northstar Advisory",
+      "contract": "NST-01",
+      "requester": "Victor",
+      "amount": 0.9,
+      "reason": "System fault",
+      "alternate_approver": "-",
+      "status": "Awaiting review",
+      "source_row_index": 4
+    },
+    {
+      "date": "2025-07-30",
+      "exception": "EX-219",
+      "vendor": "Crescent Legal",
+      "contract": "CL-09",
+      "requester": "Daniel",
+      "amount": 0.16,
+      "reason": "Legal deadline",
+      "alternate_approver": "Nora",
+      "status": "Complete",
+      "source_row_index": 5
+    },
+    {
+      "date": "2025-08-18",
+      "exception": "EX-244",
+      "vendor": "Blue Arc Systems",
+      "contract": "BAS-18",
+      "requester": "Noah",
+      "amount": 0.37,
+      "reason": "Approver absent",
+      "alternate_approver": "Irene",
+      "status": "Complete",
+      "source_row_index": 6
+    },
+    {
+      "date": "2025-09-03",
+      "exception": "EX-271",
+      "vendor": "Kestrel Data",
+      "contract": "KD-31",
+      "requester": "Mira",
+      "amount": 0.51,
+      "reason": "System fault",
+      "alternate_approver": "Owen",
+      "status": "Complete",
+      "source_row_index": 7
+    },
+    {
+      "date": "2025-10-14",
+      "exception": "EX-331",
+      "vendor": "Northstar Advisory",
+      "contract": "NST-01",
+      "requester": "Victor",
+      "amount": 0.8,
+      "reason": "Legal deadline",
+      "alternate_approver": "-",
+      "status": "Basis lacking",
+      "source_row_index": 8
+    },
+    {
+      "date": "2025-10-21",
+      "exception": "EX-349",
+      "vendor": "Meridian Labs",
+      "contract": "ML-07",
+      "requester": "Priya",
+      "amount": 0.4,
+      "reason": "System fault",
+      "alternate_approver": "Jon",
+      "status": "Complete",
+      "source_row_index": 9
+    }
+  ],
+  "chapter_5_documents": {
+    "route": {
+      "origin": "Pinned from Chapter IV",
+      "title": "Routing log PR-204 · 10:48",
+      "text": "NS-073 was routed by 0.9 million; no task was created for the Chief Financial Officer/Board.",
+      "limit": "Proves that the system routed wrongly; does not prove who knew of the 1.8 million total."
+    },
+    "lucasmail": {
+      "origin": "Pinned from Chapter IV",
+      "title": "Email Lucas → Victor · 11:18",
+      "text": "The alternative route may be used if authority is kept unchanged; if the transaction total changes the level, it must be escalated before proceeding.",
+      "limit": "Proves the condition Lucas set; it is not an approval of a 1.8 million transaction."
+    },
+    "finform": {
+      "origin": "Pinned from Chapter IV",
+      "title": "Finance checklist · NS-073",
+      "text": "References NS-051 at 0.9 million; the fields for related total value / level of authority / escalation are left blank.",
+      "limit": "Proves the Finance checkpoint was not completed in full; does not of itself prove intent."
+    },
+    "cfo": {
+      "origin": "Pinned from Chapter IV",
+      "title": "CFO-level approval queue",
+      "text": "No NST-01/NS-073 task was created for David Cole.",
+      "limit": "Proves the system assigned no task; does not prove absolutely that David did not know by another channel."
+    },
+    "monitor": {
+      "origin": "Pinned from Chapter IV",
+      "title": "October exception report",
+      "text": "Three Northstar/NST-01/Victor lines appear in the exception report after the transactions.",
+      "limit": "Proves a recurring pattern was perceived after the transactions."
+    },
+    "ic": {
+      "origin": "Pinned from Chapter IV",
+      "title": "IC-25-104 · 17/10",
+      "text": "Sophia opens a review requesting clarification of the total value, the approval and the basis of the alternative route.",
+      "limit": "Proves that Sophia performed oversight after the transaction."
+    },
+    "memo": {
+      "origin": "Newly provided at the Board’s request",
+      "title": "Manual review of the NST-01 total · 11:09",
+      "text": "Finance writes to Victor and Lucas: NS-051 0.9 + NS-073 0.9 = 1.8 million; the Chief Financial Officer + Board are required before proceeding.",
+      "limit": "Proves that the specific information of 1.8 million was sent."
+    },
+    "read": {
+      "origin": "Newly provided at the Board’s request",
+      "title": "Email log · 11:12 / 11:14",
+      "text": "Victor opened the notice at 11:12; Lucas opened it at 11:14.",
+      "limit": "Strengthens that both truly received the information before the actions that followed."
+    },
+    "altform": {
+      "origin": "Newly provided at the Board’s request",
+      "title": "Alternative route form · 11:23",
+      "text": "The VHALE account submits the form, selects “no change of level” and confirms “continue processing”; no CFO/Board document is attached.",
+      "limit": "Proves Victor’s direct action after knowing of the 1.8 million."
+    },
+    "altlog": {
+      "origin": "Newly provided at the Board’s request",
+      "title": "History ALT-1907-NS073",
+      "text": "11:23 VHALE submits; 11:27 the file moves to “continue processing”; no approval action by Lucas/David.",
+      "limit": "Distinguishes the person who acted from those who merely appear in the records."
+    },
+    "registry": {
+      "origin": "Independent cross-check",
+      "title": "Company register · Northstar Advisory",
+      "text": "Elena Hale owns 70% of Northstar Advisory.",
+      "limit": "An independent source confirms a significant ownership interest."
+    },
+    "hr": {
+      "origin": "Internal record",
+      "title": "Family relations record",
+      "text": "Elena Hale is the wife of Victor Hale.",
+      "limit": "Confirms the family relation."
+    },
+    "conflict": {
+      "origin": "Internal record",
+      "title": "Conflict of interest declaration · 30/06",
+      "text": "Victor declared that no spouse or relative held an interest in any active supplier; Northstar had been a supplier since April.",
+      "limit": "Together with the two sources above, supports the conclusion of an undeclared conflict of interest."
+    }
+  },
+  "witness_claims": [
+    {
+      "id": "vknow",
+      "person": "Victor",
+      "role": "Director of Business Development",
+      "quote": "“I knew only of one item of 0.9 million. I did not know that NST-01 had risen to 1.8 million and had to be escalated.”",
+      "task": "Test whether Victor knew of the specific condition before the transaction proceeded.",
+      "base": [
+        "route",
+        "lucasmail",
+        "finform"
+      ],
+      "request": [
+        "memo",
+        "read"
+      ]
+    },
+    {
+      "id": "vact",
+      "person": "Victor",
+      "role": "Director of Business Development",
+      "quote": "“I only asked how to use the alternative route. I did not myself decide to let the file proceed while bypassing the higher level.”",
+      "task": "Test the actions taken after Victor knew the total was 1.8 million.",
+      "base": [
+        "lucasmail"
+      ],
+      "request": [
+        "altform",
+        "altlog"
+      ]
+    },
+    {
+      "id": "lucas",
+      "person": "Lucas",
+      "role": "Finance Manager",
+      "quote": "“I knew the total was already 1.8 million. I required authority to be kept unchanged; I did not approve the bypassing of the level.”",
+      "task": "Distinguish responsibility for the Finance checkpoint from active overriding of the checkpoint.",
+      "base": [
+        "lucasmail",
+        "finform",
+        "altlog"
+      ],
+      "request": []
+    },
+    {
+      "id": "david",
+      "person": "David",
+      "role": "Chief Financial Officer",
+      "quote": "“I received no task to approve NST-01 in the system.”",
+      "task": "Determine how far this statement proves, and go no further than the evidence of absence allows.",
+      "base": [
+        "cfo"
+      ],
+      "request": []
+    },
+    {
+      "id": "sophia",
+      "person": "Sophia",
+      "role": "Internal Control Manager",
+      "quote": "“I only discovered the pattern of exceptions after the transactions, and then opened IC-25-104.”",
+      "task": "Test the timing and kind of Sophia’s responsibility.",
+      "base": [
+        "monitor",
+        "ic"
+      ],
+      "request": []
+    }
+  ],
+  "northstar_file": [
+    {
+      "record": "Company register",
+      "text": "Elena Hale owns 70% of Northstar Advisory."
+    },
+    {
+      "record": "Family relations record",
+      "text": "Elena Hale is the wife of Victor Hale."
+    },
+    {
+      "record": "Conflict declaration",
+      "text": "Victor declared that no spouse or relative held an interest in any active supplier; Northstar had been a supplier since April."
+    }
+  ]
+}

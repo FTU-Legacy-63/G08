@@ -1,0 +1,844 @@
+{
+  "_metadata": {
+    "schema_version": "1.0",
+    "source_html": "THE_LAST_HEIR_FULL_GAME_FINAL(3).html",
+    "source_sha256": "aa2e501a80c7abea6948f2a5c1a7de73f0853e0d188bf4598c53dac24a431f42",
+    "review_date": "2026-10-21",
+    "runtime_loading": false,
+    "note": "Có chứa lời giải; dành cho đối chiếu nội bộ và hồ sơ kỹ thuật. Không đặt tệp này thành màn hình đáp án trước khi người học thực hiện.",
+    "internal_only": true,
+    "review_snapshot_limit": "Trạng thái Chương IV được chạy trực tiếp từ phần gán của doRevealAnswers trước thao tác giao diện. Đây là mẫu lời giải do mã cung cấp, không khẳng định mọi tập dữ kiện hợp lệ phải trùng hệt mẫu."
+  },
+  "chapter_1": {
+    "T1_OK": {
+      "gstart": "need",
+      "gbridge": "right",
+      "gquality": "stable",
+      "mremaining": "mkt",
+      "cstart": "sources",
+      "cbridge": "right",
+      "cfinal": "balanced",
+      "handoff": "margin"
+    },
+    "T1_SCOPE": [
+      "gross",
+      "mkt",
+      "rnd",
+      "other"
+    ],
+    "MEVAL_KEY": {
+      "gross": "closed",
+      "mkt": "open",
+      "rnd": "closed",
+      "other": "closed"
+    },
+    "MEVAL": [
+      [
+        "closed",
+        "The records reconcile the movement and its amount closely enough to close this item at the level of Chapter I."
+      ],
+      [
+        "context",
+        "The records offer a plausible business explanation, but not enough to close the movement."
+      ],
+      [
+        "open",
+        "The amount is established, but its underlying components remain unresolved at this level."
+      ]
+    ]
+  },
+  "chapter_2": {
+    "accepted_documents_by_role": {
+      "PERSONNEL": {
+        "baseline": [
+          "BUDGET_ALLOC"
+        ],
+        "actual": [
+          "REC_PERSONNEL"
+        ],
+        "variance": [
+          "PAYROLL_RECON"
+        ],
+        "context": [
+          "WAGE_BENCH",
+          "NEW_MARKETS"
+        ]
+      },
+      "TRADE_MKT": {
+        "baseline": [
+          "LAUNCH_PO"
+        ],
+        "actual": [
+          "REC_TRADE"
+        ],
+        "variance": [
+          "CAMPAIGN_RECON"
+        ],
+        "context": [
+          "MEDIA_INDEX",
+          "NEW_MARKETS"
+        ]
+      },
+      "REG_LEGAL": {
+        "baseline": [
+          "LOCAL_COUNSEL"
+        ],
+        "actual": [
+          "REC_REG"
+        ],
+        "variance": [
+          "REG_FEE"
+        ],
+        "context": [
+          "REG_CTX",
+          "NEW_MARKETS"
+        ]
+      },
+      "ADVISORY": {
+        "baseline": [
+          "ADVISORY_BUDGET"
+        ],
+        "actual": [
+          "REC_ADVISORY"
+        ],
+        "variance": [],
+        "context": [
+          "STEERING_MIN",
+          "REFORECAST",
+          "NEW_MARKETS"
+        ]
+      },
+      "OTHER": {
+        "baseline": [
+          "BUDGET_ALLOC"
+        ],
+        "actual": [
+          "REC_OTHER"
+        ],
+        "variance": [
+          "OFFICE_TRAVEL"
+        ],
+        "context": []
+      }
+    },
+    "document_role_metadata": {
+      "BUDGET_ALLOC": {
+        "PERSONNEL": "baseline",
+        "OTHER": "baseline"
+      },
+      "REC_PERSONNEL": {
+        "PERSONNEL": "actual"
+      },
+      "PAYROLL_RECON": {
+        "PERSONNEL": "variance"
+      },
+      "WAGE_BENCH": {
+        "PERSONNEL": "context"
+      },
+      "LAUNCH_PO": {
+        "TRADE_MKT": "baseline"
+      },
+      "REC_TRADE": {
+        "TRADE_MKT": "actual"
+      },
+      "CAMPAIGN_RECON": {
+        "TRADE_MKT": "variance"
+      },
+      "MEDIA_INDEX": {
+        "TRADE_MKT": "context"
+      },
+      "LOCAL_COUNSEL": {
+        "REG_LEGAL": "baseline"
+      },
+      "REC_REG": {
+        "REG_LEGAL": "actual"
+      },
+      "REG_FEE": {
+        "REG_LEGAL": "variance"
+      },
+      "REG_CTX": {
+        "REG_LEGAL": "context"
+      },
+      "ADVISORY_BUDGET": {
+        "ADVISORY": "baseline"
+      },
+      "REC_ADVISORY": {
+        "ADVISORY": "actual"
+      },
+      "STEERING_MIN": {
+        "ADVISORY": "context"
+      },
+      "REFORECAST": {
+        "ADVISORY": "context"
+      },
+      "NEW_MARKETS": {
+        "PERSONNEL": "context",
+        "TRADE_MKT": "context",
+        "REG_LEGAL": "context",
+        "ADVISORY": "context"
+      },
+      "REC_OTHER": {
+        "OTHER": "actual"
+      },
+      "OFFICE_TRAVEL": {
+        "OTHER": "variance"
+      },
+      "SYSTEM_INVOICE": {}
+    },
+    "metadata_limit": "Các hàm chấm dùng ANSWERS; DOCS.roles không thay bảng chấp nhận.",
+    "conclusion": {
+      "budgetDecision": "no",
+      "residualMeaning": "gap",
+      "finalChoice": "trace"
+    }
+  },
+  "chapter_3": {
+    "boundary": {
+      "selected_ids": [
+        "N1",
+        "N2",
+        "N3"
+      ],
+      "contractVote": "yes",
+      "purposeVote": "yes",
+      "complete": true,
+      "total": 2.6,
+      "tolerance": 0.001
+    },
+    "final_choice": "boundary",
+    "conclusion_options": [
+      [
+        "boundary",
+        "NST-01 is established as a $2.6M economic transaction. The next question is whether its approval path matched that transaction-level value."
+      ],
+      [
+        "split",
+        "NST-01 is established as a $2.6M economic transaction. The pattern is enough to conclude the three entries were intentionally split to avoid a higher approval level."
+      ],
+      [
+        "fraud",
+        "NST-01 is established as a $2.6M economic transaction. The pattern is enough to conclude that Victor committed fraud in arranging the three entries."
+      ]
+    ]
+  },
+  "chapter_4": {
+    "SYSTEM_FACTS": {
+      "route::4": {
+        "docId": "route",
+        "source": "Routing Log of 19/07",
+        "text": "Value of the current request 900,000 USD"
+      },
+      "route::6": {
+        "docId": "route",
+        "source": "Routing Log of 19/07",
+        "text": "Rule for adding prior requests Not triggered"
+      },
+      "route::7": {
+        "docId": "route",
+        "source": "Routing Log of 19/07",
+        "text": "Value used to choose the approval route 900,000 USD"
+      },
+      "route::9": {
+        "docId": "route",
+        "source": "Routing Log of 19/07",
+        "text": "CFO-level task Not created at the time of routing"
+      }
+    },
+    "review_state": {
+      "part": 1,
+      "maxPart": 4,
+      "notebookTab": "pins",
+      "opened": [
+        "handoff",
+        "auth",
+        "proc",
+        "roles",
+        "e0805",
+        "e1907",
+        "e1410",
+        "route",
+        "outage",
+        "alt",
+        "n51tx",
+        "n51ex",
+        "n51fin",
+        "n51log",
+        "n73tx",
+        "n73ex",
+        "n73fin",
+        "n73log",
+        "n101tx",
+        "n101ex",
+        "n101fin",
+        "n101log",
+        "monrep",
+        "monwork"
+      ],
+      "eventsSeen": [
+        "0805",
+        "1907",
+        "1410"
+      ],
+      "controlSheet": {
+        "link": "same",
+        "sum": "aggregate",
+        "authority": "matrix",
+        "stop": "escalate",
+        "business": "victor",
+        "finance": "lucas",
+        "high": "david",
+        "monitor": "sophia"
+      },
+      "controlSheetDone": true,
+      "controlDone": true,
+      "eventEval": {
+        "1410": {
+          "related": "yes",
+          "total": "2.6",
+          "tier": "cfo",
+          "locked": true
+        },
+        "1907": {
+          "related": "yes",
+          "total": "1.8",
+          "tier": "cfo",
+          "locked": true
+        },
+        "0805": {
+          "related": "no",
+          "total": "0.9",
+          "tier": "deptfin",
+          "locked": true
+        }
+      },
+      "firstShift": "19/07",
+      "firstShiftLocked": true,
+      "thresholdDate": "19/07",
+      "thresholdPinned": true,
+      "systemBuild": {
+        "basis": "current",
+        "required": "aggregate",
+        "effect": "lower"
+      },
+      "systemPinned": true,
+      "bridgeSeen": true,
+      "rawPins": [
+        {
+          "id": "n51ex::5",
+          "docId": "n51ex",
+          "source": "NS-051 · Exception Handling Record",
+          "text": "Delegate Maya Chen"
+        },
+        {
+          "id": "n51ex::7",
+          "docId": "n51ex",
+          "source": "NS-051 · Exception Handling Record",
+          "text": "Scope Finance Manager authority within a limit of up to 1.0 million USD"
+        },
+        {
+          "id": "n51fin::9",
+          "docId": "n51fin",
+          "source": "NS-051 · Finance and Approval Record",
+          "text": "“I approve PR-117 for 900,000 USD under FIN-DEL-18.” - Maya Chen · 08/05/2025 10:26"
+        },
+        {
+          "id": "n51fin::7",
+          "docId": "n51fin",
+          "source": "NS-051 · Finance and Approval Record",
+          "text": "Total after this item 0.9 million"
+        },
+        {
+          "id": "n73ex::4",
+          "docId": "n73ex",
+          "source": "NS-073 · Exception Handling Record",
+          "text": "INC-4472 confirms the approval portal was down from 10:51 to 12:17 on 19/07."
+        },
+        {
+          "id": "n73fin::0",
+          "docId": "n73fin",
+          "source": "NS-073 · Finance and Approval Record",
+          "text": "I have read the message below and the IT incident code. As the approval portal is not working at present, I agree that Finance Operations may continue processing under the issued fallback procedure, so that the payment is not held back merely because the system is interrupted."
+        },
+        {
+          "id": "n73fin::1",
+          "docId": "n73fin",
+          "source": "NS-073 · Finance and Approval Record",
+          "text": "Kindly ensure that the supporting documents and the related evidence of approval are kept with the file. Should this request fall at an approval level above the ordinary scope of Finance Operations, continue to observe the authority requirements in force."
+        },
+        {
+          "id": "n73fin::7",
+          "docId": "n73fin",
+          "source": "NS-073 · Finance and Approval Record",
+          "text": "Total after this item -"
+        },
+        {
+          "id": "n101ex::1",
+          "docId": "n101ex",
+          "source": "NS-101 · Exception Handling Record",
+          "text": "TYPE STATED ON THE FORM Legal deadline that cannot be deferred"
+        },
+        {
+          "id": "n101ex::5",
+          "docId": "n101ex",
+          "source": "NS-101 · Exception Handling Record",
+          "text": "As confirmed by the Programme Office, this is an internal programme milestone, not a filing deadline set by a regulator. The Programme Office at present holds no further legal document."
+        },
+        {
+          "id": "n101fin::7",
+          "docId": "n101fin",
+          "source": "NS-101 · Finance and Approval Record",
+          "text": "Total after this item -"
+        },
+        {
+          "id": "n101fin::10",
+          "docId": "n101fin",
+          "source": "NS-101 · Finance and Approval Record",
+          "text": "CFO/Board approval reference -"
+        },
+        {
+          "id": "monrep::1",
+          "docId": "monrep",
+          "source": "Exception Monitoring Report · October",
+          "text": "08/05 EX-117 Northstar Advisory NST-01 Victor 0.90 Approver absent Maya Complete"
+        },
+        {
+          "id": "monrep::4",
+          "docId": "monrep",
+          "source": "Exception Monitoring Report · October",
+          "text": "19/07 EX-204 Northstar Advisory NST-01 Victor 0.90 System fault - Awaiting review"
+        },
+        {
+          "id": "monrep::8",
+          "docId": "monrep",
+          "source": "Exception Monitoring Report · October",
+          "text": "14/10 EX-331 Northstar Advisory NST-01 Victor 0.80 Legal deadline - Basis lacking"
+        },
+        {
+          "id": "monwork::4",
+          "docId": "monwork",
+          "source": "IC-25-104 · Sophia’s Review File",
+          "text": "NST-01 appears repeatedly in the set of exceptions, with the same Northstar Advisory and the same requester. The total of the related lines in the report is 2.6 million USD."
+        },
+        {
+          "id": "monwork::5",
+          "docId": "monwork",
+          "source": "IC-25-104 · Sophia’s Review File",
+          "text": "Where was the total value and the level of authority of NST-01 assessed?"
+        },
+        {
+          "id": "monwork::6",
+          "docId": "monwork",
+          "source": "IC-25-104 · Sophia’s Review File",
+          "text": "What is the specific evidence of approval for NS-073/PR-204?"
+        },
+        {
+          "id": "roles::0",
+          "docId": "roles",
+          "source": "Directory of Control Roles 2025",
+          "text": "Victor Hale Director of Business Development Business owner of ROP-25; raises requests and confirms deliverables"
+        },
+        {
+          "id": "n73log::2",
+          "docId": "n73log",
+          "source": "NS-073 · Processing Log",
+          "text": "11:06 VHALE Sends a request asking about the fallback route"
+        },
+        {
+          "id": "n101log::0",
+          "docId": "n101log",
+          "source": "NS-101 · Processing Log",
+          "text": "09:11 VHALE Create PR-331"
+        },
+        {
+          "id": "n101log::1",
+          "docId": "n101log",
+          "source": "NS-101 · Processing Log",
+          "text": "09:13 VHALE Attach Programme Office email_1310"
+        },
+        {
+          "id": "roles::1",
+          "docId": "roles",
+          "source": "Directory of Control Roles 2025",
+          "text": "Lucas Meyer Finance Manager Reviews files; checks the related total value; approves within the delegated scope or escalates"
+        },
+        {
+          "id": "roles::2",
+          "docId": "roles",
+          "source": "Directory of Control Roles 2025",
+          "text": "David Cole Chief Financial Officer Approval level for transactions above the threshold under FIN-AUTH-05"
+        },
+        {
+          "id": "n73log::6",
+          "docId": "n73log",
+          "source": "NS-073 · Processing Log",
+          "text": "- CFO QUEUE No NST-01/PR-204 task was created for David"
+        },
+        {
+          "id": "roles::3",
+          "docId": "roles",
+          "source": "Directory of Control Roles 2025",
+          "text": "Sophia Lin Internal Control Manager Oversees exceptions, recurring patterns and signs that controls are not working as designed"
+        }
+      ],
+      "sel": {
+        "n51": {
+          "use": [
+            "n51ex::5",
+            "n51ex::7",
+            "n51fin::9",
+            "n51fin::7"
+          ]
+        },
+        "n73": {
+          "use": [
+            "n73ex::4",
+            "n73fin::0",
+            "n73fin::1",
+            "n73fin::7"
+          ]
+        },
+        "n101": {
+          "use": [
+            "n101ex::1",
+            "n101ex::5",
+            "n101fin::7",
+            "n101fin::10"
+          ]
+        },
+        "cluster": {
+          "use": [
+            "monrep::1",
+            "monrep::4",
+            "monrep::8"
+          ]
+        },
+        "mon": {
+          "use": [
+            "monwork::4",
+            "monwork::5",
+            "monwork::6"
+          ]
+        }
+      },
+      "ans": {
+        "n51a": "yes",
+        "n51b": "yes",
+        "n51c": "yes",
+        "monWhen": "after",
+        "monAction": "opened"
+      },
+      "n51Pinned": true,
+      "n73Assess": {
+        "reason": "supported",
+        "decision": "notfound",
+        "total": "notfound"
+      },
+      "n73Pinned": true,
+      "n101Assess": {
+        "reason": "contradict",
+        "decision": "notfound",
+        "total": "notfound"
+      },
+      "n101Pinned": true,
+      "monitorCluster": true,
+      "monitorPinned": true,
+      "pins": [
+        {
+          "id": "p_n51",
+          "title": "Standard of Comparison from NS-051",
+          "text": "The example record shows that the alternative route changes only the manner of obtaining a decision: the stand-in must hold authority, the decision must be tied to the very transaction, and the total value must still be checked.",
+          "evidence": [
+            "n51ex::5",
+            "n51ex::7",
+            "n51fin::9",
+            "n51fin::7"
+          ],
+          "type": "sample"
+        },
+        {
+          "id": "p_n73",
+          "title": "Finding on NS-073",
+          "text": "On 19/07 the system outage was real, so the use of the fallback route had grounds; yet the records do not show a specific approval decision for a transaction of 1.8 million, nor that the total value was reassessed and escalated to the right level.",
+          "evidence": [
+            "n73ex::4",
+            "n73fin::0",
+            "n73fin::1",
+            "n73fin::7"
+          ],
+          "type": "human"
+        },
+        {
+          "id": "p_n101",
+          "title": "Finding on NS-101",
+          "text": "On 14/10 the exception type “legal deadline” contradicts the supporting document, which shows only an internal programme milestone; and no evidence has been found of independent approval at the right level, nor of a reassessment of the NST-01 total at 2.6 million.",
+          "evidence": [
+            "n101ex::1",
+            "n101ex::5",
+            "n101fin::7",
+            "n101fin::10"
+          ],
+          "type": "human"
+        },
+        {
+          "id": "p_mon",
+          "title": "Conclusion on Oversight",
+          "text": "The monitoring report allows the cluster of three Northstar/NST-01 exceptions to be perceived; Sophia then opened IC-25-104 to request clarification. Control monitoring is a function that commonly belongs to audit/internal control and works after a transaction has arisen, so it does not of itself prove that she knew of, or could have prevented, the earlier items before that time.",
+          "evidence": [
+            "monwork::4",
+            "monwork::5",
+            "monwork::6"
+          ],
+          "type": "monitor"
+        }
+      ],
+      "traces": {
+        "victor": [
+          "Role directory: business owner of ROP-25",
+          "08/05 · record with a request raised by Victor",
+          "19/07 · Victor asks about the fallback route",
+          "14/10 · Victor creates PR-331 and attaches the programme email"
+        ],
+        "lucas": [
+          "Role directory: Finance Manager",
+          "19/07 · email from Lucas on using the fallback route"
+        ],
+        "david": [
+          "Role directory: Chief Financial Officer at the higher approval level",
+          "19/07 · no NST-01 task in the CFO queue"
+        ],
+        "sophia": [
+          "Role directory: oversight of exceptions after the transaction",
+          "The October report holds Northstar/NST-01 exceptions",
+          "17/10 · Sophia opens IC-25-104"
+        ]
+      },
+      "p4Class": {
+        "p_system": "system",
+        "p_n73": "human",
+        "p_n101": "human",
+        "p_mon": "monitor"
+      },
+      "p4Locked": true,
+      "p4Bridge": "notall",
+      "p4BridgeLocked": true,
+      "roleEval": {
+        "victor": {
+          "power": "yes",
+          "know": "no",
+          "act": "no"
+        },
+        "lucas": {
+          "power": "yes",
+          "know": "no",
+          "act": "no"
+        },
+        "david": {
+          "power": "yes",
+          "know": "no",
+          "act": "no"
+        },
+        "sophia": {
+          "power": "na",
+          "know": "yes",
+          "act": "monitor"
+        }
+      },
+      "personUse": {
+        "victor": [
+          "roles::0",
+          "n73log::2",
+          "n101log::0",
+          "n101log::1"
+        ],
+        "lucas": [
+          "roles::1",
+          "n73fin::1",
+          "n73fin::7"
+        ],
+        "david": [
+          "roles::2",
+          "n73log::6"
+        ],
+        "sophia": [
+          "roles::3",
+          "monrep::4",
+          "monwork::4",
+          "monwork::5"
+        ]
+      },
+      "personVerdict": {
+        "victor": "limited",
+        "lucas": "limited",
+        "david": "limited",
+        "sophia": "monitor"
+      },
+      "rolesLocked": true,
+      "roleSummary": "none",
+      "roleSummaryLocked": true,
+      "level": 3,
+      "levelLocked": true,
+      "finalBuild": {
+        "proved": "system",
+        "unclear": "knowledge",
+        "level": "risk",
+        "notProved": "intent"
+      },
+      "finalDone": true
+    }
+  },
+  "chapter_5": {
+    "claims": {
+      "vknow": {
+        "required": [
+          "memo",
+          "read"
+        ],
+        "effect": "rebut",
+        "result": "The 11:09 notice and the 11:12 email-opening log refute the explanation “I did not know of the 1.8 million”."
+      },
+      "vact": {
+        "required": [
+          "altform",
+          "altlog"
+        ],
+        "effect": "rebut",
+        "result": "The 11:23 form and the ALT history show that Victor’s account confirmed “no change of level” and “continue processing”."
+      },
+      "lucas": {
+        "required": [
+          "lucasmail",
+          "finform",
+          "altlog"
+        ],
+        "effect": "partial",
+        "result": "Lucas knew of the 1.8 million and the Finance checkpoint was not completed in full, but the records do not show that he himself performed the act of overriding the checkpoint."
+      },
+      "david": {
+        "required": [
+          "cfo"
+        ],
+        "effect": "limit",
+        "result": "No task was created for David; this evidence is not enough to say he surely did not know through any channel."
+      },
+      "sophia": {
+        "required": [
+          "monitor",
+          "ic"
+        ],
+        "effect": "support",
+        "result": "The exception report and IC-25-104 support that Sophia appears in the oversight layer after the transaction."
+      }
+    },
+    "responsibility": {
+      "Victor": {
+        "correct": "override",
+        "options": [
+          [
+            "none",
+            "No personal responsibility established",
+            "The record does not yet link Victor strongly enough to the control outcome to assign personal responsibility."
+          ],
+          [
+            "control",
+            "Responsibility for a control failure",
+            "The record links Victor to the process, but supports only responsibility for a failed control rather than an active override."
+          ],
+          [
+            "override",
+            "Responsibility for an active override",
+            "The record links authority, knowledge of the specific condition and a direct action that kept the file moving."
+          ],
+          [
+            "fraud",
+            "Responsibility for proven fraud",
+            "The record is sufficient not only for control responsibility, but also to establish intentional fraud and improper benefit."
+          ]
+        ],
+        "text": "Victor bears primary responsibility for the override of controls in NST-01."
+      },
+      "Lucas": {
+        "correct": "control",
+        "options": [
+          [
+            "none",
+            "No personal responsibility established",
+            "The record does not show a Finance responsibility that failed in a way material to the NST-01 control path."
+          ],
+          [
+            "control",
+            "Responsibility for a control failure",
+            "The record shows the Finance checkpoint was not completed in full, without proving Lucas actively disabled it."
+          ],
+          [
+            "override",
+            "Responsibility for an active override",
+            "The record shows Lucas knew the condition and took a direct action that made the independent checkpoint ineffective."
+          ],
+          [
+            "fraud",
+            "Responsibility for proven fraud",
+            "The record is sufficient not only for a control failure, but also to establish intentional fraud by Lucas."
+          ]
+        ],
+        "text": "Lucas has a control/oversight failing, but there is not enough evidence of active overriding of the checkpoint."
+      },
+      "David": {
+        "correct": "none",
+        "options": [
+          [
+            "none",
+            "No personal responsibility established",
+            "The record shows no task reached David and does not establish that he received and ignored the matter by another channel."
+          ],
+          [
+            "control",
+            "Responsibility for a control failure",
+            "The record is sufficient to show David held a specific duty on NST-01 and failed to perform it when required."
+          ],
+          [
+            "override",
+            "Responsibility for an active override",
+            "The record is sufficient to show David took a direct action that kept NST-01 below the required approval level."
+          ],
+          [
+            "fraud",
+            "Responsibility for proven fraud",
+            "The record is sufficient to establish intentional fraud or improper benefit connected to David."
+          ]
+        ],
+        "text": "There is not enough evidence to assign personal fault to David in NST-01."
+      },
+      "Sophia": {
+        "correct": "proper",
+        "options": [
+          [
+            "breach",
+            "Responsibility for a monitoring breach",
+            "The record shows Sophia had a preventive duty before processing and failed to act when that duty arose."
+          ],
+          [
+            "none",
+            "No meaningful role established",
+            "The record does not show a monitoring action or a relevant connection to the NST-01 pattern."
+          ],
+          [
+            "proper",
+            "Post-transaction oversight performed",
+            "The record shows Sophia identified the exception pattern after processing and opened a review for clarification."
+          ],
+          [
+            "fraud",
+            "Responsibility for proven fraud",
+            "The record is sufficient to establish intentional participation in fraud or concealment by Sophia."
+          ]
+        ],
+        "text": "Sophia performed the oversight function after the transaction; the records do not show that she breached her duty."
+      }
+    },
+    "final": {
+      "motive": "motive",
+      "control": "identified",
+      "fraud": "risk"
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "evidence_rule": "An unexplained variance requires further investigation; it does not, on its own, prove wrongdoing.",
+  "evidence_roles": {
+    "baseline": "The amount approved before spending",
+    "actual": "The accounting source confirming the recorded amount",
+    "variance": "A record linking the increase or decrease directly to the figure",
+    "context": "Helps understand why the cost may have changed, but does not of itself close the figure"
+  },
+  "baseline_rule": "A draft reforecast does not replace the approved baseline unless a formal adjustment is recorded.",
+  "aster_rule": {
+    "id": "FIN-AUTH-05 §3",
+    "text": "Items under the same contract and serving the same economic purpose are deemed one economic transaction when limits are applied.",
+    "match_fields": [
+      "contract",
+      "program"
+    ],
+    "not_sufficient": [
+      "same vendor",
+      "matching total"
+    ]
+  },
+  "authority_matrix": [
+    {
+      "max": 0.5,
+      "approval": "Head of Department"
+    },
+    {
+      "min_exclusive": 0.5,
+      "max": 1.0,
+      "approval": "Head of Department + Finance Manager"
+    },
+    {
+      "min_exclusive": 1.0,
+      "approval": "Chief Financial Officer + Board of Directors"
+    }
+  ],
+  "fin_proc_11": [
+    "Before a commitment: check budget, contract, related items already incurred and total value; escalate if the level changes before proceeding.",
+    "Before each disbursement: check invoice, acceptance, contract reference and approval of the original commitment; partial disbursement must not lower the approval level."
+  ],
+  "fin_alt_02": {
+    "principle": "The alternative route changes only the manner of obtaining a decision. It must not lower the level of authority.",
+    "cases": {
+      "approver_absent": "Delegation in force + delegate approves the very transaction",
+      "system_interrupted": "IT incident code + fallback decision by the person with authority + re-recording when restored",
+      "legal_deadline": "Specific legal basis + urgent approval by the person with authority"
+    }
+  },
+  "fin_del_18": {
+    "scope": "Finance Manager authority up to 1.0",
+    "excludes": "Standing in for the CFO or changing the level of authority"
+  },
+  "control_checklist": {
+    "A": "Same contract + same economic purpose must be judged together",
+    "B": "Add the related items already incurred to the current item",
+    "C": "Compare the total value with the FIN-AUTH-05 matrix",
+    "D": "If the level changes, escalate before the commitment/processing continues",
+    "roles": {
+      "business_input": "Victor",
+      "checks_A_B_C": "Lucas / Finance",
+      "senior_level": "David",
+      "post_transaction_oversight": "Sophia"
+    }
+  },
+  "override_conditions": [
+    "Authority",
+    "Knowledge of the specific control condition",
+    "Actively rendering the checkpoint ineffective"
+  ],
+  "override_levels_ch4": [
+    "There is an anomaly",
+    "Control failure established",
+    "Grounds to investigate possible management override of controls",
+    "A person actively overriding controls identified",
+    "Fraud proven"
+  ],
+  "board_levels": {
+    "control": [
+      [
+        "failure",
+        "1 · Control failure",
+        "The record establishes that a checkpoint failed, but does not attribute an active override to a person."
+      ],
+      [
+        "investigate",
+        "2 · Possible override requiring investigation",
+        "The record raises a credible override concern, but the personal chain of authority, knowledge and action is incomplete."
+      ],
+      [
+        "identified",
+        "3 · Active override attributed to an individual",
+        "The personal files establish the required chain of authority, specific knowledge and direct action for one individual."
+      ]
+    ],
+    "fraud": [
+      [
+        "none",
+        "1 · No material fraud concern established",
+        "The present record does not contain enough conduct or conflict evidence to justify a separate fraud investigation."
+      ],
+      [
+        "risk",
+        "2 · Fraud risk requiring independent investigation",
+        "The present record contains motive and suspicious conduct, but not enough evidence to establish fraud as a concluded fact."
+      ],
+      [
+        "proven",
+        "3 · Fraud established on the present record",
+        "The present record is sufficient to establish intentional deception and an improper benefit or equivalent fraudulent outcome."
+      ]
+    ]
+  },
+  "chapter_v_timer_seconds": 90,
+  "chapter_v_timer_note": "Mỗi người có cửa sổ riêng, Victor dùng chung cho hai lời khai. Hết giờ chỉ làm mất điểm lời khai chưa hoàn thành; lời khai đã được chấp nhận giữ kết quả. Tiếp tục bước trách nhiệm. Điều kiện tạm dừng tuân theo mã; phản bác sai không dừng hoặc đặt lại thời gian.",
+  "checkpoints": {
+    "1": [
+      "t1.gstart",
+      "t1.gbridge",
+      "t1.gquality",
+      "t1.scope",
+      "t1.evals",
+      "t1.cstart",
+      "t1.cbridge",
+      "t1.cfinal",
+      "t1.handoff"
+    ],
+    "2": [
+      "t2.sample",
+      "t2.acc.TRADE_MKT",
+      "t2.acc.REG_LEGAL",
+      "t2.acc.ADVISORY",
+      "t2.acc.OTHER",
+      "t2.conclusion"
+    ],
+    "3": [
+      "t3.boundary",
+      "t3.final"
+    ],
+    "4": [
+      "t4.controlSheet",
+      "t4.ev0805",
+      "t4.ev1907",
+      "t4.ev1410",
+      "t4.firstShift",
+      "t4.system",
+      "t4.n51",
+      "t4.n73",
+      "t4.n101",
+      "t4.cluster",
+      "t4.mon",
+      "t4.p4class",
+      "t4.p4bridge",
+      "t4.roles",
+      "t4.rolesummary",
+      "t4.level",
+      "t4.final"
+    ],
+    "5": [
+      "t5.vknow",
+      "t5.vact",
+      "t5.lucas",
+      "t5.david",
+      "t5.sophia",
+      "t5.resp.Victor",
+      "t5.resp.Lucas",
+      "t5.resp.David",
+      "t5.resp.Sophia",
+      "t5.motive",
+      "t5.final"
+    ]
+  },
+  "wrong_answer_rule": {
+    "0_or_1": "Tự giải đúng sau 0–1 lỗi mới được mức làm chủ đầy đủ.",
+    "2": "Tự giải đúng sau 2 lỗi mới được một nửa mức làm chủ; từ đây áp dụng tạm dừng.",
+    "3_plus": "Không còn điểm làm chủ; lần sai thứ ba mở gợi ý.",
+    "gate_release": "Mở lại hồ sơ hoặc chờ hết 15 giây.",
+    "gate_timeout_seconds": 15,
+    "repeated_identical_answer": "Lỗi cũ đã được ghi bằng mã chữ ký không tự tính thêm; chỉ ghi lỗi mới theo cơ chế từng câu.",
+    "incomplete_sheet": "Biểu chưa đủ không được chấm như câu hoàn chỉnh.",
+    "repeats_formula": "sum(max(0, attempt.wrong - 1))"
+  },
+  "scoring": {
+    "total": 100,
+    "investigation": {
+      "max": 35,
+      "per_chapter": 7,
+      "formula": "chapter.complete && !chapter.topReveal ? 7 * (full + half / 2) / N : 0"
+    },
+    "discipline": {
+      "max": 30,
+      "per_chapter": 6,
+      "formula": "chapter.complete && !chapter.topReveal ? max(0, 6 - 1.5 * repeats) * selfSolved / N : 0",
+      "repeats": "sum(max(0, wrong - 1))"
+    },
+    "governance": {
+      "max": 25,
+      "formula": "round1(7 * responsibilityFilesSelfSolved / 4 + sum(decisionPoints))",
+      "decision_points": {
+        "balanced": 6,
+        "hesitant": 2,
+        "aggressive": 0
+      }
+    },
+    "independence": {
+      "max": 10,
+      "formula": "max(0, 10 - Math.round(0.7 * hints + 2 * revealTabs + childReveal))"
+    },
+    "rounding": "Cộng điểm từng chương rồi làm tròn điều tra và kỷ luật một chữ số thập phân. Quản trị và tổng cũng làm tròn một chữ số; mức trừ tự thực hiện dùng Math.round.",
+    "hint_deduplication": "Chỉ khử trùng theo hintKey khi sự kiện có khóa; không coi mọi sự kiện không khóa là duy nhất.",
+    "calculate_guard": "Hàm calculate trực tiếp yêu cầu ba quyết định hợp lệ; điều kiện tiến trình năm chương thuộc luồng giao diện."
+  },
+  "succession_decisions": {
+    "people": {
+      "balanced": "Temporarily remove Victor from Northstar decisions, preserve the records and commission an independent investigation before deciding permanent discipline.",
+      "aggressive": "Remove Victor permanently from executive office now, preserve the records and treat the present evidence as sufficient to establish fraud.",
+      "hesitant": "Leave Victor’s authority in place for now, preserve the records and wait for evidence sufficient to prove fraud before imposing any restriction."
+    },
+    "northstar": {
+      "balanced": "Suspend new commitments, preserve the records, verify existing deliverables and independently investigate ownership, pricing, services and cash flows.",
+      "aggressive": "End all Northstar dealings immediately, preserve the records and withhold remaining payments because the established conflict is sufficient grounds.",
+      "hesitant": "Continue Northstar dealings under current terms, preserve the records and postpone an independent investigation until evidence establishes fraud."
+    },
+    "system": {
+      "balanced": "Repair aggregation and authority logic, preserve the authority level on fallback routes and add independent review for management exceptions.",
+      "aggressive": "Keep the existing control design largely intact and rely on replacing or disciplining the people involved to prevent recurrence.",
+      "hesitant": "Repair the routing algorithm alone and leave the human checkpoints and fallback-route governance unchanged until another failure occurs."
+    }
+  },
+  "endings": [
+    {
+      "id": "reckless",
+      "title": "THE HASTY HEIR",
+      "outcome": "SUCCESSION DEFERRED",
+      "condition": "aggressive >= 2 OR (aggressive >= 1 AND discipline <= 20)"
+    },
+    {
+      "id": "hesitant",
+      "title": "THE HESITANT HEIR",
+      "outcome": "SUCCESSION DEFERRED",
+      "condition": "hesitant >= 2"
+    },
+    {
+      "id": "successor",
+      "title": "THE SUCCESSOR",
+      "outcome": "SUCCESSION APPROVED",
+      "condition": "balanced == 3 AND discipline >= 24 AND independence >= 5 AND total >= 80"
+    },
+    {
+      "id": "conditional",
+      "title": "SUCCESSION UNDER OVERSIGHT",
+      "outcome": "CONDITIONAL SUCCESSION",
+      "condition": "otherwise"
+    }
+  ],
+  "traits": [
+    {
+      "if": "discipline >= 28",
+      "title": "THE KEEPER OF EVIDENCE DISCIPLINE"
+    },
+    {
+      "if": "independence >= 9",
+      "title": "THE INDEPENDENT INVESTIGATOR"
+    },
+    {
+      "if": "chapter_reveals >= 2",
+      "title": "THE ASSISTED INVESTIGATOR"
+    },
+    {
+      "else": "THE HEIR WHO LEARNS FROM ERROR"
+    }
+  ],
+  "note": "Các ngưỡng, mã, chính sách và điểm là quy tắc giả lập của Aster Foods, không phải yêu cầu do PCAOB, COSO hoặc IAS đặt ra.",
+  "_metadata": {
+    "schema_version": "1.0",
+    "source_html": "THE_LAST_HEIR_FULL_GAME_FINAL(3).html",
+    "source_sha256": "aa2e501a80c7abea6948f2a5c1a7de73f0853e0d188bf4598c53dac24a431f42",
+    "review_date": "2026-10-21",
+    "runtime_loading": false,
+    "note": "Bản dữ liệu đối chiếu phục vụ hồ sơ Tuần 3. Trò chơi hiện tại dùng dữ liệu nhúng, không tự nạp tệp JSON này."
+  },
+  "ending_priority": [
+    "reckless",
+    "hesitant",
+    "successor",
+    "conditional"
+  ],
+  "trait_priority": [
+    "discipline >= 28",
+    "independence >= 9",
+    "chapter_reveals >= 2",
+    "otherwise"
+  ],
+  "evidence_transfer": {
+    "states": [
+      "viewed",
+      "in_use",
+      "established"
+    ],
+    "accepted_item_fields": [
+      "id",
+      "docId",
+      "source",
+      "text",
+      "usedIn"
+    ],
+    "note": "Chỉ chuyển dữ kiện đã xác lập và có usedIn không rỗng. Hồ sơ truy xuất lại ở Chương V không được gọi là đã kế thừa.",
+    "first_two_steps": "Dựng và áp dụng bảng kiểm không yêu cầu ghim thủ công. Nhận định hệ thống được khóa tự xác lập SYSTEM_FACTS."
+  },
+  "scope_max": {
+    "n51": 4,
+    "n73": 4,
+    "n101": 4,
+    "cluster": 10,
+    "mon": 4,
+    "victor": 5,
+    "lucas": 5,
+    "david": 5,
+    "sophia": 5
+  }
+}
