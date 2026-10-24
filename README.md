@@ -2,6 +2,7 @@
 
 **Dự án:** The Last Heir  
 **Học phần:** NHA408E · **Nhóm:** G08
+## 0. Final Product: https://dthiminhkhue.github.io/The-last-Heir/?fbclid=IwY2xjawVJu9lleHRuA2FlbQIxMABwZG9mBWJyaWQRMWMyRVF1UzhBT0ZsUEJ4U1BzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeFL9ROvPfGaeTagcwQV45TEToWjGeW60PDlZXHEymurIn431yoUja8kuc094_aem_-BRomajotYwuJ5y8lOvCwg
 
 ## 1. Purpose and Document Coverage
 
